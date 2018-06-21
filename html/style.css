@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    background-color: #353c47;
+    color: #b0b1b2;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th {
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background: #434f60;
+}

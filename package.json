@@ -1,0 +1,10 @@
+{
+  "name": "tera-json-to-html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Irevall/TERA-json-to-html.git"
+  },
+  "dependencies": {
+    "sqlite3": "^4.0.0"
+  }
+}
