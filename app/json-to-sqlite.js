@@ -22,7 +22,7 @@ function readFile() {
 
 function createNewTable() {
     let sqlQuery = 'CREATE TABLE if not exists guild_members (name TEXT, contrCurrent NUMBER, contrTotal NUMBER, class TEXT, rank TEXT, lastOnline TEXT, note TEXT, RKE TEXT, RRHM TEXT,' +
-        'TRNM TEXT, AANM TEXT, RKNM TEXT, discord BOOLEAN)';
+        'TRNM TEXT, AANM TEXT, RKNM TEXT, discord BOOLEAN, civil BOOLEAN)';
 
     db.serialize(() => {
         db.run(sqlQuery);
@@ -34,11 +34,19 @@ function addRow(row) {
     const valueList = [];
 
     for (let property1 in row) {
-        if (property1 !== "dungeons") {
+        if (property1 !== 'dungeons') {
             propertyList.push(property1);
             valueList.push(row[property1]);
+        } else {
+            for (let property2 in row.dungeons) {
+                propertyList.push(property2);
+                valueList.push(row.dungeons[property2]);
+            }
         }
     }
+
+    propertyList.push('discord', 'civil');
+    valueList.push(false, false);
 
     db.run('INSERT INTO guild_members (' + propertyList.join(', ') + ') VALUES(' +  propertyList.map(() => '?' ).join(', ')  +')', valueList, (err) => {
         if (err) {
@@ -53,12 +61,11 @@ function updateRow(row) {
     const setList = [];
 
     for (let property1 in row) {
+        let set = '';
         if (property1 !== "dungeons" && property1 !== "name") {
-            let set = property1;
-            set += ' = '
-            if (row[property1].length === 0) {
-                set += 'NULL';
-            } else if (property1 !== 'contrCurrent' && property1 !== 'contrTotal') {
+            set = property1;
+            set += ' = ';
+            if (property1 !== 'contrCurrent' && property1 !== 'contrTotal') {
                 set += '"';
                 set += row[property1];
                 set += '"';
@@ -66,6 +73,14 @@ function updateRow(row) {
                 set += row[property1];
             }
             setList.push(set);
+        } else if (property1 === "dungeons") {
+            for (let property2 in row.dungeons) {
+                set = property2;
+                set += ' = "';
+                set += row.dungeons[property2];
+                set += '"';
+                setList.push(set);
+            }
         }
     }
 
