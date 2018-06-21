@@ -5,6 +5,7 @@
     "url": "git+https://github.com/Irevall/TERA-json-to-html.git"
   },
   "dependencies": {
+    "sqlite": "^2.9.2",
     "sqlite3": "^4.0.0"
   }
 }

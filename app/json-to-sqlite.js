@@ -1,13 +1,12 @@
 const data = [];
 let fs = require('fs');
 
-const sqlite3 = require('sqlite3').verbose();
-let db = new sqlite3.Database('data/tera.db', (err) => {
-    if (err) {
-        return console.error(err.message);
-    }
-    console.log('Connected to the in-memory SQlite database.');
-});
+let db = '';
+
+function logAndExit(error) {
+    console.log(error);
+    process.exit();
+}
 
 function readFile() {
     return new Promise(resolve => {
@@ -24,9 +23,7 @@ function createNewTable() {
     let sqlQuery = 'CREATE TABLE if not exists guild_members (name TEXT, contrCurrent NUMBER, contrTotal NUMBER, class TEXT, rank TEXT, lastOnline TEXT, note TEXT, RKE TEXT, RRHM TEXT,' +
         'TRNM TEXT, AANM TEXT, RKNM TEXT, discord BOOLEAN, civil BOOLEAN)';
 
-    db.serialize(() => {
-        db.run(sqlQuery);
-    });
+    return db.run(sqlQuery);
 }
 
 function addRow(row) {
@@ -48,13 +45,7 @@ function addRow(row) {
     propertyList.push('discord', 'civil');
     valueList.push(false, false);
 
-    db.run('INSERT INTO guild_members (' + propertyList.join(', ') + ') VALUES(' +  propertyList.map(() => '?' ).join(', ')  +')', valueList, (err) => {
-        if (err) {
-            return console.log(err);
-        }
-
-        console.log('A row has been inserted');
-    });
+    return db.run('INSERT INTO guild_members (' + propertyList.join(', ') + ') VALUES(' +  propertyList.map(() => '?' ).join(', ')  +')', valueList);
 }
 
 function updateRow(row) {
@@ -84,45 +75,38 @@ function updateRow(row) {
         }
     }
 
-    db.run('UPDATE guild_members SET ' + setList.join(', ') + ' WHERE name = "' + row.name + '"', (err) => {
-        if (err) {
-            return console.log(err.message);
-        }
-    });
+    return db.run('UPDATE guild_members SET ' + setList.join(', ') + ' WHERE name = "' + row.name + '"');
 }
 
 async function main() {
-    let jsonAsString = await readFile();
+    const sqlite = require('sqlite');
+
+    db = await sqlite.open('data/tera.db').catch(err => logAndExit(err));
+    console.log('Open DB connection.');
+
+    let jsonAsString = await readFile().catch(err => logAndExit(err));
+    console.log('Read file');
+
     JSON.parse(jsonAsString).forEach((element) => {
         data.push(element);
     });
 
-    createNewTable();
+    await createNewTable();
 
-    data.forEach((element) => {
-        db.all('select * from guild_members where name = "' + element.name + '"', (err, row) => {
-            if (err) {
-                return console.log(err);
-            }
-
-            if (row.length === 0) {
-                addRow(element);
-            } else if (row.length === 1) {
-                updateRow(element);
-            } else {
-                console.log('ERROR. More than 1 row, shouldn\'t be possible');
-                console.log(row);
-            }
-
-        });
-    });
-
-    db.close((err) => {
-        if (err) {
-            return console.error(err.message);
+    for (let element in data) {
+        const row = await db.all('select * from guild_members where name = "' + data[element].name + '"').catch(err => logAndExit(err));
+        if (row.length === 0) {
+            await addRow(data[element]).catch(err => logAndExit(err));
+        } else if (row.length === 1) {
+            await updateRow(data[element]).catch(err => logAndExit(err));
+        } else {
+            console.log('ERROR. More than 1 row, shouldn\'t be possible');
+            console.log(row);
         }
-        console.log('Close the database connection.');
-    });
+    }
+
+    await db.close().catch(err => logAndExit(err));
+    console.log('Close DB connection.');
 }
 
 main();
