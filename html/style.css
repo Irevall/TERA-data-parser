@@ -2,32 +2,43 @@ body {
     margin: 0;
     background-color: #353c47;
     color: #b0b1b2;
-}
-
-table {
-    border-collapse: collapse;
     font-size: 20px;
 }
-tr {
-    height: 30px;
+
+main {
+    display: grid;
+    width: max-content;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
 }
 
-tr:first-of-type {
+.row {
+    display: contents;
 }
 
-table, th, td {
-    border: 1px solid black;
+.row > div {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 6px 0 4px;
+    border-right: solid black 2px;
+    border-bottom: solid black 2px;
 }
 
-th {
-    text-align: left;
+.row:nth-of-type(1) > div {
+    font-weight: bold;
 }
 
-tr:nth-child(even) {
+.row > div > span {
+    height: max-content;
+}
+
+.row:nth-of-type(2n) > div {
     background: #434f60;
 }
 
-td img {
+
+div img {
+    max-height: 30px;
     max-width: 30px;
     border-radius: 50%;
 }

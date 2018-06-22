@@ -1,5 +1,42 @@
-let data = [];
 let fs = require('fs');
+
+const alts = {
+    'Mazin.Kaiser': ['Fatooma', 'Kingrai', 'Meiko.Shirakii', 'Miss.Kaiser', 'Akuma.kaiser', 'Count.Kaiser', 'Grendizer.kaiser', 'Kaiser.Exo'],
+    'Mini.Setesh': ['Khonsu', 'Mini.Osiris'],
+    'Kawaii.grill': ['Kawaii.Bulbo', 'Yko'],
+    'Nikki.Arkest': ['Lina.Arkest', 'Merrick.Arkest', 'Ruby.Arkest'],
+    'Mereida': ['Lucky.Charm', 'Meneidä', 'Mirä-chän', 'Tulina'],
+    'Raikira': ['Raikina', 'Roaronoa', 'Raikillua', 'Raiichuu', 'Raiki', 'Raikita'],
+    'Skormy': ['Skorbe', 'Skorbulancer', 'Skorcerer', 'Skorcher', 'Skorkyrie', 'Skorlynne', 'Skornja', 'Skorpri', 'Skorpurr', 'Skorrawline', 'Skorrior', 'Skory', 'Skoryer', 'Skorynne'],
+    'Suzi': ['suzyi', 'dilisorc', 'takemaballs', 'andiko', 'dilia'],
+    'Prav': ['W.Prav', 'Pravler', 'G.Prav'],
+    'Tiltlyn': ['Achu', 'Blanko', 'Zenyte', 'Spectral', 'Lyniph'],
+    'Ällaya': ['Ariadn.e', 'Fällïna', 'Miny.a', 'Aërith'],
+    'The.Blanker': ['Blanko'],
+    'King.sslayer': ['Coldfiresy', 'Deadlyfiresy', 'Fireskullsy'],
+    'omg.brunette': ['Exoluis_W'],
+    'Morrandai': ['Faldorn', 'Allandras'],
+    'Cataleä': ['Kataleïa', 'Catameia', 'Cataluïa'],
+    'Lyria-chan': ['Lyirix', 'Yuraiyka', 'Tarik.Farrah', 'Lyirai', 'Lyira', 'Kan.U'],
+    'Kebu': ['minikebu', 'Kebudos', 'Shawarma'],
+    'A.dox': ['Molgron', 'T.Adox'],
+    'Thelight': ['Ninga', 'Mr.Gazawe'],
+    'Ninji': ['Ninjii.Sorc', 'Ninjiikun'],
+    'No.Escape': ['Princess.Julia'],
+    'Smyrnaa': ['Smyrna', 'Puntta'],
+    'Csillagocska': ['Pink.Csillag', 'Hullo.Csillag', 'Csillagfeny', 'Morci.Csillag'],
+    'play.doll': ['play-toy'],
+    'Santa': ['Ratpatrol'],
+    'Adälyn': ['Shiriaki', 'Daianoia', 'Shieraki'],
+    'Rooooocket': ['Sklver'],
+    'Inter.Stellar': ['Tessla'],
+    'Valeryiah': ['Valandiel'],
+    'Torcy': ['Yullissa', 'Skyilla', 'Paxslx', 'Deonna'],
+    'Namastre': ['Name.Crush', 'Enryo', 'Namecut', 'Naslash'],
+    'Emlyn': ['Eleora'],
+    'Dammu': ['Sausage'],
+    'Adraeel': ['Arkaeel', 'Asod', 'Darkflame.iq']
+};
 
 function logAndExit(error) {
     console.log(error);
@@ -33,6 +70,36 @@ function dungeonsScore(data) {
     return html;
 }
 
+function addRow(element) {
+    let html = '<div class="row"><div><span>';
+    html += element.name;
+    html += '</span></div><div><span>';
+    html += element.rank;
+    html += '</div><div><span>';
+    html += element.class;
+    html += '</div><div><span>';
+    html += element.contrCurrent + ' (' + element.contrTotal + ')';
+    html += '</div><div><span>';
+    html += element.lastOnline.split(',')[0];
+    html += '</div><div class="hidden"><span class="empty">...</span><span class="content">';
+    html += element.note;
+    html += '</span></div><div class="dungeons hidden"><span class="empty">...</span><span class="content">';
+    html += dungeonsScore(element.RKE);
+    html += '</span></div><div class="dungeons hidden"><span class="empty">...</span><span class="content">';
+    html += dungeonsScore(element.RRHM);
+    html += '</span></div><div class="dungeons hidden"><span class="empty">...</span><span class="content">';
+    html += dungeonsScore(element.TRNM);
+    html += '</span></div><div class="dungeons hidden"><span class="empty">...</span><span class="content">';
+    html += dungeonsScore(element.AANM);
+    html += '</span></div><div class="dungeons hidden"><span class="empty">...</span><span class="content">';
+    html += dungeonsScore(element.RKNM);
+    html += '</span></div><div>';
+    html += element.discord ? '<img src="icons/discord-blue.png" alt="Has discord" />' : '<img src="icons/discord-grey.png" alt="No discord" />';
+    html += element.civil ? '<img src="icons/sword-blue.png" alt="Plays civil unrest" />' : '<img src="icons/sword-grey.png" alt="Doesn\'t play civil unrest" />';
+    html += '</div></div>';
+    return html;
+}
+
 function buildHtml(data) {
     let head = '';
     let body = '';
@@ -40,36 +107,29 @@ function buildHtml(data) {
     head += '<link rel="stylesheet" type="text/css" href="style.css"/>';
     head += '<script src="main.js"></script>';
 
-    body += '<table><tr><th>Name</th><th>Rank</th><th>Class</th><th>Contribution</th><th>Last online</th><th>Note</th><th>RKE</th><th>RRHM</th><th>TRNM</th><th>AANM</th><th>RKNM</th><th>Misc</th></tr>';
-    data.forEach((element) => {
-        body += '<tr><td>';
-        body += element.name;
-        body += '</td><td>';
-        body += element.rank;
-        body += '</td><td>';
-        body += element.class;
-        body += '</td><td>';
-        body += element.contrCurrent + ' (' + element.contrTotal + ')';
-        body += '</td><td>';
-        body += element.lastOnline.split(',')[0];
-        body += '</td><td class="hidden"><div class="empty">...</div><div class="content">';
-        body += element.note;
-        body += '</div></td><td class="dungeons hidden"><div class="empty">...</div><div class="content">';
-        body += dungeonsScore(element.RKE);
-        body += '</div></td><td class="dungeons hidden"><div class="empty">...</div><div class="content">';
-        body += dungeonsScore(element.RRHM);
-        body += '</div></td><td class="dungeons hidden"><div class="empty">...</div><div class="content">';
-        body += dungeonsScore(element.TRNM);
-        body += '</div></td><td class="dungeons hidden"><div class="empty">...</div><div class="content">';
-        body += dungeonsScore(element.AANM);
-        body += '</div></td><td class="dungeons hidden"><div class="empty">...</div><div class="content">';
-        body += dungeonsScore(element.RKNM);
-        body += '</div></td><td>';
-        body += element.discord ? '<img src="icons/discord-blue.svg" alt="Has discord" />' : '<img src="icons/discord-grey.svg" alt="No discord" />';
-        body += element.civil ? '<img src="icons/sword-blue.svg" alt="Plays civil unrest" />' : '<img src="icons/sword-grey.svg" alt="Doesn\'t play civil unrest" />';
-        body += '</td></tr>'
-    });
-    body += '</table>';
+    body += '<main><div class="row"><div>Name</div><div>Rank</div><div>Class</div><div>Contribution</div><div>Last online</div><div>Note</div><div>RKE</div><div>RRHM</div><div>TRNM</div><div>AANM</div><div>RKNM</div><div>Misc</div></div>';
+
+    for (let main in alts) {
+        let object = data.find((element) => {return element.name === main;});
+        if (object !== undefined) {
+            body += addRow(object);
+            for (let alt in alts[main]) {
+                let object2 = data.find((element) => {return element.name === alts[main][alt];});
+                if (object2 !== undefined) {
+                    body += addRow(object2);
+                    data = data.filter(element => element.name !== alts[main][alt]);
+                } else {
+                    console.log('Couldn\'t find match for: ' + main);
+                }
+            }
+            data = data.filter(element => element.name !== main);
+        } else {
+            console.log('Couldn\'t find match for: ' + main);
+        }
+    }
+    data.forEach(element => body += addRow(element));
+
+    body += '</main>';
     return '<!DOCTYPE html><html><head>' + head + '</head><body>' + body + '</body></html>';
 }
 

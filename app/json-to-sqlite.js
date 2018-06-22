@@ -20,7 +20,7 @@ function readFile() {
 }
 
 function createNewTable() {
-    let sqlQuery = 'CREATE TABLE if not exists guild_members (name TEXT, contrCurrent NUMBER, contrTotal NUMBER, class TEXT, rank TEXT, lastOnline TEXT, note TEXT, RKE TEXT, RRHM TEXT,' +
+    let sqlQuery = 'CREATE TABLE if not exists guild_members (name TEXT, main TEXT, contrCurrent NUMBER, contrTotal NUMBER, class TEXT, rank TEXT, lastOnline TEXT, note TEXT, RKE TEXT, RRHM TEXT,' +
         'TRNM TEXT, AANM TEXT, RKNM TEXT, discord BOOLEAN, civil BOOLEAN)';
 
     return db.run(sqlQuery);
@@ -42,8 +42,8 @@ function addRow(row) {
         }
     }
 
-    propertyList.push('discord', 'civil');
-    valueList.push(false, false);
+    propertyList.push('discord', 'civil', 'main');
+    valueList.push(false, false, '');
 
     return db.run('INSERT INTO guild_members (' + propertyList.join(', ') + ') VALUES(' +  propertyList.map(() => '?' ).join(', ')  +')', valueList);
 }

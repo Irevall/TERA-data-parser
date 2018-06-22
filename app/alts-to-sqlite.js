@@ -1,42 +1,4 @@
-function checkChanges() {
-    document.querySelectorAll('input[type=checkbox]').forEach((element, index) => {
-        element.addEventListener('change', (e) => {
-            console.log('index: ' + index);
-            console.log('event: ');
-            console.log(e);
-            // if(this.checked) {
-            //     // Checkbox is checked..
-            // } else {
-            //     // Checkbox is not checked..
-            // }
-        });
-    });
-}
-
-function hideElements() {
-    document.querySelector('.row').querySelectorAll('div').forEach((element, index) => {
-        if (index >= 5 && index <= 11) {
-            element.addEventListener('click', () => {
-                console.log(index);
-                document.querySelectorAll('.row').forEach((element2, index2) => {
-                    if (index2 === 0) {
-                        return false;
-                    } else {
-                        element2.querySelector('div:nth-child(' + (index + 1) + ')').classList.remove('hidden');
-                        element2.querySelector('div:nth-child(' + (index + 1) + ')').classList.add('visible');
-                    }
-                });
-            })
-        }
-    });
-}
-document.addEventListener('DOMContentLoaded', () => {
-    checkChanges();
-    hideElements();
-});
-
-
-const daikatana = {
+const alts = {
     'Mazin.Kaiser': ['Fatooma', 'Kingrai', 'Meiko.Shirakii', 'Miss.Kaiser', 'Akuma.kaiser', 'Count.Kaiser', 'Grendizer.kaiser', 'Kaiser.Exo'],
     'Mini.Setesh': ['Khonsu', 'Mini.Osiris'],
     'Kawaii.grill': ['Kawaii.Bulbo', 'Yko'],
@@ -52,7 +14,6 @@ const daikatana = {
     'King.sslayer': ['Coldfiresy', 'Deadlyfiresy', 'Fireskullsy'],
     'omg.brunette': ['Exoluis_W'],
     'Morrandai': ['Faldorn', 'Allandras'],
-    'Gam_Den': [],
     'Cataleä': ['Kataleïa', 'Catameia', 'Cataluïa'],
     'Lyria-chan': ['Lyirix', 'Yuraiyka', 'Tarik.Farrah', 'Lyirai', 'Lyira', 'Kan.U'],
     'Kebu': ['minikebu', 'Kebudos', 'Shawarma'],
@@ -72,6 +33,34 @@ const daikatana = {
     'Namastre': ['Name.Crush', 'Enryo', 'Namecut', 'Naslash'],
     'Emlyn': ['Eleora'],
     'Dammu': ['Sausage'],
-    //'narianna': ['Serrenna'],
     'Adraeel': ['Arkaeel', 'Asod', 'Darkflame.iq']
 };
+
+
+let db = '';
+
+function logAndExit(error) {
+    console.log(error);
+    process.exit();
+}
+
+async function main() {
+    const sqlite = require('sqlite');
+
+    db = await sqlite.open('data/tera.db').catch(err => logAndExit(err));
+    console.log('Open DB connection.');
+
+    for (let property in alts) {
+        let sql = 'UPDATE guild_members SET main = "'
+        sql += property;
+        sql += '" WHERE name = "';
+        sql += alts[property].join('" OR name = "');
+        sql += '"';
+        await db.run(sql).catch(err => logAndExit(err));
+    }
+
+    await db.close().catch(err => logAndExit(err));
+    console.log('Close DB connection.');
+}
+
+main();

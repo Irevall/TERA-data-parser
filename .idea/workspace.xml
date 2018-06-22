@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66fae6df-2b16-47ee-8d41-29f710d34d14" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app/data/tera.db" afterPath="$PROJECT_DIR$/app/data/tera.db" />
+      <change beforePath="$PROJECT_DIR$/app/json-to-sqlite.js" afterPath="$PROJECT_DIR$/app/json-to-sqlite.js" />
       <change beforePath="$PROJECT_DIR$/app/sqlite-to-html.js" afterPath="$PROJECT_DIR$/app/sqlite-to-html.js" />
       <change beforePath="$PROJECT_DIR$/html/index.html" afterPath="$PROJECT_DIR$/html/index.html" />
       <change beforePath="$PROJECT_DIR$/html/main.js" afterPath="$PROJECT_DIR$/html/main.js" />
@@ -21,31 +21,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sqlite-to-html.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="json-to-sqlite.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/json-to-sqlite.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-88">
+              <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sqlite-to-html.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/sqlite-to-html.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="54" column="33" lean-forward="false" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
+            <state relative-caret-position="600">
+              <caret line="95" column="19" lean-forward="false" selection-start-line="95" selection-start-column="19" selection-end-line="95" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="49" />
+            <state relative-caret-position="527">
+              <caret line="31" column="24" lean-forward="false" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -64,13 +64,23 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="28" lean-forward="false" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+            <state relative-caret-position="425">
+              <caret line="25" column="67" lean-forward="false" selection-start-line="25" selection-start-column="67" selection-end-line="25" selection-end-column="67" />
               <folding>
-                <marker date="1529664611955" expanded="true" signature="108:125" ph="{...}" />
-                <marker date="1529664611955" expanded="true" signature="160:181" ph="{...}" />
-                <marker date="1529664611955" expanded="true" signature="1143:1163" ph="{...}" />
+                <marker date="1529674953352" expanded="true" signature="108:125" ph="{...}" />
+                <marker date="1529674953352" expanded="true" signature="160:181" ph="{...}" />
+                <marker date="1529674953352" expanded="true" signature="1248:1268" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="alts-to-sqlite.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/alts-to-sqlite.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="28" column="29" lean-forward="false" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,8 +90,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -90,10 +100,17 @@
       <find>rank</find>
       <find>raik</find>
       <find>fill=&quot;#D80027&quot;</find>
+      <find>&lt;/td&gt;</find>
+      <find>&lt;/th&gt;</find>
+      <find>td</find>
       <find>undefined</find>
+      <find>svg</find>
     </findStrings>
     <replaceStrings>
       <replace>html</replace>
+      <replace>&lt;/div&gt;</replace>
+      <replace>div</replace>
+      <replace>png</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -105,7 +122,6 @@
         <option value="$PROJECT_DIR$/app/json-to-html.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app/data/tera2.json" />
-        <option value="$PROJECT_DIR$/app/json-to-sqlite.js" />
         <option value="$PROJECT_DIR$/../../test.html" />
         <option value="$PROJECT_DIR$/html/test.html" />
         <option value="$PROJECT_DIR$/html/logos/discord-blue.svg" />
@@ -113,9 +129,12 @@
         <option value="$PROJECT_DIR$/html/icons/sword.svg" />
         <option value="$PROJECT_DIR$/html/icons/sword-grey.svg" />
         <option value="$PROJECT_DIR$/html/icons/sword-blue.svg" />
+        <option value="$PROJECT_DIR$/app/json-to-sqlite.js" />
+        <option value="$PROJECT_DIR$/html/alts-to-sqlite.js" />
+        <option value="$PROJECT_DIR$/app/alts-to-sqlite.js" />
         <option value="$PROJECT_DIR$/html/main.js" />
-        <option value="$PROJECT_DIR$/html/style.css" />
         <option value="$PROJECT_DIR$/app/sqlite-to-html.js" />
+        <option value="$PROJECT_DIR$/html/style.css" />
       </list>
     </option>
   </component>
@@ -136,11 +155,10 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="28" />
-    <option name="y" value="15" />
-    <option name="width" value="1892" />
-    <option name="height" value="1025" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="7" />
+    <option name="width" value="1878" />
+    <option name="height" value="1018" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -224,15 +242,15 @@
       <updated>1529578971356</updated>
       <workItem from="1529578973592" duration="290000" />
       <workItem from="1529582579073" duration="24741000" />
-      <workItem from="1529657895923" duration="7310000" />
+      <workItem from="1529657895923" duration="19406000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32341000" />
+    <option name="totallyTimeSpent" value="44437000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -287,9 +305,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1529664611955" expanded="true" signature="108:125" ph="{...}" />
-            <marker date="1529664611955" expanded="true" signature="160:181" ph="{...}" />
-            <marker date="1529664611955" expanded="true" signature="1143:1163" ph="{...}" />
+            <marker date="1529674953352" expanded="true" signature="108:125" ph="{...}" />
+            <marker date="1529674953352" expanded="true" signature="160:181" ph="{...}" />
+            <marker date="1529674953352" expanded="true" signature="1248:1268" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -308,9 +326,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1529664611955" expanded="true" signature="108:125" ph="{...}" />
-            <marker date="1529664611955" expanded="true" signature="160:181" ph="{...}" />
-            <marker date="1529664611955" expanded="true" signature="1143:1163" ph="{...}" />
+            <marker date="1529674953352" expanded="true" signature="108:125" ph="{...}" />
+            <marker date="1529674953352" expanded="true" signature="160:181" ph="{...}" />
+            <marker date="1529674953352" expanded="true" signature="1248:1268" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -336,6 +354,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="861">
           <caret line="3120" column="1" lean-forward="false" selection-start-line="3120" selection-start-column="1" selection-end-line="3120" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -361,14 +380,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/json-to-sqlite.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-873">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="8" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../personal-website/icons/github.svg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -379,32 +390,69 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/icons/sword-grey.svg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/icons/discord-blue.svg">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="28" lean-forward="false" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-          <folding>
-            <marker date="1529664611955" expanded="true" signature="108:125" ph="{...}" />
-            <marker date="1529664611955" expanded="true" signature="160:181" ph="{...}" />
-            <marker date="1529664611955" expanded="true" signature="1143:1163" ph="{...}" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/alts-to-sqlite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="84" column="20" lean-forward="true" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="2" column="222" lean-forward="true" selection-start-line="2" selection-start-column="222" selection-end-line="2" selection-end-column="239" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="67" lean-forward="false" selection-start-line="25" selection-start-column="67" selection-end-line="25" selection-end-column="67" />
+          <folding>
+            <marker date="1529674953352" expanded="true" signature="108:125" ph="{...}" />
+            <marker date="1529674953352" expanded="true" signature="160:181" ph="{...}" />
+            <marker date="1529674953352" expanded="true" signature="1248:1268" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/alts-to-sqlite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="28" column="29" lean-forward="false" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/icons/discord-grey.svg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/icons/sword-grey.svg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/json-to-sqlite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-88">
+          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -417,18 +465,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/style.css">
+    <entry file="file://$PROJECT_DIR$/app/sqlite-to-html.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        <state relative-caret-position="600">
+          <caret line="95" column="19" lean-forward="false" selection-start-line="95" selection-start-column="19" selection-end-line="95" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/sqlite-to-html.js">
+    <entry file="file://$PROJECT_DIR$/html/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="54" column="33" lean-forward="false" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
+        <state relative-caret-position="527">
+          <caret line="31" column="24" lean-forward="false" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
           <folding />
         </state>
       </provider>
