@@ -6,6 +6,13 @@ body {
 
 table {
     border-collapse: collapse;
+    font-size: 20px;
+}
+tr {
+    height: 30px;
+}
+
+tr:first-of-type {
 }
 
 table, th, td {
@@ -18,4 +25,17 @@ th {
 
 tr:nth-child(even) {
     background: #434f60;
+}
+
+td img {
+    max-width: 30px;
+    border-radius: 50%;
+}
+
+.visible .empty {
+    display: none;
+}
+
+.hidden .content {
+    display: none;
 }
