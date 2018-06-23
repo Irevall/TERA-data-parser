@@ -48,21 +48,19 @@ function dungeonsScore(data) {
     if (/party/.exec(data) !== null) {
         let x = data.split(' ');
         let number = x[2].replace(/,/g, '');
-        html += (number / (10**6)).toFixed(1);
-        html += 'M ';
-        html += x[3];
-        html += ')';
+        html += '<span>' + (number / (10**6)).toFixed(3) + 'M</span>&nbsp';
+        html += x[3] + ')';
     } else if (/Divine/.exec(data) !== null){
         let x = data.match(/[0-9]+[%]/g);
         x.forEach((element, index) => {
             html += '<img src="buffs/priest/buff' + (index + 1) + '.png" alt="Buff" />';
-            html += ' ' + element;
+            html += '<span>' + element + '</span>';
         });
     } else if (/Thrall/.exec(data) !== null) {
         let x = data.match(/[0-9]+[%]/g);
         x.forEach((element, index) => {
             html += '<img src="buffs/mystic/buff' + (index + 1) + '.png" alt="Buff" />';
-            html += ' ' + element;
+            html += '<span>' + element + '</span>';
         });
     } else {
         html += data;
@@ -70,10 +68,14 @@ function dungeonsScore(data) {
     return html;
 }
 
-function addRow(element) {
-    let html = '<div class="row"><div><span>';
+function addRow(element, hasAlts) {
+    let html = '<div class="row"><div><span ';
+    html += (element.main !== '') ? ('title="Main: ' + element.main + '"') : '';
+    html += '>';
     html += element.name;
-    html += '</span></div><div><span>';
+    html += '</span>';
+    html += (hasAlts) ? '<img src="icons/arrow.png" alt="Show alts" class="arrow"/>' : '';
+    html += '</div><div><span>';
     html += element.rank;
     html += '</div><div><span>';
     html += element.class;
@@ -81,19 +83,19 @@ function addRow(element) {
     html += element.contrCurrent + ' (' + element.contrTotal + ')';
     html += '</div><div><span>';
     html += element.lastOnline.split(',')[0];
-    html += '</div><div class="hidden"><span class="empty">...</span><span class="content">';
+    html += '</div><div class="notes"><span class="empty">...</span><span class="content hidden">';
     html += element.note;
-    html += '</span></div><div class="dungeons hidden"><span class="empty">...</span><span class="content">';
+    html += '</span></div><div class="dungeons"><span class="empty">...</span><div class="content hidden">';
     html += dungeonsScore(element.RKE);
-    html += '</span></div><div class="dungeons hidden"><span class="empty">...</span><span class="content">';
+    html += '</div></div><div class="dungeons"><span class="empty">...</span><div class="content hidden">';
     html += dungeonsScore(element.RRHM);
-    html += '</span></div><div class="dungeons hidden"><span class="empty">...</span><span class="content">';
+    html += '</div></div><div class="dungeons"><span class="empty">...</span><div class="content hidden">';
     html += dungeonsScore(element.TRNM);
-    html += '</span></div><div class="dungeons hidden"><span class="empty">...</span><span class="content">';
+    html += '</div></div><div class="dungeons"><span class="empty">...</span><div class="content hidden">';
     html += dungeonsScore(element.AANM);
-    html += '</span></div><div class="dungeons hidden"><span class="empty">...</span><span class="content">';
+    html += '</div></div><div class="dungeons"><span class="empty">...</span><div class="content hidden">';
     html += dungeonsScore(element.RKNM);
-    html += '</span></div><div>';
+    html += '</div></div><div>';
     html += element.discord ? '<img src="icons/discord-blue.png" alt="Has discord" />' : '<img src="icons/discord-grey.png" alt="No discord" />';
     html += element.civil ? '<img src="icons/sword-blue.png" alt="Plays civil unrest" />' : '<img src="icons/sword-grey.png" alt="Doesn\'t play civil unrest" />';
     html += '</div></div>';
@@ -112,22 +114,26 @@ function buildHtml(data) {
     for (let main in alts) {
         let object = data.find((element) => {return element.name === main;});
         if (object !== undefined) {
-            body += addRow(object);
+            body += '<div class="main">';
+            body += addRow(object, true);
+            body += '</div>';
+            body += '<div class="alts hidden">';
             for (let alt in alts[main]) {
                 let object2 = data.find((element) => {return element.name === alts[main][alt];});
                 if (object2 !== undefined) {
-                    body += addRow(object2);
+                    body += addRow(object2, false);
                     data = data.filter(element => element.name !== alts[main][alt]);
                 } else {
                     console.log('Couldn\'t find match for: ' + main);
                 }
             }
+            body += '</div>';
             data = data.filter(element => element.name !== main);
         } else {
             console.log('Couldn\'t find match for: ' + main);
         }
     }
-    data.forEach(element => body += addRow(element));
+    data.forEach(element => body += addRow(element, false));
 
     body += '</main>';
     return '<!DOCTYPE html><html><head>' + head + '</head><body>' + body + '</body></html>';

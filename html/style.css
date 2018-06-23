@@ -11,6 +11,14 @@ main {
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
 }
 
+.main {
+    display: contents;
+}
+
+.alts {
+    display: contents;
+}
+
 .row {
     display: contents;
 }
@@ -24,18 +32,42 @@ main {
     border-bottom: solid black 2px;
 }
 
-.row:nth-of-type(1) > div {
+main > .row:nth-of-type(1) > div {
     font-weight: bold;
 }
 
-.row > div > span {
+.row span {
     height: max-content;
 }
 
-.row:nth-of-type(2n) > div {
+.main:nth-of-type(2n) div {
     background: #434f60;
 }
 
+.alts:nth-of-type(2n) div {
+    background: #434f60;
+}
+
+.down {
+    transform: rotate(0.5turn);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+.content span {
+    font-weight: bold;
+}
+
+.content img {
+    margin-right: 4px;
+}
+
+.content img:not(:first-of-type) {
+    margin-left: 4px;
+}
 
 div img {
     max-height: 30px;
@@ -43,10 +75,10 @@ div img {
     border-radius: 50%;
 }
 
-.visible .empty {
+.hidden {
     display: none;
 }
 
-.hidden .content {
-    display: none;
+main > .row:nth-child(1) > div {
+    position: sticky;
 }
