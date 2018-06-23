@@ -1,4 +1,19 @@
-let fs = require('fs');
+const http = require('http');
+const koa = require('koa');
+const serve = require('koa-static');
+
+const app = new koa();
+
+app.use(serve('../html'));
+app.use(async (ctx) => {
+    if (ctx.request.url === '/') {
+        ctx.body = await deliverHTML();
+    }
+});
+
+app.listen(8080, () => {
+    console.log('Server running on https://localhost:8080')
+});
 
 const alts = {
     'Mazin.Kaiser': ['Fatooma', 'Kingrai', 'Meiko.Shirakii', 'Miss.Kaiser', 'Akuma.kaiser', 'Count.Kaiser', 'Grendizer.kaiser', 'Kaiser.Exo'],
@@ -102,7 +117,7 @@ function addRow(element, hasAlts) {
     return html;
 }
 
-function buildHtml(data) {
+function buildHTML(data) {
     let head = '';
     let body = '';
 
@@ -124,13 +139,13 @@ function buildHtml(data) {
                     body += addRow(object2, false);
                     data = data.filter(element => element.name !== alts[main][alt]);
                 } else {
-                    console.log('Couldn\'t find match for: ' + main);
+                    // console.log('Couldn\'t find match for: ' + main);
                 }
             }
             body += '</div>';
             data = data.filter(element => element.name !== main);
         } else {
-            console.log('Couldn\'t find match for: ' + main);
+            // console.log('Couldn\'t find match for: ' + main);
         }
     }
     data.forEach(element => body += addRow(element, false));
@@ -139,25 +154,31 @@ function buildHtml(data) {
     return '<!DOCTYPE html><html><head>' + head + '</head><body>' + body + '</body></html>';
 }
 
-let db = '';
-
-async function main() {
+async function deliverHTML() {
     const sqlite = require('sqlite');
 
-    db = await sqlite.open('data/tera.db').catch(err => logAndExit(err));
+    const db = await sqlite.open('data/tera.db').catch(err => logAndExit(err));
     console.log('Open DB connection.');
 
-    const row = await db.all('select * from guild_members').catch(err => logAndExit(err));
-
-    let fileName = '../html/index.html';
-    let stream = fs.createWriteStream(fileName);
-    stream.once('open', function(fd) {
-        let html = buildHtml(row);
-        stream.end(html);
-    });
+    const html = buildHTML(await db.all('select * from guild_members').catch(err => logAndExit(err)));
 
     await db.close().catch(err => logAndExit(err));
     console.log('Close DB connection.');
+
+    return html;
 }
 
-main();
+// const server = http.createServer(async (req, res) => {
+//     console.log('got request');
+//     console.log('Request', { method: req.method, url: req.url });
+//     let html = await deliverHTML();
+//     res.writeHead(200, {
+//         'Content-Type': 'text/html'
+//     });
+//     res.write(html);
+//     res.end();
+// }).listen(port);
+//
+// // server.listen(port, hostname, () => {
+// //     console.log(`Server running at http://${hostname}:${port}/`);
+// // });
