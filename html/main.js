@@ -1,20 +1,37 @@
-function sendRequest() {
-    let xhr = new XMLHttpRequest();
-    xhr.open('POST', '../app/listener.js', true);
+function sendRequest(method, url, ) {
+    const xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.send();
+}
 
-    //Send the proper header information along with the request
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+function miscChange() {
+    document.querySelectorAll('.discord').forEach((element, index) => {
+        element.addEventListener('click', () => {
+            if (element.classList.contains('faded')) {
+                sendRequest('PUT', ('/' + document.querySelectorAll('.name')[index].querySelector('span').innerHTML + '/discord/1'));
+                element.classList.remove('faded');
+                element.alt = 'Has discord';
+            } else {
+                sendRequest('PUT', ('/' + document.querySelectorAll('.name')[index].querySelector('span').innerHTML + '/discord/0'));
+                element.classList.add('faded');
+                element.alt = 'No discord';
+            }
+        });
+    });
 
-    xhr.onreadystatechange = function() {//Call a function when the state changes.
-        if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-            // Request finished. Do processing here.
-        }
-    }
-
-    xhr.send("foo=bar&lorem=ipsum");
-    // xhr.send(new Blob());
-    // xhr.send(new Int8Array());
-    // xhr.send(document);
+    document.querySelectorAll('.civil').forEach((element, index) => {
+        element.addEventListener('click', () => {
+            if (element.classList.contains('faded')) {
+                sendRequest('PUT', ('/' + document.querySelectorAll('.name')[index].querySelector('span').innerHTML + '/civil/1'));
+                element.classList.remove('faded');
+                element.alt = 'Plays civil unrest';
+            } else {
+                sendRequest('PUT', ('/' + document.querySelectorAll('.name')[index].querySelector('span').innerHTML + '/civil/0'));
+                element.classList.add('faded');
+                element.alt = 'Doesn\'t play civil unrest';
+            }
+        });
+    });
 }
 
 function hiddenElements() {
@@ -53,7 +70,7 @@ function hiddenElements() {
     });
 }
 document.addEventListener('DOMContentLoaded', () => {
-
+    miscChange();
     hiddenElements();
 });
 

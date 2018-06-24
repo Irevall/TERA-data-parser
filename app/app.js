@@ -1,15 +1,32 @@
-const http = require('http');
-const koa = require('koa');
-const serve = require('koa-static');
+const Koa = require('koa');
+const Router = require('koa-router');
+const Serve = require('koa-static');
+const Sqlite = require('sqlite');
 
-const app = new koa();
+const app = new Koa();
+const router = new Router();
 
-app.use(serve('../html'));
-app.use(async (ctx) => {
-    if (ctx.request.url === '/') {
-        ctx.body = await deliverHTML();
-    }
+router.get('/', async (ctx, next) => {
+    ctx.body = await deliverHTML();
 });
+
+app.use(Serve('../html'));
+router.get('/', async (ctx, next) => {
+    console.log(ctx.response);
+    ctx.body = await deliverHTML();
+});
+
+router.put('/:id/:column/:data', async (ctx, next) => {
+    await updateDB(ctx.params);
+    console.log(ctx.params);
+});
+
+app.use(router.routes());
+// app.use(async (ctx) => {
+//     if (ctx.request.url === '/') {
+//         ctx.body = await deliverHTML();
+//     }
+// });
 
 app.listen(8080, () => {
     console.log('Server running on https://localhost:8080')
@@ -84,21 +101,21 @@ function dungeonsScore(data) {
 }
 
 function addRow(element, hasAlts) {
-    let html = '<div class="row"><div><span ';
+    let html = '<div class="row"><div class="name"><span ';
     html += (element.main !== '') ? ('title="Main: ' + element.main + '"') : '';
     html += '>';
     html += element.name;
     html += '</span>';
     html += (hasAlts) ? '<img src="icons/arrow.png" alt="Show alts" class="arrow"/>' : '';
-    html += '</div><div><span>';
+    html += '</div><div class="rank"><span>';
     html += element.rank;
-    html += '</div><div><span>';
+    html += '</div><div class="class"><span>';
     html += element.class;
-    html += '</div><div><span>';
+    html += '</div><div class="contribution"><span>';
     html += element.contrCurrent + ' (' + element.contrTotal + ')';
-    html += '</div><div><span>';
+    html += '</div><div class="last-online"><span>';
     html += element.lastOnline.split(',')[0];
-    html += '</div><div class="notes"><span class="empty">...</span><span class="content hidden">';
+    html += '</div><div class="note"><span class="empty">...</span><span class="content hidden">';
     html += element.note;
     html += '</span></div><div class="dungeons"><span class="empty">...</span><div class="content hidden">';
     html += dungeonsScore(element.RKE);
@@ -110,9 +127,9 @@ function addRow(element, hasAlts) {
     html += dungeonsScore(element.AANM);
     html += '</div></div><div class="dungeons"><span class="empty">...</span><div class="content hidden">';
     html += dungeonsScore(element.RKNM);
-    html += '</div></div><div>';
-    html += element.discord ? '<img src="icons/discord-blue.png" alt="Has discord" />' : '<img src="icons/discord-grey.png" alt="No discord" />';
-    html += element.civil ? '<img src="icons/sword-blue.png" alt="Plays civil unrest" />' : '<img src="icons/sword-grey.png" alt="Doesn\'t play civil unrest" />';
+    html += '</div></div><div class="misc">';
+    html += element.discord ? '<img src="icons/discord.png" alt="Has discord" class="discord"/>' : '<img src="icons/discord.png" alt="No discord" class="discord faded"/>';
+    html += element.civil ? '<img src="icons/sword.png" alt="Plays civil unrest" class="civil"/>' : '<img src="icons/sword.png" alt="Doesn\'t play civil unrest" class="civil faded"/>';
     html += '</div></div>';
     return html;
 }
@@ -155,9 +172,7 @@ function buildHTML(data) {
 }
 
 async function deliverHTML() {
-    const sqlite = require('sqlite');
-
-    const db = await sqlite.open('data/tera.db').catch(err => logAndExit(err));
+    const db = await Sqlite.open('data/tera.db').catch(err => logAndExit(err));
     console.log('Open DB connection.');
 
     const html = buildHTML(await db.all('select * from guild_members').catch(err => logAndExit(err)));
@@ -168,17 +183,23 @@ async function deliverHTML() {
     return html;
 }
 
-// const server = http.createServer(async (req, res) => {
-//     console.log('got request');
-//     console.log('Request', { method: req.method, url: req.url });
-//     let html = await deliverHTML();
-//     res.writeHead(200, {
-//         'Content-Type': 'text/html'
-//     });
-//     res.write(html);
-//     res.end();
-// }).listen(port);
-//
-// // server.listen(port, hostname, () => {
-// //     console.log(`Server running at http://${hostname}:${port}/`);
-// // });
+async function updateDB(data) {
+    if (!(data.column === 'discord' || data.column === 'civil')) {
+        console.log('bad request');
+        return {success: false, response: 'You can\'t change that column.'};
+    }
+    const db = await Sqlite.open('data/tera.db').catch(err => logAndExit(err));
+    console.log('Open DB connection.');
+
+    let sqlQuery = 'UPDATE guild_members SET ';
+    sqlQuery += data.column;
+    sqlQuery += ' = ? WHERE name = ?';
+
+    console.log(sqlQuery);
+    await db.run(sqlQuery, [data.data, data.id]).catch(err => logAndExit(err));
+
+    await db.close().catch(err => logAndExit(err));
+    console.log('Close DB connection.');
+
+    return {success: true, response: 'Database updated'}
+}

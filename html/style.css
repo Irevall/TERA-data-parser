@@ -57,6 +57,10 @@ main > .row:nth-of-type(1) > div {
     align-items: center;
 }
 
+.faded {
+    filter: grayscale(100%);
+}
+
 .content span {
     font-weight: bold;
 }
