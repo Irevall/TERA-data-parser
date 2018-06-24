@@ -6,6 +6,8 @@ body {
 }
 
 main {
+    margin-left: 5px;
+    margin-top: 5px;
     display: grid;
     width: max-content;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
@@ -28,8 +30,14 @@ main {
     align-items: center;
     flex-direction: row;
     padding: 0 6px 0 4px;
-    border-right: solid black 2px;
+}
+
+.row > div {
     border-bottom: solid black 2px;
+}
+
+.row > div:not(:last-of-type) {
+    border-right: solid black 2px;
 }
 
 main > .row:nth-of-type(1) > div {
@@ -40,11 +48,7 @@ main > .row:nth-of-type(1) > div {
     height: max-content;
 }
 
-.main:nth-of-type(2n) div {
-    background: #434f60;
-}
-
-.alts:nth-of-type(2n) div {
+main > .main:nth-child(2) * {
     background: #434f60;
 }
 
@@ -59,6 +63,7 @@ main > .row:nth-of-type(1) > div {
 
 .faded {
     filter: grayscale(100%);
+    opacity: 0.7;
 }
 
 .content span {
@@ -85,4 +90,16 @@ div img {
 
 main > .row:nth-child(1) > div {
     position: sticky;
+}
+
+.alts > .row > div:first-of-type, .alts > .row > div:last-of-type {
+    grid-column: span 2;
+}
+
+/*.alts > .row > div:last-of-type {*/
+    /*visibility: hidden;*/
+/*}*/
+
+.alts > .row > div:nth-of-type(1) > span {
+    margin-left: auto;
 }
