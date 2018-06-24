@@ -42,9 +42,9 @@ function hiddenElements() {
                     let target = '';
 
                     if (element2.querySelector('.rank') === null) {
-                        target = element2.querySelector('.dungeons:nth-of-type(' + (index) + ')');
+                        target = element2.querySelector('div:nth-of-type(' + (index) + ')');
                     } else {
-                        target = element2.querySelector('.dungeons:nth-of-type(' + (index + 1) + ')');
+                        target = element2.querySelector('div:nth-of-type(' + (index + 1) + ')');
                     }
 
                     if (index2 === 0) {
@@ -84,3 +84,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+// const xhr = new XMLHttpRequest();
+// xhr.open('GET', '/sorted/name/ASC', true);
+// xhr.onreadystatechange = function () {
+//     if(xhr.readyState === 4 && xhr.status === 200) {
+//         let doc = document.open('text/html');
+//         doc.write(xhr.responseText);
+//         doc.close();
+//     }
+// };
+// xhr.send();

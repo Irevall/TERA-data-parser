@@ -83,7 +83,7 @@ function addRow(element, hasAlts, showAlts) {
     html += '</div><div class="class"><span>';
     html += element.class;
     html += '</div><div class="contribution"><span>';
-    html += element.contrCurrent + ' (' + element.contrTotal + ')';
+    html += element.contrCurrent + ' ('  + element.contrTotal + ')';
     html += '</div><div class="last-online"><span title="' + element.lastOnline.split(',')[1] + '">';
     html += element.lastOnline.split(',')[0];
     html += '</div><div class="note"><span class="empty">...</span><span class="content hidden">';
@@ -99,13 +99,10 @@ function addRow(element, hasAlts, showAlts) {
     html += '</div></div><div class="dungeons"><span class="empty">...</span><div class="content hidden">';
     html += dungeonsScore(element.RKNM);
     html += '</div>';
-
+    html += '</div><div class="misc">';
     if (element.main === '') {
-        html += '</div><div class="misc">';
         html += element.discord ? '<img src="icons/discord.png" alt="Has discord" class="discord"/>' : '<img src="icons/discord.png" alt="No discord" class="discord faded"/>';
         html += element.civil ? '<img src="icons/sword.png" alt="Plays civil unrest" class="civil"/>' : '<img src="icons/sword.png" alt="Doesn\'t play civil unrest" class="civil faded"/>';
-    } else if (showAlts) {
-        html += '</div><div class="misc">';
     }
     html += '</div></div>';
     return html;
@@ -118,12 +115,11 @@ function buildHTML(data, showAlts) {
     head += '<link rel="stylesheet" type="text/css" href="style.css"/>';
     head += '<script src="main.js"></script>';
 
-    body += '<main><div class="row"><div>Name</div><div>Rank</div><div>Class</div><div>Contribution</div><div>Last online</div><div>Note</div><div>RKE</div><div>RRHM</div><div>TRNM</div><div>AANM</div><div>RKNM</div><div>Misc</div></div>';
+    body += '<main><div class="row"><div>Name</div><div>Rank</div><div>Class</div><div>Contribution</div><div>Last online</div><div>Note</div><div>RKE</div><div>RRHM</div><div>TRNM</div><div>AANM</div><div>RKNM</div><div>Misc</div></div><hr/>';
 
     if (showAlts === false) {
         data.forEach((element) => {
             body += '<div class="main">';
-            // body += addRow(element, true);
             body += ((element.alts.length === 0) ? addRow(element, false, showAlts) : addRow(element, true, showAlts));
             body += '</div>';
             body += '<div class="alts hidden">';

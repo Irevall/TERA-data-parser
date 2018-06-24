@@ -1,27 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 body {
     margin: 0;
-    background-color: #353c47;
-    color: #b0b1b2;
+    background-color: #2a3245;;
+    color: #dbdbdb;
     font-size: 20px;
+    font-family: 'Roboto', sans-serif;
 }
 
 main {
     margin-left: 5px;
     margin-top: 5px;
     display: grid;
+    grid-column-gap: 15px;
+    grid-row-gap: 7px;
     width: max-content;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
 }
 
-.main {
-    display: contents;
+hr {
+    grid-column: span 12;
+    width: 100%;
+    margin: 0;
 }
 
-.alts {
-    display: contents;
+hr {
+    opacity: 0.3;
 }
 
-.row {
+main > hr {
+    opacity: 1;
+}
+
+
+.main, .alts, .row {
     display: contents;
 }
 
@@ -29,27 +41,14 @@ main {
     display: flex;
     align-items: center;
     flex-direction: row;
-    padding: 0 6px 0 4px;
 }
 
-.row > div {
-    border-bottom: solid black 2px;
-}
-
-.row > div:not(:last-of-type) {
-    border-right: solid black 2px;
-}
-
-main > .row:nth-of-type(1) > div {
-    font-weight: bold;
+.row > div:not(:first-of-type) {
+    justify-content: flex-end;
 }
 
 .row span {
     height: max-content;
-}
-
-main > .main:nth-child(2) * {
-    background: #434f60;
 }
 
 .down {
@@ -92,14 +91,11 @@ main > .row:nth-child(1) > div {
     position: sticky;
 }
 
-.alts > .row > div:first-of-type, .alts > .row > div:last-of-type {
+.alts > .row > div:first-of-type {
     grid-column: span 2;
 }
 
-/*.alts > .row > div:last-of-type {*/
-    /*visibility: hidden;*/
-/*}*/
 
 .alts > .row > div:nth-of-type(1) > span {
-    margin-left: auto;
+    margin-left: 25px;
 }
