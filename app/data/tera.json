@@ -1,3121 +1,5434 @@
 [
- {
-  "name": "narianna",
-  "contrCurrent": 0,
-  "contrTotal": 1819,
-  "class": "Archer",
-  "rank": "Samurai",
-  "lastOnline": "19/06/2018, 8:57:27",
-  "note": "dark misstres ",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,810,616 (20.70% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 892,921 (13.44% party)"
+  {
+    "name": "narianna",
+    "contrCurrent": 0,
+    "contrTotal": 1819,
+    "class": "Archer",
+    "rank": "Samurai",
+    "lastOnline": 1530368996380,
+    "note": "dark misstres ",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1810616",
+        "partyPercent": "20.70%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "892921",
+        "partyPercent": "13.44%"
+      }
+    }
+  },
+  {
+    "name": "Smyrnaa",
+    "contrCurrent": 0,
+    "contrTotal": 770,
+    "class": "Sorcerer",
+    "rank": "Samurai",
+    "lastOnline": 1530365069380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "2128946",
+        "partyPercent": "24.80%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "1357493",
+        "partyPercent": "17.65%"
+      },
+      "AANM": {
+        "completed": true,
+        "dps": "1092597",
+        "partyPercent": "18.68%"
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1717452",
+        "partyPercent": "23.25%"
+      }
+    }
+  },
+  {
+    "name": "Skormy",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Mystic",
+    "rank": "Daikatana",
+    "lastOnline": 1529344325380,
+    "note": "~Skormy™ the Critty-Cat~",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Estii",
+    "contrCurrent": 208,
+    "contrTotal": 0,
+    "class": "Gunner",
+    "rank": "Ronin",
+    "lastOnline": 1530315410380,
+    "note": "Xhestyi",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "1421348",
+        "partyPercent": "24.46%"
+      },
+      "AANM": {
+        "completed": true,
+        "dps": "1059398",
+        "partyPercent": "18.15%"
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1393244",
+        "partyPercent": "23.59%"
+      }
+    }
+  },
+  {
+    "name": "Adälyn",
+    "contrCurrent": 160,
+    "contrTotal": 796,
+    "class": "Priest",
+    "rank": "Samurai",
+    "lastOnline": 1530367101380,
+    "note": "Addie c:",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "Triple Nemesis": "87%",
+        "Energy Stars": "88%",
+        "Edict of Judgement": "2%",
+        "Divine Charge": "1%"
+      },
+      "RKE": {
+        "completed": true,
+        "Triple Nemesis": "75%",
+        "Energy Stars": "94%",
+        "Edict of Judgement": "1%",
+        "Divine Charge": "1%"
+      },
+      "RRHM": {
+        "completed": true,
+        "Triple Nemesis": "54%",
+        "Energy Stars": "76%",
+        "Edict of Judgement": "1%",
+        "Divine Charge": "1%"
+      },
+      "AANM": {
+        "completed": true,
+        "Triple Nemesis": "69%",
+        "Energy Stars": "84%",
+        "Edict of Judgement": "0%",
+        "Divine Charge": "1%"
+      },
+      "RKNM": {
+        "completed": true,
+        "Triple Nemesis": "94%",
+        "Energy Stars": "93%",
+        "Edict of Judgement": "1%",
+        "Divine Charge": "1%"
+      }
+    }
+  },
+  {
+    "name": "Skorynne",
+    "contrCurrent": 440,
+    "contrTotal": 888,
+    "class": "Gunner",
+    "rank": "Daikatana",
+    "lastOnline": 1530374766380,
+    "note": "Skormy's Gun-Cat",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "920557",
+        "partyPercent": "19.02%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "1077077",
+        "partyPercent": "21.24%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1216701",
+        "partyPercent": "17.84%"
+      }
+    }
+  },
+  {
+    "name": "Kurandera",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Priest",
+    "rank": "Ronin",
+    "lastOnline": 1529101296380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Elezarïa",
+    "contrCurrent": 60,
+    "contrTotal": 408,
+    "class": "Berserker",
+    "rank": "Alts",
+    "lastOnline": 1530367097380,
+    "note": "ew, ele",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "4959597",
+        "partyPercent": "43.42%"
+      },
+      "RKE": {
+        "completed": true,
+        "dps": "2187627",
+        "partyPercent": "30.61%"
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "1937414",
+        "partyPercent": "32.73%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "3459328",
+        "partyPercent": "34.92%"
+      }
+    }
+  },
+  {
+    "name": "Valandiel",
+    "contrCurrent": 0,
+    "contrTotal": 280,
+    "class": "Archer",
+    "rank": "Alts",
+    "lastOnline": 1530312118380,
+    "note": "Yo it's Smartie with a bow!",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1568175",
+        "partyPercent": "17.21%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "877143",
+        "partyPercent": "15.50%"
+      }
+    }
+  },
+  {
+    "name": "Aceseron",
+    "contrCurrent": 208,
+    "contrTotal": 0,
+    "class": "Archer",
+    "rank": "Ronin",
+    "lastOnline": 1530373800380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "4305106",
+        "partyPercent": "36.19%"
+      },
+      "RKE": {
+        "completed": true,
+        "dps": "2150228",
+        "partyPercent": "25.58%"
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "2317229",
+        "partyPercent": "29.52%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "2671625",
+        "partyPercent": "30.17%"
+      }
+    }
+  },
+  {
+    "name": "Nikki.Arkest",
+    "contrCurrent": 72,
+    "contrTotal": 1346,
+    "class": "Reaper",
+    "rank": "Daikatana",
+    "lastOnline": 1530368331380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1960967",
+        "partyPercent": "23.85%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "889739",
+        "partyPercent": "16.59%"
+      }
+    }
+  },
+  {
+    "name": "Xnxxx.Pussy",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Priest",
+    "rank": "Ronin",
+    "lastOnline": 1530304498380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "Triple Nemesis": "69%",
+        "Energy Stars": "79%",
+        "Edict of Judgement": "1%",
+        "Divine Charge": "1%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "Triple Nemesis": "66%",
+        "Energy Stars": "77%",
+        "Edict of Judgement": "1%",
+        "Divine Charge": "1%"
+      }
+    }
+  },
+  {
+    "name": "Lvpin",
+    "contrCurrent": 176,
+    "contrTotal": 584,
+    "class": "Warrior",
+    "rank": "Ronin",
+    "lastOnline": 1530351587380,
+    "note": "wat",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "2429728",
+        "partyPercent": "24.06%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1529538",
+        "partyPercent": "21.84%"
+      }
+    }
+  },
+  {
+    "name": "Skorbulancer",
+    "contrCurrent": 0,
+    "contrTotal": 180,
+    "class": "Lancer",
+    "rank": "Daikatana",
+    "lastOnline": 1530315707380,
+    "note": "Skormy's Lancer",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "769219",
+        "partyPercent": "8.15%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Delmar",
+    "contrCurrent": 28,
+    "contrTotal": 0,
+    "class": "Archer",
+    "rank": "Ronin",
+    "lastOnline": 1530377600380,
+    "note": "Red Hot Chili Pepper",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "3390653",
+        "partyPercent": "28.79%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "2115045",
+        "partyPercent": "24.76%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "3090599",
+        "partyPercent": "31.98%"
+      }
+    }
+  },
+  {
+    "name": "Tiltlyn",
+    "contrCurrent": 156,
+    "contrTotal": 484,
+    "class": "Brawler",
+    "rank": "Samurai",
+    "lastOnline": 1530367462380,
+    "note": "Don't Interact Me.",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "3669229",
+        "partyPercent": "33.38%"
+      },
+      "RKE": {
+        "completed": true,
+        "dps": "2530000",
+        "partyPercent": "30.73%"
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "2880372",
+        "partyPercent": "37.82%"
+      },
+      "AANM": {
+        "completed": true,
+        "dps": "2027834",
+        "partyPercent": "34.57%"
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "3499304",
+        "partyPercent": "34.44%"
+      }
+    }
+  },
+  {
+    "name": "Skorrior",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Warrior",
+    "rank": "Daikatana",
+    "lastOnline": 1529344372380,
+    "note": "Skormy's Warrior",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Lyria.Chan",
+    "contrCurrent": 120,
+    "contrTotal": 720,
+    "class": "Lancer",
+    "rank": "Samurai",
+    "lastOnline": 1530292997380,
+    "note": "Lyria MAIN",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1491931",
+        "partyPercent": "20.30%"
+      },
+      "RKE": {
+        "completed": true,
+        "dps": "846167",
+        "partyPercent": "13.16%"
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "691348",
+        "partyPercent": "15.52%"
+      },
+      "AANM": {
+        "completed": true,
+        "dps": "802199",
+        "partyPercent": "13.79%"
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1242506",
+        "partyPercent": "17.68%"
+      }
+    }
+  },
+  {
+    "name": "Skorpurr",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Reaper",
+    "rank": "Daikatana",
+    "lastOnline": 1529883233380,
+    "note": "Skormy's Etching-Demon",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Mini.Setesh",
+    "contrCurrent": 0,
+    "contrTotal": 1659,
+    "class": "Berserker",
+    "rank": "Daikatana",
+    "lastOnline": 1529968721380,
+    "note": "yo :3 ",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1494754",
+        "partyPercent": "19.73%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "706546",
+        "partyPercent": "12.48%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1481543",
+        "partyPercent": "18.86%"
+      }
+    }
+  },
+  {
+    "name": "Rooooocket",
+    "contrCurrent": 56,
+    "contrTotal": 2248,
+    "class": "Gunner",
+    "rank": "Samurai",
+    "lastOnline": 1530378671380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1637522",
+        "partyPercent": "22.56%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "894990",
+        "partyPercent": "13.58%"
+      }
+    }
+  },
+  {
+    "name": "Skorpri",
+    "contrCurrent": 364,
+    "contrTotal": 2156,
+    "class": "Priest",
+    "rank": "Daikatana",
+    "lastOnline": 1530305521380,
+    "note": "Skormy's Priest",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "Triple Nemesis": "93%",
+        "Energy Stars": "89%",
+        "Edict of Judgement": "3%",
+        "Divine Charge": "2%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": true,
+        "Triple Nemesis": "65%",
+        "Energy Stars": "69%",
+        "Edict of Judgement": "1%",
+        "Divine Charge": "1%"
+      },
+      "AANM": {
+        "completed": true,
+        "Triple Nemesis": "4%",
+        "Energy Stars": "64%",
+        "Edict of Judgement": "0%",
+        "Divine Charge": "1%"
+      },
+      "RKNM": {
+        "completed": true,
+        "Triple Nemesis": "88%",
+        "Energy Stars": "89%",
+        "Edict of Judgement": "1%",
+        "Divine Charge": "1%"
+      }
+    }
+  },
+  {
+    "name": "Savarah",
+    "contrCurrent": 0,
+    "contrTotal": 468,
+    "class": "Berserker",
+    "rank": "Ronin",
+    "lastOnline": 1530287156380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1035243",
+        "partyPercent": "15.19%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Gam_Den",
+    "contrCurrent": 45,
+    "contrTotal": 3887,
+    "class": "Valkyrie",
+    "rank": "Samurai",
+    "lastOnline": 1529854009380,
+    "note": "HeLLo ThErE \\o/",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "2769762",
+        "partyPercent": "28.29%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "1239330",
+        "partyPercent": "19.29%"
+      },
+      "AANM": {
+        "completed": true,
+        "dps": "904986",
+        "partyPercent": "22.91%"
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "2131559",
+        "partyPercent": "27.58%"
+      }
+    }
+  },
+  {
+    "name": "Prav",
+    "contrCurrent": 247,
+    "contrTotal": 4555,
+    "class": "Gunner",
+    "rank": "Daikatana",
+    "lastOnline": 1530377606380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "4121144",
+        "partyPercent": "49.32%"
+      },
+      "RKE": {
+        "completed": true,
+        "dps": "2332298",
+        "partyPercent": "30.53%"
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "1921284",
+        "partyPercent": "30.95%"
+      },
+      "AANM": {
+        "completed": true,
+        "dps": "2016837",
+        "partyPercent": "31.35%"
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "2970123",
+        "partyPercent": "33.80%"
+      }
+    }
+  },
+  {
+    "name": "Daianoia",
+    "contrCurrent": 172,
+    "contrTotal": 276,
+    "class": "Mystic",
+    "rank": "Alts",
+    "lastOnline": 1530223189380,
+    "note": "Addie c:",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "Volley of Curses": "92%",
+        "Contagion": "0%",
+        "Thrall of Vengeance": "5%",
+        "Thrall of Wrath": "4%"
+      },
+      "RKE": {
+        "completed": true,
+        "Volley of Curses": "99%",
+        "Contagion": "0%",
+        "Thrall of Vengeance": "35%",
+        "Thrall of Wrath": "17%"
+      },
+      "RRHM": {
+        "completed": true,
+        "Volley of Curses": "86%",
+        "Contagion": "0%",
+        "Thrall of Vengeance": "25%",
+        "Thrall of Wrath": "14%"
+      },
+      "AANM": {
+        "completed": true,
+        "Volley of Curses": "88%",
+        "Contagion": "0%",
+        "Thrall of Vengeance": "24%",
+        "Thrall of Wrath": "16%"
+      },
+      "RKNM": {
+        "completed": true,
+        "Volley of Curses": "96%",
+        "Contagion": "0%",
+        "Thrall of Vengeance": "13%",
+        "Thrall of Wrath": "7%"
+      }
+    }
+  },
+  {
+    "name": "Annaliisa",
+    "contrCurrent": 96,
+    "contrTotal": 88,
+    "class": "Ninja",
+    "rank": "Ronin",
+    "lastOnline": 1530345518380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "2251885",
+        "partyPercent": "32.06%"
+      },
+      "RKE": {
+        "completed": true,
+        "dps": "1564631",
+        "partyPercent": "21.41%"
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "1012567",
+        "partyPercent": "17.25%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1659970",
+        "partyPercent": "23.17%"
+      }
+    }
+  },
+  {
+    "name": "Sociopath",
+    "contrCurrent": 148,
+    "contrTotal": 0,
+    "class": "Gunner",
+    "rank": "Ronin",
+    "lastOnline": 1530375119380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1903084",
+        "partyPercent": "24.87%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "1716732",
+        "partyPercent": "25.43%"
+      },
+      "AANM": {
+        "completed": true,
+        "dps": "1338563",
+        "partyPercent": "18.59%"
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "2036289",
+        "partyPercent": "25.52%"
+      }
+    }
+  },
+  {
+    "name": "suzyi",
+    "contrCurrent": 297,
+    "contrTotal": 8121,
+    "class": "Archer",
+    "rank": "Shogun",
+    "lastOnline": 1530362527380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "4109044",
+        "partyPercent": "43.68%"
+      },
+      "RKE": {
+        "completed": true,
+        "dps": "1104645",
+        "partyPercent": "13.55%"
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "1525260",
+        "partyPercent": "30.15%"
+      },
+      "AANM": {
+        "completed": true,
+        "dps": "1419500",
+        "partyPercent": "37.96%"
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "2657969",
+        "partyPercent": "35.33%"
+      }
+    }
+  },
+  {
+    "name": "Devils.Death",
+    "contrCurrent": 0,
+    "contrTotal": 618,
+    "class": "Warrior",
+    "rank": "Samurai",
+    "lastOnline": 1530327408380,
+    "note": "DeviL",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "754139",
+        "partyPercent": "14.76%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "342946",
+        "partyPercent": "8.14%"
+      }
+    }
+  },
+  {
+    "name": "Raikillua",
+    "contrCurrent": 216,
+    "contrTotal": 4784,
+    "class": "Mystic",
+    "rank": "Emperor",
+    "lastOnline": 1530380283380,
+    "note": "Rai",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "Volley of Curses": "82%",
+        "Contagion": "0%",
+        "Thrall of Vengeance": "11%",
+        "Thrall of Wrath": "6%"
+      },
+      "RKE": {
+        "completed": true,
+        "Volley of Curses": "93%",
+        "Contagion": "0%",
+        "Thrall of Vengeance": "30%",
+        "Thrall of Wrath": "9%"
+      },
+      "RRHM": {
+        "completed": true,
+        "Volley of Curses": "78%",
+        "Contagion": "0%",
+        "Thrall of Vengeance": "17%",
+        "Thrall of Wrath": "6%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "Volley of Curses": "92%",
+        "Contagion": "0%",
+        "Thrall of Vengeance": "14%",
+        "Thrall of Wrath": "5%"
+      }
+    }
+  },
+  {
+    "name": "Falling.Leaf",
+    "contrCurrent": 180,
+    "contrTotal": 2008,
+    "class": "Gunner",
+    "rank": "Samurai",
+    "lastOnline": 1530377882380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "2603897",
+        "partyPercent": "29.42%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "932022",
+        "partyPercent": "18.93%"
+      },
+      "AANM": {
+        "completed": true,
+        "dps": "947922",
+        "partyPercent": "18.01%"
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1662605",
+        "partyPercent": "27.74%"
+      }
+    }
+  },
+  {
+    "name": "Inter.Stellar",
+    "contrCurrent": 293,
+    "contrTotal": 1912,
+    "class": "Valkyrie",
+    "rank": "Samurai",
+    "lastOnline": 1530379398380,
+    "note": "Tessla",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "2019769",
+        "partyPercent": "24.70%"
+      },
+      "RKE": {
+        "completed": true,
+        "dps": "1018374",
+        "partyPercent": "14.87%"
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "690804",
+        "partyPercent": "15.33%"
+      },
+      "AANM": {
+        "completed": true,
+        "dps": "1053804",
+        "partyPercent": "19.97%"
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1605857",
+        "partyPercent": "24.05%"
+      }
+    }
+  },
+  {
+    "name": "Emlyn",
+    "contrCurrent": 618,
+    "contrTotal": 816,
+    "class": "Valkyrie",
+    "rank": "Samurai",
+    "lastOnline": 1530374528380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "2475942",
+        "partyPercent": "26.40%"
+      },
+      "RKE": {
+        "completed": true,
+        "dps": "788049",
+        "partyPercent": "10.67%"
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "468177",
+        "partyPercent": "10.81%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1937613",
+        "partyPercent": "23.28%"
+      }
+    }
+  },
+  {
+    "name": "Skorbe",
+    "contrCurrent": 0,
+    "contrTotal": 28,
+    "class": "Berserker",
+    "rank": "Daikatana",
+    "lastOnline": 1530302970380,
+    "note": "Skormy's Berser-Chick",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1074199",
+        "partyPercent": "21.21%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "wwzeroww",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Warrior",
+    "rank": "Ronin",
+    "lastOnline": 1530132939380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Namestre",
+    "contrCurrent": 0,
+    "contrTotal": 6399,
+    "class": "Brawler",
+    "rank": "Excused",
+    "lastOnline": 1528040639380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1880089",
+        "partyPercent": "22.21%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1321689",
+        "partyPercent": "20.83%"
+      }
+    }
+  },
+  {
+    "name": "Skorcher",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Archer",
+    "rank": "Daikatana",
+    "lastOnline": 1529344278380,
+    "note": "Skormy's Archer",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Santa",
+    "contrCurrent": 0,
+    "contrTotal": 1042,
+    "class": "Lancer",
+    "rank": "Samurai",
+    "lastOnline": 1530126170380,
+    "note": "Kakoo`s alt",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "677309",
+        "partyPercent": "7.91%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "220427",
+        "partyPercent": "5.36%"
+      }
+    }
+  },
+  {
+    "name": "Raikira",
+    "contrCurrent": 0,
+    "contrTotal": 901,
+    "class": "Gunner",
+    "rank": "Emperor",
+    "lastOnline": 1530374928380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1411320",
+        "partyPercent": "21.68%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "933868",
+        "partyPercent": "17.73%"
+      }
+    }
+  },
+  {
+    "name": "Torcy",
+    "contrCurrent": 212,
+    "contrTotal": 1713,
+    "class": "Gunner",
+    "rank": "Samurai",
+    "lastOnline": 1530375376380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "2492572",
+        "partyPercent": "27.18%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "1428022",
+        "partyPercent": "28.55%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "2169183",
+        "partyPercent": "26.38%"
+      }
+    }
+  },
+  {
+    "name": "Achu",
+    "contrCurrent": 340,
+    "contrTotal": 84,
+    "class": "Lancer",
+    "rank": "Alts",
+    "lastOnline": 1530378252380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": true,
+        "dps": "787910",
+        "partyPercent": "11.51%"
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "1176563",
+        "partyPercent": "16.35%"
+      },
+      "AANM": {
+        "completed": true,
+        "dps": "1025196",
+        "partyPercent": "14.71%"
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1202192",
+        "partyPercent": "17.10%"
+      }
+    }
+  },
+  {
+    "name": "Yuraiyka",
+    "contrCurrent": 0,
+    "contrTotal": 200,
+    "class": "Brawler",
+    "rank": "Alts",
+    "lastOnline": 1529535486380,
+    "note": "Lyria",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1934092",
+        "partyPercent": "28.96%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "1510349",
+        "partyPercent": "30.97%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1721496",
+        "partyPercent": "24.42%"
+      }
+    }
+  },
+  {
+    "name": "Skoryer",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Slayer",
+    "rank": "Daikatana",
+    "lastOnline": 1529344631380,
+    "note": "Skormy's Slayer",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Mereida",
+    "contrCurrent": 56,
+    "contrTotal": 1538,
+    "class": "Priest",
+    "rank": "Daikatana",
+    "lastOnline": 1530362477380,
+    "note": "Mira",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "Triple Nemesis": "65%",
+        "Energy Stars": "83%",
+        "Edict of Judgement": "2%",
+        "Divine Charge": "1%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": true,
+        "Triple Nemesis": "24%",
+        "Energy Stars": "33%",
+        "Edict of Judgement": "0%",
+        "Divine Charge": "13%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "Triple Nemesis": "69%",
+        "Energy Stars": "86%",
+        "Edict of Judgement": "6%",
+        "Divine Charge": "1%"
+      }
+    }
+  },
+  {
+    "name": "Smyrna",
+    "contrCurrent": 0,
+    "contrTotal": 80,
+    "class": "Valkyrie",
+    "rank": "Alts",
+    "lastOnline": 1530144444380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1884753",
+        "partyPercent": "27.36%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "838932",
+        "partyPercent": "10.73%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "825777",
+        "partyPercent": "19.85%"
+      }
+    }
+  },
+  {
+    "name": "Raikina",
+    "contrCurrent": 400,
+    "contrTotal": 4447,
+    "class": "Brawler",
+    "rank": "GuildMaster",
+    "lastOnline": 1530365198380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "2544977",
+        "partyPercent": "28.70%"
+      },
+      "RKE": {
+        "completed": true,
+        "dps": "1335557",
+        "partyPercent": "19.43%"
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "1600964",
+        "partyPercent": "34.74%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1811139",
+        "partyPercent": "24.99%"
+      }
+    }
+  },
+  {
+    "name": "Lucky.Charm",
+    "contrCurrent": 176,
+    "contrTotal": 1766,
+    "class": "Mystic",
+    "rank": "Daikatana",
+    "lastOnline": 1530353625380,
+    "note": "Main/Mira",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "Volley of Curses": "85%",
+        "Contagion": "0%",
+        "Thrall of Vengeance": "2%",
+        "Thrall of Wrath": "5%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": true,
+        "Volley of Curses": "45%",
+        "Contagion": "0%",
+        "Thrall of Vengeance": "3%",
+        "Thrall of Wrath": "6%"
+      },
+      "AANM": {
+        "completed": true,
+        "Volley of Curses": "59%",
+        "Contagion": "0%",
+        "Thrall of Vengeance": "5%",
+        "Thrall of Wrath": "7%"
+      },
+      "RKNM": {
+        "completed": true,
+        "Volley of Curses": "91%",
+        "Contagion": "0%",
+        "Thrall of Vengeance": "6%",
+        "Thrall of Wrath": "4%"
+      }
+    }
+  },
+  {
+    "name": "Molgron",
+    "contrCurrent": 88,
+    "contrTotal": 364,
+    "class": "Priest",
+    "rank": "Alts",
+    "lastOnline": 1530351972380,
+    "note": "What a day, what a lovely Day",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "Triple Nemesis": "78%",
+        "Energy Stars": "82%",
+        "Edict of Judgement": "0%",
+        "Divine Charge": "1%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": true,
+        "Triple Nemesis": "40%",
+        "Energy Stars": "40%",
+        "Edict of Judgement": "0%",
+        "Divine Charge": "1%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "Triple Nemesis": "87%",
+        "Energy Stars": "82%",
+        "Edict of Judgement": "0%",
+        "Divine Charge": "1%"
+      }
+    }
+  },
+  {
+    "name": "dilia",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Archer",
+    "rank": "Shogun",
+    "lastOnline": 1529135368380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Aellio",
+    "contrCurrent": 0,
+    "contrTotal": 68,
+    "class": "Brawler",
+    "rank": "Ronin",
+    "lastOnline": 1529872266380,
+    "note": "Look it's Smartie in a bikini",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "926724",
+        "partyPercent": "14.18%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Kan.U",
+    "contrCurrent": 84,
+    "contrTotal": 232,
+    "class": "Valkyrie",
+    "rank": "Alts",
+    "lastOnline": 1530111936380,
+    "note": "Lyria 3th DPS",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1411516",
+        "partyPercent": "18.54%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "960532",
+        "partyPercent": "14.88%"
+      }
+    }
+  },
+  {
+    "name": "Lury",
+    "contrCurrent": 704,
+    "contrTotal": 152,
+    "class": "Warrior",
+    "rank": "Samurai",
+    "lastOnline": 1530333549380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "2623250",
+        "partyPercent": "27.86%"
+      },
+      "RKE": {
+        "completed": true,
+        "dps": "1820852",
+        "partyPercent": "25.45%"
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "1591853",
+        "partyPercent": "25.25%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1854003",
+        "partyPercent": "21.15%"
+      }
+    }
+  },
+  {
+    "name": "Roaronoa",
+    "contrCurrent": 60,
+    "contrTotal": 1500,
+    "class": "Warrior",
+    "rank": "Emperor",
+    "lastOnline": 1530294141380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1898439",
+        "partyPercent": "31.03%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1508314",
+        "partyPercent": "21.69%"
+      }
+    }
+  },
+  {
+    "name": "Lyirix",
+    "contrCurrent": 96,
+    "contrTotal": 388,
+    "class": "Sorcerer",
+    "rank": "Alts",
+    "lastOnline": 1530192461380,
+    "note": "Lyria Main DPS",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1887194",
+        "partyPercent": "29.40%"
+      },
+      "RKE": {
+        "completed": true,
+        "dps": "1164782",
+        "partyPercent": "15.97%"
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "1496960",
+        "partyPercent": "18.64%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1316048",
+        "partyPercent": "21.37%"
+      }
+    }
+  },
+  {
+    "name": "Kebu",
+    "contrCurrent": 0,
+    "contrTotal": 2570,
+    "class": "Brawler",
+    "rank": "Samurai",
+    "lastOnline": 1530274729380,
+    "note": "Rai's left nut",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "3071648",
+        "partyPercent": "36.95%"
+      },
+      "RKE": {
+        "completed": true,
+        "dps": "1321603",
+        "partyPercent": "18.83%"
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "1501798",
+        "partyPercent": "30.28%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "2337836",
+        "partyPercent": "31.99%"
+      }
+    }
+  },
+  {
+    "name": "Ninjii",
+    "contrCurrent": 232,
+    "contrTotal": 1332,
+    "class": "Brawler",
+    "rank": "Samurai",
+    "lastOnline": 1530356729380,
+    "note": "nab extraordinaire &lt;3",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "2601784",
+        "partyPercent": "23.94%"
+      },
+      "RKE": {
+        "completed": true,
+        "dps": "1469000",
+        "partyPercent": "20.11%"
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "2175040",
+        "partyPercent": "30.80%"
+      },
+      "AANM": {
+        "completed": true,
+        "dps": "1782492",
+        "partyPercent": "23.59%"
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "2380506",
+        "partyPercent": "25.29%"
+      }
+    }
+  },
+  {
+    "name": "Slim.Chance",
+    "contrCurrent": 128,
+    "contrTotal": 0,
+    "class": "Valkyrie",
+    "rank": "Ronin",
+    "lastOnline": 1530380451380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1597260",
+        "partyPercent": "20.30%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "842484",
+        "partyPercent": "13.13%"
+      }
+    }
+  },
+  {
+    "name": "Nastr",
+    "contrCurrent": 0,
+    "contrTotal": 296,
+    "class": "Archer",
+    "rank": "Ronin",
+    "lastOnline": 1529465137380,
+    "note": "boK na logikata :)",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Tessla",
+    "contrCurrent": 48,
+    "contrTotal": 300,
+    "class": "Berserker",
+    "rank": "Alts",
+    "lastOnline": 1529936780380,
+    "note": "Inter.Stellar",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1176681",
+        "partyPercent": "13.71%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Skorrawline",
+    "contrCurrent": 220,
+    "contrTotal": 1616,
+    "class": "Brawler",
+    "rank": "Daikatana",
+    "lastOnline": 1530318098380,
+    "note": "Skormy's Brawler Cat",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1425514",
+        "partyPercent": "17.54%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "559224",
+        "partyPercent": "15.59%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1254575",
+        "partyPercent": "19.49%"
+      }
+    }
+  },
+  {
+    "name": "Teaspoon",
+    "contrCurrent": 0,
+    "contrTotal": 248,
+    "class": "Slayer",
+    "rank": "Ronin",
+    "lastOnline": 1530190608380,
+    "note": "Aloha!",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "3411572",
+        "partyPercent": "32.07%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1608483",
+        "partyPercent": "21.21%"
+      }
+    }
+  },
+  {
+    "name": "Princess.Julia",
+    "contrCurrent": 0,
+    "contrTotal": 106,
+    "class": "Sorcerer",
+    "rank": "Alts",
+    "lastOnline": 1530275838380,
+    "note": "No.Escape",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "396563",
+        "partyPercent": "9.66%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "476344",
+        "partyPercent": "7.93%"
+      }
+    }
+  },
+  {
+    "name": "Mazin.Kaiser",
+    "contrCurrent": 149,
+    "contrTotal": 3297,
+    "class": "Berserker",
+    "rank": "Shogun",
+    "lastOnline": 1530365261380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "4203511",
+        "partyPercent": "45.03%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "1238906",
+        "partyPercent": "23.04%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "2826600",
+        "partyPercent": "32.91%"
+      }
+    }
+  },
+  {
+    "name": "Skorcerer",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Sorcerer",
+    "rank": "Daikatana",
+    "lastOnline": 1529344496380,
+    "note": "Skormy's Sorcerer",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Morrandai",
+    "contrCurrent": 32,
+    "contrTotal": 0,
+    "class": "Sorcerer",
+    "rank": "Samurai",
+    "lastOnline": 1530377671380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1800781",
+        "partyPercent": "22.86%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "527617",
+        "partyPercent": "12.46%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1432609",
+        "partyPercent": "29.83%"
+      }
+    }
+  },
+  {
+    "name": "Deonna",
+    "contrCurrent": 0,
+    "contrTotal": 208,
+    "class": "Archer",
+    "rank": "Alts",
+    "lastOnline": 1530372053380,
+    "note": "Torcy's alt",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "2010499",
+        "partyPercent": "28.20%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "2083136",
+        "partyPercent": "20.96%"
+      }
+    }
+  },
+  {
+    "name": "Khan.n",
+    "contrCurrent": 25,
+    "contrTotal": 124,
+    "class": "Warrior",
+    "rank": "Ronin",
+    "lastOnline": 1530379249380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "357007",
+        "partyPercent": "7.22%"
+      }
+    }
+  },
+  {
+    "name": "A.dox",
+    "contrCurrent": 143,
+    "contrTotal": 1581,
+    "class": "Warrior",
+    "rank": "Samurai",
+    "lastOnline": 1530353662380,
+    "note": "Molgron's ALT",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "3548107",
+        "partyPercent": "31.27%"
+      },
+      "RKE": {
+        "completed": true,
+        "dps": "2339478",
+        "partyPercent": "28.96%"
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "2133733",
+        "partyPercent": "27.27%"
+      },
+      "AANM": {
+        "completed": true,
+        "dps": "2294297",
+        "partyPercent": "28.33%"
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "3108437",
+        "partyPercent": "34.16%"
+      }
+    }
+  },
+  {
+    "name": "Vertigoo",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Archer",
+    "rank": "Alts",
+    "lastOnline": 1530143601380,
+    "note": "Cinali ",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1422747",
+        "partyPercent": "21.56%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "776413",
+        "partyPercent": "14.24%"
+      }
+    }
+  },
+  {
+    "name": "Name.Crush",
+    "contrCurrent": 0,
+    "contrTotal": 4108,
+    "class": "Berserker",
+    "rank": "Alts",
+    "lastOnline": 1527789978380,
+    "note": "Namestre alt",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "2220003",
+        "partyPercent": "27.87%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1418160",
+        "partyPercent": "26.05%"
+      }
+    }
+  },
+  {
+    "name": "Cosmoria",
+    "contrCurrent": 28,
+    "contrTotal": 182,
+    "class": "Warrior",
+    "rank": "Samurai",
+    "lastOnline": 1530349888380,
+    "note": "Ditto",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1534266",
+        "partyPercent": "25.22%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1463832",
+        "partyPercent": "23.65%"
+      }
+    }
+  },
+  {
+    "name": "Yojimbo",
+    "contrCurrent": 0,
+    "contrTotal": 76,
+    "class": "Warrior",
+    "rank": "Excused",
+    "lastOnline": 1526221966380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "926974",
+        "partyPercent": "15.26%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Tarik.Farrah",
+    "contrCurrent": 64,
+    "contrTotal": 392,
+    "class": "Archer",
+    "rank": "Alts",
+    "lastOnline": 1529945823380,
+    "note": "Lyria",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1606782",
+        "partyPercent": "23.22%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "836021",
+        "partyPercent": "16.05%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1302446",
+        "partyPercent": "19.72%"
+      }
+    }
+  },
+  {
+    "name": "Lyirai",
+    "contrCurrent": 0,
+    "contrTotal": 56,
+    "class": "Priest",
+    "rank": "Alts",
+    "lastOnline": 1529338247380,
+    "note": "Lyria",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "Triple Nemesis": "93%",
+        "Energy Stars": "88%",
+        "Edict of Judgement": "0%",
+        "Divine Charge": "1%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "Triple Nemesis": "96%",
+        "Energy Stars": "92%",
+        "Edict of Judgement": "1%",
+        "Divine Charge": "1%"
+      }
+    }
+  },
+  {
+    "name": "Aloly",
+    "contrCurrent": 28,
+    "contrTotal": 0,
+    "class": "Mystic",
+    "rank": "Alts",
+    "lastOnline": 1530290551380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "Volley of Curses": "96%",
+        "Contagion": "0%",
+        "Thrall of Vengeance": "20%",
+        "Thrall of Wrath": "13%"
+      },
+      "RKE": {
+        "completed": true,
+        "Volley of Curses": "84%",
+        "Contagion": "0%",
+        "Thrall of Vengeance": "26%",
+        "Thrall of Wrath": "21%"
+      },
+      "RRHM": {
+        "completed": true,
+        "Volley of Curses": "75%",
+        "Contagion": "0%",
+        "Thrall of Vengeance": "31%",
+        "Thrall of Wrath": "18%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "Volley of Curses": "99%",
+        "Contagion": "0%",
+        "Thrall of Vengeance": "15%",
+        "Thrall of Wrath": "8%"
+      }
+    }
+  },
+  {
+    "name": "Skory",
+    "contrCurrent": 124,
+    "contrTotal": 1460,
+    "class": "Slayer",
+    "rank": "Daikatana",
+    "lastOnline": 1530324655380,
+    "note": "Skormy's (elin)Slayer",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1904509",
+        "partyPercent": "21.36%"
+      },
+      "RKE": {
+        "completed": true,
+        "dps": "919031",
+        "partyPercent": "15.05%"
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "719456",
+        "partyPercent": "13.67%"
+      },
+      "AANM": {
+        "completed": true,
+        "dps": "690410",
+        "partyPercent": "14.61%"
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1059898",
+        "partyPercent": "17.42%"
+      }
+    }
+  },
+  {
+    "name": "Kawaii.grill",
+    "contrCurrent": 57,
+    "contrTotal": 2526,
+    "class": "Slayer",
+    "rank": "Daikatana",
+    "lastOnline": 1530343693380,
+    "note": "WTB Tank",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "3076378",
+        "partyPercent": "32.84%"
+      },
+      "RKE": {
+        "completed": true,
+        "dps": "2145191",
+        "partyPercent": "26.39%"
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "1839364",
+        "partyPercent": "22.91%"
+      },
+      "AANM": {
+        "completed": true,
+        "dps": "1735857",
+        "partyPercent": "30.84%"
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "2379818",
+        "partyPercent": "30.76%"
+      }
+    }
+  },
+  {
+    "name": "tassa",
+    "contrCurrent": 0,
+    "contrTotal": 144,
+    "class": "Mystic",
+    "rank": "Ronin",
+    "lastOnline": 1530229658380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "Volley of Curses": "88%",
+        "Contagion": "0%",
+        "Thrall of Vengeance": "0%",
+        "Thrall of Wrath": "0%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "dilisorc",
+    "contrCurrent": 32,
+    "contrTotal": 1484,
+    "class": "Sorcerer",
+    "rank": "Shogun",
+    "lastOnline": 1530292951380,
+    "note": "suzy",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1595904",
+        "partyPercent": "22.23%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "891322",
+        "partyPercent": "18.35%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1201099",
+        "partyPercent": "19.37%"
+      }
+    }
+  },
+  {
+    "name": "Ratpatrol",
+    "contrCurrent": 0,
+    "contrTotal": 40,
+    "class": "Berserker",
+    "rank": "Alts",
+    "lastOnline": 1529100170380,
+    "note": "Santa",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Zenyte",
+    "contrCurrent": 0,
+    "contrTotal": 124,
+    "class": "Warrior",
+    "rank": "Alts",
+    "lastOnline": 1530366746380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "2408092",
+        "partyPercent": "21.32%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1603334",
+        "partyPercent": "21.31%"
+      }
+    }
+  },
+  {
+    "name": "Puntta",
+    "contrCurrent": 0,
+    "contrTotal": 108,
+    "class": "Brawler",
+    "rank": "Alts",
+    "lastOnline": 1530145108380,
+    "note": "Smyrnaa's alt",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1232806",
+        "partyPercent": "15.91%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "364210",
+        "partyPercent": "8.76%"
+      }
+    }
+  },
+  {
+    "name": "Apostrosios",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Archer",
+    "rank": "Ronin",
+    "lastOnline": 1530294309380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Xnxxx.Boner",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Berserker",
+    "rank": "Ronin",
+    "lastOnline": 1530379739380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1838536",
+        "partyPercent": "29.18%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "852875",
+        "partyPercent": "18.43%"
+      }
+    }
+  },
+  {
+    "name": "Skorphrite",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Reaper",
+    "rank": "Daikatana",
+    "lastOnline": 1530310193380,
+    "note": "Skormy's Alchemist",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Tulina",
+    "contrCurrent": 0,
+    "contrTotal": 56,
+    "class": "Sorcerer",
+    "rank": "Daikatana",
+    "lastOnline": 1530281381380,
+    "note": "Mira/alt/",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1271115",
+        "partyPercent": "19.00%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "612856",
+        "partyPercent": "13.42%"
+      }
+    }
+  },
+  {
+    "name": "omg.brunette",
+    "contrCurrent": 228,
+    "contrTotal": 224,
+    "class": "Brawler",
+    "rank": "Ronin",
+    "lastOnline": 1530308664380,
+    "note": "Discord&gt; Exolius",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1544051",
+        "partyPercent": "19.22%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "461103",
+        "partyPercent": "9.68%"
+      }
+    }
+  },
+  {
+    "name": "Eleora",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Archer",
+    "rank": "Alts",
+    "lastOnline": 1530205938380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1666257",
+        "partyPercent": "16.08%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Lugh.Lamhfada",
+    "contrCurrent": 28,
+    "contrTotal": 140,
+    "class": "Berserker",
+    "rank": "Ronin",
+    "lastOnline": 1530133220380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1493174",
+        "partyPercent": "33.53%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1825590",
+        "partyPercent": "25.60%"
+      }
+    }
+  },
+  {
+    "name": "Aceon",
+    "contrCurrent": 0,
+    "contrTotal": 56,
+    "class": "Priest",
+    "rank": "Alts",
+    "lastOnline": 1530276128380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "Triple Nemesis": "84%",
+        "Energy Stars": "83%",
+        "Edict of Judgement": "12%",
+        "Divine Charge": "2%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "Triple Nemesis": "87%",
+        "Energy Stars": "83%",
+        "Edict of Judgement": "8%",
+        "Divine Charge": "40%"
+      }
+    }
+  },
+  {
+    "name": "Yeviathan",
+    "contrCurrent": 28,
+    "contrTotal": 68,
+    "class": "Valkyrie",
+    "rank": "Alts",
+    "lastOnline": 1530053591380,
+    "note": "Addie",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1474146",
+        "partyPercent": "25.61%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "797220",
+        "partyPercent": "14.47%"
+      }
+    }
+  },
+  {
+    "name": "Meiko.Shirakii",
+    "contrCurrent": 0,
+    "contrTotal": 281,
+    "class": "Priest",
+    "rank": "Shogun",
+    "lastOnline": 1529180110380,
+    "note": "Alt mazinkaiser",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "Triple Nemesis": "64%",
+        "Energy Stars": "70%",
+        "Edict of Judgement": "0%",
+        "Divine Charge": "0%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "Triple Nemesis": "66%",
+        "Energy Stars": "74%",
+        "Edict of Judgement": "0%",
+        "Divine Charge": "0%"
+      }
+    }
+  },
+  {
+    "name": "Bob",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Archer",
+    "rank": "Alts",
+    "lastOnline": 1526245821380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Faldorn",
+    "contrCurrent": 100,
+    "contrTotal": 0,
+    "class": "Mystic",
+    "rank": "Alts",
+    "lastOnline": 1530315252380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Shieraki",
+    "contrCurrent": 0,
+    "contrTotal": 72,
+    "class": "Lancer",
+    "rank": "Alts",
+    "lastOnline": 1530128400380,
+    "note": "Addie c:",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "327178",
+        "partyPercent": "4.10%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Sklver",
+    "contrCurrent": 0,
+    "contrTotal": 280,
+    "class": "Valkyrie",
+    "rank": "Alts",
+    "lastOnline": 1530219244380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "takemaballs",
+    "contrCurrent": 28,
+    "contrTotal": 2735,
+    "class": "Mystic",
+    "rank": "Shogun",
+    "lastOnline": 1530364125380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "Volley of Curses": "70%",
+        "Contagion": "0%",
+        "Thrall of Vengeance": "9%",
+        "Thrall of Wrath": "8%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "Volley of Curses": "74%",
+        "Contagion": "0%",
+        "Thrall of Vengeance": "8%",
+        "Thrall of Wrath": "8%"
+      }
+    }
+  },
+  {
+    "name": "Skorkyrie",
+    "contrCurrent": 0,
+    "contrTotal": 48,
+    "class": "Valkyrie",
+    "rank": "Daikatana",
+    "lastOnline": 1530307331380,
+    "note": "Skormy's Impaler",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1634431",
+        "partyPercent": "26.10%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "859746",
+        "partyPercent": "20.46%"
+      }
+    }
+  },
+  {
+    "name": "play.doll",
+    "contrCurrent": 0,
+    "contrTotal": 24,
+    "class": "Lancer",
+    "rank": "Ronin",
+    "lastOnline": 1528281818380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "484216",
+        "partyPercent": "6.15%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Günz",
+    "contrCurrent": 24,
+    "contrTotal": 0,
+    "class": "Gunner",
+    "rank": "Ronin",
+    "lastOnline": 1530307329380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Raiichuu",
+    "contrCurrent": 28,
+    "contrTotal": 1968,
+    "class": "Ninja",
+    "rank": "Emperor",
+    "lastOnline": 1530294691380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1064229",
+        "partyPercent": "11.93%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "809746",
+        "partyPercent": "12.28%"
+      }
+    }
+  },
+  {
+    "name": "Fatooma",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Valkyrie",
+    "rank": "Shogun",
+    "lastOnline": 1530036956380,
+    "note": "Mazinkaiser alt",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1581282",
+        "partyPercent": "32.81%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Kingrai",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Sorcerer",
+    "rank": "Shogun",
+    "lastOnline": 1529656498380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Lyniph",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Slayer",
+    "rank": "Alts",
+    "lastOnline": 1530365791380,
+    "note": "I need 3 iframes",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Mirä-chän",
+    "contrCurrent": 212,
+    "contrTotal": 2114,
+    "class": "Valkyrie",
+    "rank": "Daikatana",
+    "lastOnline": 1530363454380,
+    "note": "Mira",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1621277",
+        "partyPercent": "18.30%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "835451",
+        "partyPercent": "15.19%"
+      }
+    }
+  },
+  {
+    "name": "Ninjii.Sorc",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Sorcerer",
+    "rank": "Alts",
+    "lastOnline": 1530192219380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Raikita",
+    "contrCurrent": 428,
+    "contrTotal": 2707,
+    "class": "Priest",
+    "rank": "Emperor",
+    "lastOnline": 1530367505380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "Triple Nemesis": "68%",
+        "Energy Stars": "77%",
+        "Edict of Judgement": "11%",
+        "Divine Charge": "26%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "Triple Nemesis": "79%",
+        "Energy Stars": "87%",
+        "Edict of Judgement": "11%",
+        "Divine Charge": "1%"
+      }
+    }
+  },
+  {
+    "name": "Miny.a",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Warrior",
+    "rank": "Alts",
+    "lastOnline": 1530302458380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Atomgunner",
+    "contrCurrent": 0,
+    "contrTotal": 710,
+    "class": "Gunner",
+    "rank": "Ronin",
+    "lastOnline": 1529143498380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Namecut",
+    "contrCurrent": 0,
+    "contrTotal": 611,
+    "class": "Reaper",
+    "rank": "Alts",
+    "lastOnline": 1525228827380,
+    "note": "Namestre alt",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "687335",
+        "partyPercent": "18.25%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Skorpet",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Reaper",
+    "rank": "Daikatana",
+    "lastOnline": 1530105058380,
+    "note": "Skormy's Armor Master",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Enryo",
+    "contrCurrent": 0,
+    "contrTotal": 195,
+    "class": "Valkyrie",
+    "rank": "Alts",
+    "lastOnline": 1525229337380,
+    "note": "Namestre alt",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Naslash",
+    "contrCurrent": 0,
+    "contrTotal": 1319,
+    "class": "Ninja",
+    "rank": "Alts",
+    "lastOnline": 1523865396380,
+    "note": "Namestre alt",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "minikebu",
+    "contrCurrent": 0,
+    "contrTotal": 40,
+    "class": "Reaper",
+    "rank": "Alts",
+    "lastOnline": 1527870519380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Thor.X",
+    "contrCurrent": 0,
+    "contrTotal": 112,
+    "class": "Berserker",
+    "rank": "Ronin",
+    "lastOnline": 1529791832380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1740700",
+        "partyPercent": "23.09%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Khonsu",
+    "contrCurrent": 5,
+    "contrTotal": 284,
+    "class": "Sorcerer",
+    "rank": "Daikatana",
+    "lastOnline": 1530012128380,
+    "note": "Mini's sorc :3",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1337149",
+        "partyPercent": "13.63%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "546628",
+        "partyPercent": "9.05%"
+      }
+    }
+  },
+  {
+    "name": "Chändra",
+    "contrCurrent": 24,
+    "contrTotal": 0,
+    "class": "Valkyrie",
+    "rank": "Alts",
+    "lastOnline": 1530307259380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Ällaya",
+    "contrCurrent": 160,
+    "contrTotal": 0,
+    "class": "Reaper",
+    "rank": "Samurai",
+    "lastOnline": 1530378008380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": true,
+        "dps": "698732",
+        "partyPercent": "10.30%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "766147",
+        "partyPercent": "12.36%"
+      }
+    }
+  },
+  {
+    "name": "Aërith",
+    "contrCurrent": 24,
+    "contrTotal": 0,
+    "class": "Priest",
+    "rank": "Ronin",
+    "lastOnline": 1530307215380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Moon_Moony",
+    "contrCurrent": 0,
+    "contrTotal": 148,
+    "class": "Berserker",
+    "rank": "Ronin",
+    "lastOnline": 1529489743380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "G.Prav",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Gunner",
+    "rank": "Daikatana",
+    "lastOnline": 1530322818380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "andiko",
+    "contrCurrent": 0,
+    "contrTotal": 1225,
+    "class": "Warrior",
+    "rank": "Shogun",
+    "lastOnline": 1530295096380,
+    "note": "suzy alt",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Paxslx",
+    "contrCurrent": 56,
+    "contrTotal": 668,
+    "class": "Mystic",
+    "rank": "Alts",
+    "lastOnline": 1530371177380,
+    "note": "Torcy's alt",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "Volley of Curses": "94%",
+        "Contagion": "0%",
+        "Thrall of Vengeance": "37%",
+        "Thrall of Wrath": "26%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "Volley of Curses": "95%",
+        "Contagion": "0%",
+        "Thrall of Vengeance": "36%",
+        "Thrall of Wrath": "19%"
+      }
+    }
+  },
+  {
+    "name": "Ruby.Arkest",
+    "contrCurrent": 0,
+    "contrTotal": 459,
+    "class": "Reaper",
+    "rank": "Daikatana",
+    "lastOnline": 1530368817380,
+    "note": "not Nikki's alt ",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1671225",
+        "partyPercent": "19.62%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "The.Blanker",
+    "contrCurrent": 0,
+    "contrTotal": 959,
+    "class": "Gunner",
+    "rank": "Ronin",
+    "lastOnline": 1529600983380,
+    "note": "Its just me, myself & i",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1028173",
+        "partyPercent": "11.71%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "694586",
+        "partyPercent": "10.70%"
+      }
+    }
+  },
+  {
+    "name": "Tempi",
+    "contrCurrent": 0,
+    "contrTotal": 317,
+    "class": "Warrior",
+    "rank": "Ronin",
+    "lastOnline": 1529432875380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Skormlin",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Mystic",
+    "rank": "Daikatana",
+    "lastOnline": 1530104843380,
+    "note": "Skormy's Etching Master",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Yko",
+    "contrCurrent": 0,
+    "contrTotal": 215,
+    "class": "Mystic",
+    "rank": "Daikatana",
+    "lastOnline": 1530060006380,
+    "note": "Hai Hai!",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Lyira",
+    "contrCurrent": 0,
+    "contrTotal": 223,
+    "class": "Berserker",
+    "rank": "Alts",
+    "lastOnline": 1529234272380,
+    "note": "Lyria",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "793605",
+        "partyPercent": "9.32%"
+      }
+    }
+  },
+  {
+    "name": "Kawaii.Bulbo",
+    "contrCurrent": 0,
+    "contrTotal": 380,
+    "class": "Lancer",
+    "rank": "Daikatana",
+    "lastOnline": 1529869125380,
+    "note": "Kawaii.Grill alt",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "449704",
+        "partyPercent": "5.59%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "348415",
+        "partyPercent": "5.35%"
+      }
+    }
+  },
+  {
+    "name": "Merrick.Arkest",
+    "contrCurrent": 0,
+    "contrTotal": 315,
+    "class": "Brawler",
+    "rank": "Daikatana",
+    "lastOnline": 1528574910380,
+    "note": "ITS MERRICK NOT NIKKI PFF",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "sammetjenl",
+    "contrCurrent": 495,
+    "contrTotal": 0,
+    "class": "Berserker",
+    "rank": "Ronin",
+    "lastOnline": 1530375586380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "A_Dox",
+    "contrCurrent": 56,
+    "contrTotal": 0,
+    "class": "Warrior",
+    "rank": "Alts",
+    "lastOnline": 1530305747380,
+    "note": "Valaki",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "3483225",
+        "partyPercent": "26.47%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "2248038",
+        "partyPercent": "28.64%"
+      }
+    }
+  },
+  {
+    "name": "Skornja",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Ninja",
+    "rank": "Daikatana",
+    "lastOnline": 1528241317380,
+    "note": "Skormy's Ninja (forever lvl41",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Meneidä",
+    "contrCurrent": 0,
+    "contrTotal": 225,
+    "class": "Lancer",
+    "rank": "Daikatana",
+    "lastOnline": 1530353959380,
+    "note": "Mira",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Ramari",
+    "contrCurrent": 136,
+    "contrTotal": 730,
+    "class": "Gunner",
+    "rank": "Ronin",
+    "lastOnline": 1530129050380,
+    "note": "Save the day, or Wreck it",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "567156",
+        "partyPercent": "8.26%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Exoluis_W",
+    "contrCurrent": 0,
+    "contrTotal": 120,
+    "class": "Warrior",
+    "rank": "Alts",
+    "lastOnline": 1529584470380,
+    "note": "omg.brunette's shite hoew",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Lina.Arkest",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Slayer",
+    "rank": "Daikatana",
+    "lastOnline": 1525188020380,
+    "note": "Nikki  alt",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "No.Escape",
+    "contrCurrent": 84,
+    "contrTotal": 1590,
+    "class": "Warrior",
+    "rank": "Samurai",
+    "lastOnline": 1530372813380,
+    "note": "No.Escape",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "288147",
+        "partyPercent": "5.05%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "828917",
+        "partyPercent": "12.94%"
+      }
+    }
+  },
+  {
+    "name": "Talycia",
+    "contrCurrent": 60,
+    "contrTotal": 219,
+    "class": "Mystic",
+    "rank": "Ronin",
+    "lastOnline": 1530357289380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "Volley of Curses": "63%",
+        "Contagion": "0%",
+        "Thrall of Vengeance": "0%",
+        "Thrall of Wrath": "0%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Akuma.kaiser",
+    "contrCurrent": 0,
+    "contrTotal": 1748,
+    "class": "Brawler",
+    "rank": "Shogun",
+    "lastOnline": 1530312381380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "2243063",
+        "partyPercent": "29.94%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Arcanistkvothe",
+    "contrCurrent": 0,
+    "contrTotal": 135,
+    "class": "Sorcerer",
+    "rank": "Alts",
+    "lastOnline": 1529434171380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Ninjiikun",
+    "contrCurrent": 56,
+    "contrTotal": 56,
+    "class": "Warrior",
+    "rank": "Alts",
+    "lastOnline": 1530192602380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1481780",
+        "partyPercent": "20.94%"
+      }
+    }
+  },
+  {
+    "name": "play-toy",
+    "contrCurrent": 0,
+    "contrTotal": 84,
+    "class": "Slayer",
+    "rank": "Alts",
+    "lastOnline": 1529753693380,
+    "note": "play.doll's slayer",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "2163524",
+        "partyPercent": "24.35%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Skorlynne",
+    "contrCurrent": 0,
+    "contrTotal": 24,
+    "class": "Gunner",
+    "rank": "Daikatana",
+    "lastOnline": 1530303553380,
+    "note": "Skormy's Gun-Bun",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Miss.Kaiser",
+    "contrCurrent": 0,
+    "contrTotal": 958,
+    "class": "Ninja",
+    "rank": "Shogun",
+    "lastOnline": 1529911977380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1711694",
+        "partyPercent": "29.00%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1067739",
+        "partyPercent": "30.17%"
+      }
+    }
+  },
+  {
+    "name": "Raiki",
+    "contrCurrent": 0,
+    "contrTotal": 450,
+    "class": "Brawler",
+    "rank": "Emperor",
+    "lastOnline": 1530312622380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Shawarma",
+    "contrCurrent": 0,
+    "contrTotal": 60,
+    "class": "Warrior",
+    "rank": "Alts",
+    "lastOnline": 1527064758380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Shiriaki",
+    "contrCurrent": 96,
+    "contrTotal": 192,
+    "class": "Priest",
+    "rank": "Alts",
+    "lastOnline": 1530315668380,
+    "note": "Addie",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "Triple Nemesis": "76%",
+        "Energy Stars": "85%",
+        "Edict of Judgement": "12%",
+        "Divine Charge": "2%"
+      },
+      "RKE": {
+        "completed": true,
+        "Triple Nemesis": "91%",
+        "Energy Stars": "93%",
+        "Edict of Judgement": "0%",
+        "Divine Charge": "3%"
+      },
+      "RRHM": {
+        "completed": true,
+        "Triple Nemesis": "61%",
+        "Energy Stars": "66%",
+        "Edict of Judgement": "1%",
+        "Divine Charge": "1%"
+      },
+      "AANM": {
+        "completed": true,
+        "Triple Nemesis": "75%",
+        "Energy Stars": "85%",
+        "Edict of Judgement": "0%",
+        "Divine Charge": "14%"
+      },
+      "RKNM": {
+        "completed": true,
+        "Triple Nemesis": "95%",
+        "Energy Stars": "92%",
+        "Edict of Judgement": "0%",
+        "Divine Charge": "2%"
+      }
+    }
+  },
+  {
+    "name": "Blanko",
+    "contrCurrent": 0,
+    "contrTotal": 152,
+    "class": "Priest",
+    "rank": "Alts",
+    "lastOnline": 1530366363380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "Triple Nemesis": "92%",
+        "Energy Stars": "89%",
+        "Edict of Judgement": "11%",
+        "Divine Charge": "16%"
+      },
+      "RKE": {
+        "completed": true,
+        "Triple Nemesis": "88%",
+        "Energy Stars": "85%",
+        "Edict of Judgement": "16%",
+        "Divine Charge": "1%"
+      },
+      "RRHM": {
+        "completed": true,
+        "Triple Nemesis": "89%",
+        "Energy Stars": "91%",
+        "Edict of Judgement": "16%",
+        "Divine Charge": "1%"
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "Triple Nemesis": "95%",
+        "Energy Stars": "95%",
+        "Edict of Judgement": "20%",
+        "Divine Charge": "1%"
+      }
+    }
+  },
+  {
+    "name": "W.Prav",
+    "contrCurrent": 0,
+    "contrTotal": 1170,
+    "class": "Warrior",
+    "rank": "Daikatana",
+    "lastOnline": 1530216214380,
+    "note": "&lt;-- Prav Prav Prav Prav",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "2656554",
+        "partyPercent": "35.02%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "1285151",
+        "partyPercent": "23.16%"
+      }
+    }
+  },
+  {
+    "name": "Kebudos",
+    "contrCurrent": 0,
+    "contrTotal": 135,
+    "class": "Brawler",
+    "rank": "Alts",
+    "lastOnline": 1527861788380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Grendizer.kaiser",
+    "contrCurrent": 150,
+    "contrTotal": 585,
+    "class": "Slayer",
+    "rank": "Shogun",
+    "lastOnline": 1529832960380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Count.Kaiser",
+    "contrCurrent": 0,
+    "contrTotal": 975,
+    "class": "Mystic",
+    "rank": "Shogun",
+    "lastOnline": 1528977439380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Shinkunotsuki",
+    "contrCurrent": 0,
+    "contrTotal": 135,
+    "class": "Gunner",
+    "rank": "Shogun",
+    "lastOnline": 1528020614380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Mini.Osiris",
+    "contrCurrent": 0,
+    "contrTotal": 559,
+    "class": "Reaper",
+    "rank": "Daikatana",
+    "lastOnline": 1530007810380,
+    "note": "mini's reaper :3",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "596172",
+        "partyPercent": "7.75%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "55278",
+        "partyPercent": "1.10%"
+      }
+    }
+  },
+  {
+    "name": "Kaiser.Exo",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Archer",
+    "rank": "Shogun",
+    "lastOnline": 1528227012380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Lucymiu",
+    "contrCurrent": 0,
+    "contrTotal": 735,
+    "class": "Priest",
+    "rank": "Ronin",
+    "lastOnline": 1529245837380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "T.Adox",
+    "contrCurrent": 28,
+    "contrTotal": 1361,
+    "class": "Brawler",
+    "rank": "Alts",
+    "lastOnline": 1530313162380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1578214",
+        "partyPercent": "19.61%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "677482",
+        "partyPercent": "14.38%"
+      }
+    }
+  },
+  {
+    "name": "Krux",
+    "contrCurrent": 84,
+    "contrTotal": 72,
+    "class": "Brawler",
+    "rank": "Ronin",
+    "lastOnline": 1530367993380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1457482",
+        "partyPercent": "17.90%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "kornhub",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Warrior",
+    "rank": "Ronin",
+    "lastOnline": 1530330971380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "579780",
+        "partyPercent": "11.67%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Suzi",
+    "contrCurrent": 855,
+    "contrTotal": 225,
+    "class": "Brawler",
+    "rank": "Shogun",
+    "lastOnline": 1530377375380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Kishiroza",
+    "contrCurrent": 0,
+    "contrTotal": 156,
+    "class": "Valkyrie",
+    "rank": "Excused",
+    "lastOnline": 1529318646380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "589887",
+        "partyPercent": "10.85%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Anotix",
+    "contrCurrent": 0,
+    "contrTotal": 873,
+    "class": "Berserker",
+    "rank": "Alts",
+    "lastOnline": 1530371618380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "2212674",
+        "partyPercent": "21.11%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Glingo",
+    "contrCurrent": 0,
+    "contrTotal": 195,
+    "class": "Reaper",
+    "rank": "Ronin",
+    "lastOnline": 1529948776380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Yachii",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Reaper",
+    "rank": "Alts",
+    "lastOnline": 1530294816380,
+    "note": "Lyria",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Spectral",
+    "contrCurrent": 0,
+    "contrTotal": 447,
+    "class": "Reaper",
+    "rank": "Alts",
+    "lastOnline": 1530367100380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "1296036",
+        "partyPercent": "16.79%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "293504",
+        "partyPercent": "5.97%"
+      }
+    }
+  },
+  {
+    "name": "Jaymo",
+    "contrCurrent": 0,
+    "contrTotal": 195,
+    "class": "Archer",
+    "rank": "Ronin",
+    "lastOnline": 1529249078380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "escanor.Pride",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Priest",
+    "rank": "Ronin",
+    "lastOnline": 1529671924380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Monark",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Brawler",
+    "rank": "Ronin",
+    "lastOnline": 1530290707380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Luna.Rp",
+    "contrCurrent": 0,
+    "contrTotal": 375,
+    "class": "Reaper",
+    "rank": "Ronin",
+    "lastOnline": 1529247673380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Soha",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Lancer",
+    "rank": "Alts",
+    "lastOnline": 1530370686380,
+    "note": "Nari's tank and spank",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Roronoa",
+    "contrCurrent": 56,
+    "contrTotal": 0,
+    "class": "Warrior",
+    "rank": "Samurai",
+    "lastOnline": 1530112371380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": true,
+        "dps": "3042415",
+        "partyPercent": "39.21%"
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": true,
+        "dps": "2048411",
+        "partyPercent": "35.69%"
+      }
+    }
+  },
+  {
+    "name": "Pravler",
+    "contrCurrent": 135,
+    "contrTotal": 450,
+    "class": "Brawler",
+    "rank": "Daikatana",
+    "lastOnline": 1530111932380,
+    "note": "Pravs alt",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Shadow.Orb",
+    "contrCurrent": 570,
+    "contrTotal": 0,
+    "class": "Warrior",
+    "rank": "Ronin",
+    "lastOnline": 1530318315380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Torzy",
+    "contrCurrent": 1000,
+    "contrTotal": 0,
+    "class": "Warrior",
+    "rank": "Alts",
+    "lastOnline": 1530374253380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Pravs.Alt",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Lancer",
+    "rank": "Daikatana",
+    "lastOnline": 1530329921380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Adox.Rip",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Reaper",
+    "rank": "Alts",
+    "lastOnline": 1530120836380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Abbi",
+    "contrCurrent": 225,
+    "contrTotal": 0,
+    "class": "Gunner",
+    "rank": "Alts",
+    "lastOnline": 1530311828380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Maoi",
+    "contrCurrent": 0,
+    "contrTotal": 0,
+    "class": "Slayer",
+    "rank": "Ronin",
+    "lastOnline": 1530245606380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
+  },
+  {
+    "name": "Cruelsun",
+    "contrCurrent": 60,
+    "contrTotal": 0,
+    "class": "Lancer",
+    "rank": "Alts",
+    "lastOnline": 1530305266380,
+    "note": "",
+    "dungeons": {
+      "TRNM": {
+        "completed": false
+      },
+      "RKE": {
+        "completed": false
+      },
+      "RRHM": {
+        "completed": false
+      },
+      "AANM": {
+        "completed": false
+      },
+      "RKNM": {
+        "completed": false
+      }
+    }
   }
- },
- {
-  "name": "Smyrnaa",
-  "contrCurrent": 80,
-  "contrTotal": 634,
-  "class": "Sorcerer",
-  "rank": "Samurai",
-  "lastOnline": "20/06/2018, 2:54:23",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Average dps: 1,357,493 (17.65% party)",
-   "TRNM": "Average dps: 2,128,946 (24.80% party)",
-   "AANM": "Average dps: 1,086,603 (19.11% party)",
-   "RKNM": "Average dps: 1,717,452 (23.25% party)"
-  }
- },
- {
-  "name": "Skormy",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Mystic",
-  "rank": "Daikatana",
-  "lastOnline": "18/06/2018, 7:51:59",
-  "note": "~Skormy™ the Critty-Cat~",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Adälyn",
-  "contrCurrent": 112,
-  "contrTotal": 592,
-  "class": "Priest",
-  "rank": "Ronin",
-  "lastOnline": "20/06/2018, 3:40:39",
-  "note": "Addie c:",
-  "dungeons": {
-   "RKE": "Triple Nemesis: 74%, Energy Stars: 94%, Edict of Judgement: undefined%, Divine Charge: 1%",
-   "RRHM": "Triple Nemesis: 52%, Energy Stars: 77%, Edict of Judgement: 1%, Divine Charge: 1%",
-   "TRNM": "Triple Nemesis: 87%, Energy Stars: 88%, Edict of Judgement: 2%, Divine Charge: 1%",
-   "AANM": "Never completed",
-   "RKNM": "Triple Nemesis: 93%, Energy Stars: 93%, Edict of Judgement: 2%, Divine Charge: 1%"
-  }
- },
- {
-  "name": "Skorynne",
-  "contrCurrent": 480,
-  "contrTotal": 48,
-  "class": "Gunner",
-  "rank": "Daikatana",
-  "lastOnline": "20/06/2018, 5:27:59",
-  "note": "Skormy's Gun-Cat",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 920,557 (19.02% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,089,470 (18.86% party)"
-  }
- },
- {
-  "name": "Kurandera",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Priest",
-  "rank": "Ronin",
-  "lastOnline": "16/06/2018, 12:21:33",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Elezarïa",
-  "contrCurrent": 32,
-  "contrTotal": 348,
-  "class": "Berserker",
-  "rank": "Ronin",
-  "lastOnline": "20/06/2018, 3:13:36",
-  "note": "ew, ele",
-  "dungeons": {
-   "RKE": "Average dps: 2,187,627 (30.61% party)",
-   "RRHM": "Average dps: 1,937,414 (32.73% party)",
-   "TRNM": "Average dps: 4,959,597 (43.42% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 3,400,637 (36.06% party)"
-  }
- },
- {
-  "name": "Valandiel",
-  "contrCurrent": 0,
-  "contrTotal": 280,
-  "class": "Archer",
-  "rank": "Alts",
-  "lastOnline": "19/06/2018, 12:54:56",
-  "note": "Yo it's Smartie with a bow!",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,568,175 (17.21% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 877,143 (15.50% party)"
-  }
- },
- {
-  "name": "Nikki.Arkest",
-  "contrCurrent": 40,
-  "contrTotal": 1306,
-  "class": "Reaper",
-  "rank": "Daikatana",
-  "lastOnline": "18/06/2018, 9:01:20",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,960,967 (23.85% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 889,739 (16.59% party)"
-  }
- },
- {
-  "name": "Lvpin",
-  "contrCurrent": 284,
-  "contrTotal": 188,
-  "class": "Warrior",
-  "rank": "Ronin",
-  "lastOnline": "19/06/2018, 11:58:19",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 2,429,728 (24.06% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,529,538 (21.84% party)"
-  }
- },
- {
-  "name": "Skorbulancer",
-  "contrCurrent": 0,
-  "contrTotal": 180,
-  "class": "Lancer",
-  "rank": "Daikatana",
-  "lastOnline": "20/06/2018, 5:28:54",
-  "note": "Skormy's Lancer",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 769,219 (8.15% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Catameia",
-  "contrCurrent": 0,
-  "contrTotal": 344,
-  "class": "Slayer",
-  "rank": "Alts",
-  "lastOnline": "03/06/2018, 8:39:07",
-  "note": "Cata's Slayer ! Main ",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 2,577,285 (36.69% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,642,903 (25.25% party)"
-  }
- },
- {
-  "name": "Tiltlyn",
-  "contrCurrent": 64,
-  "contrTotal": 328,
-  "class": "Brawler",
-  "rank": "Samurai",
-  "lastOnline": "20/06/2018, 7:29:39",
-  "note": "Don't Interact Me.",
-  "dungeons": {
-   "RKE": "Average dps: 2,466,878 (30.13% party)",
-   "RRHM": "Average dps: 2,916,805 (37.68% party)",
-   "TRNM": "Average dps: 3,669,229 (33.38% party)",
-   "AANM": "Average dps: 1,980,896 (32.55% party)",
-   "RKNM": "Average dps: 3,499,304 (34.44% party)"
-  }
- },
- {
-  "name": "Skorrior",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Warrior",
-  "rank": "Daikatana",
-  "lastOnline": "18/06/2018, 7:52:46",
-  "note": "Skormy's Warrior",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Lyria.Chan",
-  "contrCurrent": 28,
-  "contrTotal": 508,
-  "class": "Lancer",
-  "rank": "Samurai",
-  "lastOnline": "20/06/2018, 6:15:22",
-  "note": "Lyria MAIN",
-  "dungeons": {
-   "RKE": "Average dps: 790,141 (11.88% party)",
-   "RRHM": "Average dps: 671,454 (12.88% party)",
-   "TRNM": "Average dps: 1,491,931 (20.30% party)",
-   "AANM": "Average dps: 802,199 (13.79% party)",
-   "RKNM": "Average dps: 1,255,044 (16.28% party)"
-  }
- },
- {
-  "name": "Skorpurr",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Reaper",
-  "rank": "Daikatana",
-  "lastOnline": "16/06/2018, 2:33:25",
-  "note": "Skormy's Etching-Demon",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Mini.Setesh",
-  "contrCurrent": 0,
-  "contrTotal": 1599,
-  "class": "Berserker",
-  "rank": "Daikatana",
-  "lastOnline": "15/06/2018, 1:15:48",
-  "note": "yo :3 ",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Average dps: 743,670 (12.50% party)",
-   "TRNM": "Average dps: 1,494,754 (19.73% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,481,543 (18.86% party)"
-  }
- },
- {
-  "name": "Rooooocket",
-  "contrCurrent": 48,
-  "contrTotal": 2172,
-  "class": "Gunner",
-  "rank": "Samurai",
-  "lastOnline": "20/06/2018, 7:28:06",
-  "note": "Sklver ",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,637,522 (22.56% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 884,989 (13.14% party)"
-  }
- },
- {
-  "name": "Skorpri",
-  "contrCurrent": 0,
-  "contrTotal": 2064,
-  "class": "Priest",
-  "rank": "Daikatana",
-  "lastOnline": "19/06/2018, 8:07:38",
-  "note": "Skormy's Priest",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Triple Nemesis: 93%, Energy Stars: 89%, Edict of Judgement: 3%, Divine Charge: 2%",
-   "AANM": "Triple Nemesis: 4%, Energy Stars: 58%, Edict of Judgement: undefined%, Divine Charge: 17%",
-   "RKNM": "Triple Nemesis: 88%, Energy Stars: 88%, Edict of Judgement: 1%, Divine Charge: 1%"
-  }
- },
- {
-  "name": "Savarah",
-  "contrCurrent": 48,
-  "contrTotal": 364,
-  "class": "Berserker",
-  "rank": "Ronin",
-  "lastOnline": "20/06/2018, 2:58:54",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,035,243 (15.19% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Gam_Den",
-  "contrCurrent": 76,
-  "contrTotal": 3755,
-  "class": "Valkyrie",
-  "rank": "Samurai",
-  "lastOnline": "20/06/2018, 3:30:13",
-  "note": "HeLLo ThErE \\o/",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Average dps: 1,239,330 (19.29% party)",
-   "TRNM": "Average dps: 2,777,118 (27.76% party)",
-   "AANM": "Average dps: 904,986 (22.91% party)",
-   "RKNM": "Average dps: 2,188,019 (27.44% party)"
-  }
- },
- {
-  "name": "Prav",
-  "contrCurrent": 28,
-  "contrTotal": 4171,
-  "class": "Gunner",
-  "rank": "Daikatana",
-  "lastOnline": "20/06/2018, 1:27:16",
-  "note": "",
-  "dungeons": {
-   "RKE": "Average dps: 2,261,064 (28.26% party)",
-   "RRHM": "Average dps: 2,042,205 (28.33% party)",
-   "TRNM": "Average dps: 4,128,638 (43.98% party)",
-   "AANM": "Average dps: 1,925,195 (26.94% party)",
-   "RKNM": "Average dps: 2,881,299 (31.39% party)"
-  }
- },
- {
-  "name": "Daianoia",
-  "contrCurrent": 0,
-  "contrTotal": 188,
-  "class": "Mystic",
-  "rank": "Alts",
-  "lastOnline": "18/06/2018, 2:03:24",
-  "note": "Addie c:",
-  "dungeons": {
-   "RKE": "Volley of Curses: 99%, Contagion: 27%, Thrall of Vengeance: 35%, Thrall of Wrath: 16%",
-   "RRHM": "Volley of Curses: 86%, Contagion: 23%, Thrall of Vengeance: 25%, Thrall of Wrath: 14%",
-   "TRNM": "Volley of Curses: 92%, Contagion: 17%, Thrall of Vengeance: 5%, Thrall of Wrath: 4%",
-   "AANM": "Never completed",
-   "RKNM": "Volley of Curses: 96%, Contagion: 23%, Thrall of Vengeance: 12%, Thrall of Wrath: 6%"
-  }
- },
- {
-  "name": "Pink.Csillag",
-  "contrCurrent": 0,
-  "contrTotal": 224,
-  "class": "Priest",
-  "rank": "Alts",
-  "lastOnline": "19/06/2018, 8:14:55",
-  "note": "Csillag",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Triple Nemesis: 81%, Energy Stars: 89%, Edict of Judgement: 14%, Divine Charge: 27%",
-   "AANM": "Never completed",
-   "RKNM": "Triple Nemesis: 92%, Energy Stars: 94%, Edict of Judgement: 13%, Divine Charge: 1%"
-  }
- },
- {
-  "name": "Wilzo",
-  "contrCurrent": 0,
-  "contrTotal": 78,
-  "class": "Berserker",
-  "rank": "Ronin",
-  "lastOnline": "27/05/2018, 5:23:22",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "suzyi",
-  "contrCurrent": 180,
-  "contrTotal": 7637,
-  "class": "Archer",
-  "rank": "Shogun",
-  "lastOnline": "20/06/2018, 7:30:36",
-  "note": "",
-  "dungeons": {
-   "RKE": "Average dps: 1,104,645 (13.55% party)",
-   "RRHM": "Average dps: 1,880,376 (25.39% party)",
-   "TRNM": "Average dps: 4,157,148 (43.84% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 2,442,698 (34.24% party)"
-  }
- },
- {
-  "name": "Devils.Death",
-  "contrCurrent": 0,
-  "contrTotal": 618,
-  "class": "Warrior",
-  "rank": "Samurai",
-  "lastOnline": "20/06/2018, 4:09:09",
-  "note": "welcome",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 754,139 (14.76% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 342,946 (8.14% party)"
-  }
- },
- {
-  "name": "Raikillua",
-  "contrCurrent": 124,
-  "contrTotal": 4420,
-  "class": "Mystic",
-  "rank": "Emperor",
-  "lastOnline": "20/06/2018, 4:28:29",
-  "note": "Rai",
-  "dungeons": {
-   "RKE": "Volley of Curses: 93%, Contagion: 31%, Thrall of Vengeance: 30%, Thrall of Wrath: 9%",
-   "RRHM": "Volley of Curses: 97%, Contagion: 34%, Thrall of Vengeance: 22%, Thrall of Wrath: 9%",
-   "TRNM": "Volley of Curses: 82%, Contagion: 26%, Thrall of Vengeance: 11%, Thrall of Wrath: 6%",
-   "AANM": "Never completed",
-   "RKNM": "Volley of Curses: 92%, Contagion: 28%, Thrall of Vengeance: 12%, Thrall of Wrath: 4%"
-  }
- },
- {
-  "name": "Falling.Leaf",
-  "contrCurrent": 260,
-  "contrTotal": 1716,
-  "class": "Gunner",
-  "rank": "Samurai",
-  "lastOnline": "19/06/2018, 10:34:42",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Average dps: 932,689 (17.66% party)",
-   "TRNM": "Average dps: 2,603,897 (29.42% party)",
-   "AANM": "Average dps: 947,922 (18.01% party)",
-   "RKNM": "Average dps: 1,662,605 (27.74% party)"
-  }
- },
- {
-  "name": "Inter.Stellar",
-  "contrCurrent": 80,
-  "contrTotal": 1708,
-  "class": "Valkyrie",
-  "rank": "Samurai",
-  "lastOnline": "19/06/2018, 6:28:49",
-  "note": "Tessla",
-  "dungeons": {
-   "RKE": "Average dps: 1,018,374 (14.87% party)",
-   "RRHM": "Average dps: 627,247 (11.77% party)",
-   "TRNM": "Average dps: 2,019,769 (24.70% party)",
-   "AANM": "Average dps: 999,894 (21.19% party)",
-   "RKNM": "Average dps: 1,527,278 (22.19% party)"
-  }
- },
- {
-  "name": "Emlyn",
-  "contrCurrent": 152,
-  "contrTotal": 312,
-  "class": "Valkyrie",
-  "rank": "Ronin",
-  "lastOnline": "20/06/2018, 6:51:04",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Average dps: 576,371 (15.74% party)",
-   "TRNM": "Average dps: 2,750,644 (25.27% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 2,032,599 (26.23% party)"
-  }
- },
- {
-  "name": "Skorbe",
-  "contrCurrent": 0,
-  "contrTotal": 28,
-  "class": "Berserker",
-  "rank": "Daikatana",
-  "lastOnline": "19/06/2018, 11:38:44",
-  "note": "Skormy's Berser-Chick",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,074,199 (21.21% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Cataluïa",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Priest",
-  "rank": "Alts",
-  "lastOnline": "03/06/2018, 10:18:09",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Triple Nemesis: 39%, Energy Stars: 75%, Edict of Judgement: 7%, Divine Charge: 1%",
-   "AANM": "Never completed",
-   "RKNM": "Triple Nemesis: 38%, Energy Stars: 64%, Edict of Judgement: undefined%, Divine Charge: 4%"
-  }
- },
- {
-  "name": "wwzeroww",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Warrior",
-  "rank": "Ronin",
-  "lastOnline": "12/06/2018, 11:38:29",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Namestre",
-  "contrCurrent": 0,
-  "contrTotal": 6399,
-  "class": "Brawler",
-  "rank": "Excused",
-  "lastOnline": "03/06/2018, 5:43:54",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,880,089 (22.21% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,321,689 (20.83% party)"
-  }
- },
- {
-  "name": "Skorcher",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Archer",
-  "rank": "Daikatana",
-  "lastOnline": "18/06/2018, 7:51:12",
-  "note": "Skormy's Archer",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Santa",
-  "contrCurrent": 146,
-  "contrTotal": 896,
-  "class": "Lancer",
-  "rank": "Samurai",
-  "lastOnline": "20/06/2018, 6:20:35",
-  "note": "Kakoo`s alt",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 560,624 (6.82% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 220,427 (5.36% party)"
-  }
- },
- {
-  "name": "Raikira",
-  "contrCurrent": 0,
-  "contrTotal": 901,
-  "class": "Gunner",
-  "rank": "Emperor",
-  "lastOnline": "20/06/2018, 10:34:16",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,411,320 (21.68% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 933,868 (17.73% party)"
-  }
- },
- {
-  "name": "Torcy",
-  "contrCurrent": 304,
-  "contrTotal": 1201,
-  "class": "Gunner",
-  "rank": "Samurai",
-  "lastOnline": "20/06/2018, 6:30:35",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 2,492,572 (27.18% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,600,329 (21.69% party)"
-  }
- },
- {
-  "name": "Achu",
-  "contrCurrent": 0,
-  "contrTotal": 56,
-  "class": "Lancer",
-  "rank": "Alts",
-  "lastOnline": "20/06/2018, 3:02:35",
-  "note": "",
-  "dungeons": {
-   "RKE": "Average dps: 787,910 (11.51% party)",
-   "RRHM": "Average dps: 859,385 (14.92% party)",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,053,557 (17.41% party)"
-  }
- },
- {
-  "name": "Yuraiyka",
-  "contrCurrent": 0,
-  "contrTotal": 168,
-  "class": "Brawler",
-  "rank": "Alts",
-  "lastOnline": "17/06/2018, 1:06:35",
-  "note": "Lyria",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Average dps: 1,559,817 (31.20% party)",
-   "TRNM": "Average dps: 1,934,092 (28.96% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,721,496 (24.42% party)"
-  }
- },
- {
-  "name": "Skoryer",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Slayer",
-  "rank": "Daikatana",
-  "lastOnline": "18/06/2018, 7:57:06",
-  "note": "Skormy's Slayer",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Mereida",
-  "contrCurrent": 0,
-  "contrTotal": 1506,
-  "class": "Priest",
-  "rank": "Daikatana",
-  "lastOnline": "20/06/2018, 12:39:16",
-  "note": "Mira",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Triple Nemesis: 24%, Energy Stars: 33%, Edict of Judgement: undefined%, Divine Charge: 13%",
-   "TRNM": "Triple Nemesis: 65%, Energy Stars: 83%, Edict of Judgement: 2%, Divine Charge: 1%",
-   "AANM": "Never completed",
-   "RKNM": "Triple Nemesis: 69%, Energy Stars: 86%, Edict of Judgement: 6%, Divine Charge: 1%"
-  }
- },
- {
-  "name": "Thelight",
-  "contrCurrent": 0,
-  "contrTotal": 1095,
-  "class": "Brawler",
-  "rank": "Samurai",
-  "lastOnline": "03/06/2018, 1:29:32",
-  "note": "wanna help just say so $:",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,632,409 (25.59% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,569,675 (22.55% party)"
-  }
- },
- {
-  "name": "Smyrna",
-  "contrCurrent": 24,
-  "contrTotal": 56,
-  "class": "Valkyrie",
-  "rank": "Alts",
-  "lastOnline": "19/06/2018, 11:53:39",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Average dps: 838,932 (10.73% party)",
-   "TRNM": "Average dps: 1,884,753 (27.36% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 825,777 (19.85% party)"
-  }
- },
- {
-  "name": "Raikina",
-  "contrCurrent": 228,
-  "contrTotal": 4011,
-  "class": "Brawler",
-  "lastOnline": "20/06/2018, 3:02:46",
-  "note": "",
-  "dungeons": {
-   "RKE": "Average dps: 1,335,557 (19.43% party)",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 2,411,475 (27.61% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,737,149 (25.90% party)"
-  }
- },
- {
-  "name": "Lucky.Charm",
-  "contrCurrent": 224,
-  "contrTotal": 1398,
-  "class": "Mystic",
-  "rank": "Daikatana",
-  "lastOnline": "20/06/2018, 7:10:49",
-  "note": "Rai's property",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Volley of Curses: 51%, Contagion: 12%, Thrall of Vengeance: 3%, Thrall of Wrath: 5%",
-   "TRNM": "Volley of Curses: 85%, Contagion: 21%, Thrall of Vengeance: 2%, Thrall of Wrath: 5%",
-   "AANM": "Volley of Curses: 59%, Contagion: 20%, Thrall of Vengeance: 5%, Thrall of Wrath: 7%",
-   "RKNM": "Volley of Curses: 92%, Contagion: 25%, Thrall of Vengeance: 6%, Thrall of Wrath: 3%"
-  }
- },
- {
-  "name": "Molgron",
-  "contrCurrent": 0,
-  "contrTotal": 332,
-  "class": "Priest",
-  "rank": "Alts",
-  "lastOnline": "19/06/2018, 9:13:56",
-  "note": "What a day, what a lovely Day",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Triple Nemesis: 78%, Energy Stars: 82%, Edict of Judgement: undefined%, Divine Charge: 1%",
-   "AANM": "Never completed",
-   "RKNM": "Triple Nemesis: 87%, Energy Stars: 82%, Edict of Judgement: undefined%, Divine Charge: 1%"
-  }
- },
- {
-  "name": "dilia",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Archer",
-  "rank": "Shogun",
-  "lastOnline": "16/06/2018, 9:49:25",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Aellio",
-  "contrCurrent": 0,
-  "contrTotal": 68,
-  "class": "Brawler",
-  "rank": "Ronin",
-  "lastOnline": "19/06/2018, 1:32:42",
-  "note": "Look it's Smartie in a bikini",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 926,724 (14.18% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Kan.U",
-  "contrCurrent": 204,
-  "contrTotal": 0,
-  "class": "Valkyrie",
-  "rank": "Alts",
-  "lastOnline": "19/06/2018, 7:33:27",
-  "note": "Lyria 3th DPS",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,411,516 (18.54% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,276,099 (19.78% party)"
-  }
- },
- {
-  "name": "Roaronoa",
-  "contrCurrent": 0,
-  "contrTotal": 1472,
-  "class": "Warrior",
-  "rank": "Emperor",
-  "lastOnline": "20/06/2018, 9:51:26",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,898,439 (31.03% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,443,146 (21.01% party)"
-  }
- },
- {
-  "name": "Lyirix",
-  "contrCurrent": 52,
-  "contrTotal": 240,
-  "class": "Sorcerer",
-  "rank": "Alts",
-  "lastOnline": "20/06/2018, 6:30:28",
-  "note": "Lyria Main DPS",
-  "dungeons": {
-   "RKE": "Average dps: 1,099,578 (14.74% party)",
-   "RRHM": "Average dps: 1,437,979 (18.00% party)",
-   "TRNM": "Average dps: 1,887,194 (29.40% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,316,048 (21.37% party)"
-  }
- },
- {
-  "name": "Kebu",
-  "contrCurrent": 24,
-  "contrTotal": 2546,
-  "class": "Brawler",
-  "rank": "Samurai",
-  "lastOnline": "20/06/2018, 12:40:36",
-  "note": "Rai's left nut",
-  "dungeons": {
-   "RKE": "Average dps: 1,321,603 (18.83% party)",
-   "RRHM": "Average dps: 1,501,798 (30.28% party)",
-   "TRNM": "Average dps: 3,071,648 (36.95% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 2,337,836 (31.99% party)"
-  }
- },
- {
-  "name": "Ninjii",
-  "contrCurrent": 0,
-  "contrTotal": 1268,
-  "class": "Brawler",
-  "rank": "Samurai",
-  "lastOnline": "19/06/2018, 1:17:57",
-  "note": "nab extraordinaire &lt;3",
-  "dungeons": {
-   "RKE": "Average dps: 1,438,058 (19.25% party)",
-   "RRHM": "Average dps: 2,164,678 (31.10% party)",
-   "TRNM": "Average dps: 2,601,784 (23.94% party)",
-   "AANM": "Average dps: 1,782,492 (23.59% party)",
-   "RKNM": "Average dps: 2,380,506 (25.29% party)"
-  }
- },
- {
-  "name": "Nastr",
-  "contrCurrent": 0,
-  "contrTotal": 296,
-  "class": "Archer",
-  "rank": "Ronin",
-  "lastOnline": "20/06/2018, 5:25:32",
-  "note": "boK na logikata :)",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Tessla",
-  "contrCurrent": 0,
-  "contrTotal": 300,
-  "class": "Berserker",
-  "rank": "Alts",
-  "lastOnline": "10/06/2018, 11:53:26",
-  "note": "Inter.Stellar",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,059,567 (9.80% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Hullo.Csillag",
-  "contrCurrent": 132,
-  "contrTotal": 573,
-  "class": "Mystic",
-  "rank": "Alts",
-  "lastOnline": "19/06/2018, 9:30:40",
-  "note": "Csillag's Main",
-  "dungeons": {
-   "RKE": "Volley of Curses: 96%, Contagion: 22%, Thrall of Vengeance: 36%, Thrall of Wrath: 9%",
-   "RRHM": "Volley of Curses: 90%, Contagion: 21%, Thrall of Vengeance: 32%, Thrall of Wrath: 9%",
-   "TRNM": "Volley of Curses: 96%, Contagion: 28%, Thrall of Vengeance: 29%, Thrall of Wrath: 9%",
-   "AANM": "Volley of Curses: 89%, Contagion: 22%, Thrall of Vengeance: 23%, Thrall of Wrath: 5%",
-   "RKNM": "Volley of Curses: 98%, Contagion: 29%, Thrall of Vengeance: 23%, Thrall of Wrath: 6%"
-  }
- },
- {
-  "name": "Skorrawline",
-  "contrCurrent": 108,
-  "contrTotal": 1364,
-  "class": "Brawler",
-  "rank": "Daikatana",
-  "lastOnline": "20/06/2018, 6:15:02",
-  "note": "Skormy's Brawler Cat",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,425,514 (17.54% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,416,176 (20.56% party)"
-  }
- },
- {
-  "name": "Teaspoon",
-  "contrCurrent": 0,
-  "contrTotal": 248,
-  "class": "Slayer",
-  "rank": "Ronin",
-  "lastOnline": "19/06/2018, 4:25:32",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 3,411,572 (32.07% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,608,483 (21.21% party)"
-  }
- },
- {
-  "name": "Princess.Julia",
-  "contrCurrent": 0,
-  "contrTotal": 106,
-  "class": "Sorcerer",
-  "rank": "Alts",
-  "lastOnline": "20/06/2018, 5:16:43",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 396,563 (9.66% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 476,344 (7.93% party)"
-  }
- },
- {
-  "name": "Mazin.Kaiser",
-  "contrCurrent": 68,
-  "contrTotal": 3117,
-  "class": "Berserker",
-  "rank": "Shogun",
-  "lastOnline": "20/06/2018, 7:43:35",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Average dps: 1,218,246 (22.20% party)",
-   "TRNM": "Average dps: 4,203,511 (45.03% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 2,783,902 (31.72% party)"
-  }
- },
- {
-  "name": "Skorcerer",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Sorcerer",
-  "rank": "Daikatana",
-  "lastOnline": "18/06/2018, 7:54:51",
-  "note": "Skormy's Sorcerer",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Morrandai",
-  "contrCurrent": 48,
-  "contrTotal": 653,
-  "class": "Sorcerer",
-  "rank": "Samurai",
-  "lastOnline": "20/06/2018, 6:45:12",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,800,781 (22.86% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Deonna",
-  "contrCurrent": 80,
-  "contrTotal": 128,
-  "class": "Archer",
-  "rank": "Alts",
-  "lastOnline": "20/06/2018, 6:12:25",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 2,010,499 (28.20% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 2,083,136 (20.96% party)"
-  }
- },
- {
-  "name": "Khan.n",
-  "contrCurrent": 24,
-  "contrTotal": 100,
-  "class": "Warrior",
-  "rank": "Ronin",
-  "lastOnline": "20/06/2018, 12:18:46",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 357,007 (7.22% party)"
-  }
- },
- {
-  "name": "Underworldsss",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Sorcerer",
-  "rank": "Alts",
-  "lastOnline": "20/05/2018, 8:24:44",
-  "note": "Hakan Alt",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "A.dox",
-  "contrCurrent": 80,
-  "contrTotal": 1405,
-  "class": "Warrior",
-  "rank": "Samurai",
-  "lastOnline": "20/06/2018, 1:33:42",
-  "note": "Molgron's ALT",
-  "dungeons": {
-   "RKE": "Average dps: 2,328,731 (28.63% party)",
-   "RRHM": "Average dps: 2,061,934 (26.98% party)",
-   "TRNM": "Average dps: 3,548,107 (31.27% party)",
-   "AANM": "Average dps: 2,284,635 (27.60% party)",
-   "RKNM": "Average dps: 3,108,437 (34.16% party)"
-  }
- },
- {
-  "name": "Vertigoo",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Archer",
-  "rank": "Alts",
-  "lastOnline": "19/06/2018, 11:08:13",
-  "note": "Cinali ",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,422,747 (21.56% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 776,413 (14.24% party)"
-  }
- },
- {
-  "name": "Name.Crush",
-  "contrCurrent": 0,
-  "contrTotal": 4108,
-  "class": "Berserker",
-  "rank": "Alts",
-  "lastOnline": "31/05/2018, 8:06:13",
-  "note": "Namestre alt",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 2,220,003 (27.87% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,418,160 (26.05% party)"
-  }
- },
- {
-  "name": "Cosmoria",
-  "contrCurrent": 0,
-  "contrTotal": 182,
-  "class": "Warrior",
-  "rank": "Samurai",
-  "lastOnline": "19/06/2018, 9:48:46",
-  "note": "Ditto",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,534,266 (25.22% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,463,832 (23.65% party)"
-  }
- },
- {
-  "name": "Cataleä",
-  "contrCurrent": 0,
-  "contrTotal": 496,
-  "class": "Archer",
-  "rank": "Samurai",
-  "lastOnline": "04/06/2018, 7:31:58",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,661,751 (21.48% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,282,534 (21.84% party)"
-  }
- },
- {
-  "name": "Yojimbo",
-  "contrCurrent": 0,
-  "contrTotal": 76,
-  "class": "Warrior",
-  "rank": "Excused",
-  "lastOnline": "13/05/2018, 4:32:41",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 926,974 (15.26% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Valeryiah",
-  "contrCurrent": 0,
-  "contrTotal": 637,
-  "class": "Slayer",
-  "rank": "Samurai",
-  "lastOnline": "10/06/2018, 5:50:36",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 830,433 (13.12% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 802,021 (11.75% party)"
-  }
- },
- {
-  "name": "Tarik.Farrah",
-  "contrCurrent": 0,
-  "contrTotal": 360,
-  "class": "Archer",
-  "rank": "Alts",
-  "lastOnline": "18/06/2018, 9:12:41",
-  "note": "Lyria",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Average dps: 1,178,596 (15.15% party)",
-   "TRNM": "Average dps: 1,606,782 (23.22% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,302,446 (19.72% party)"
-  }
- },
- {
-  "name": "Lyirai",
-  "contrCurrent": 28,
-  "contrTotal": 28,
-  "class": "Priest",
-  "rank": "Alts",
-  "lastOnline": "18/06/2018, 6:10:42",
-  "note": "Lyria",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Triple Nemesis: 93%, Energy Stars: 88%, Edict of Judgement: undefined%, Divine Charge: 1%",
-   "AANM": "Never completed",
-   "RKNM": "Triple Nemesis: 96%, Energy Stars: 92%, Edict of Judgement: 1%, Divine Charge: 1%"
-  }
- },
- {
-  "name": "Evil.Quen",
-  "contrCurrent": 0,
-  "contrTotal": 472,
-  "class": "Sorcerer",
-  "rank": "Ronin",
-  "lastOnline": "19/06/2018, 8:16:02",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,144,815 (15.97% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Polett",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Archer",
-  "rank": "Ronin",
-  "lastOnline": "15/06/2018, 11:48:27",
-  "note": "Dani ",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Ariadn.e",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Ninja",
-  "rank": "Alts",
-  "lastOnline": "20/06/2018, 5:43:07",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Skory",
-  "contrCurrent": 0,
-  "contrTotal": 1364,
-  "class": "Slayer",
-  "rank": "Daikatana",
-  "lastOnline": "20/06/2018, 6:45:40",
-  "note": "Skormy's (elin)Slayer",
-  "dungeons": {
-   "RKE": "Average dps: 919,031 (15.05% party)",
-   "RRHM": "Average dps: 712,126 (11.20% party)",
-   "TRNM": "Average dps: 1,904,509 (21.36% party)",
-   "AANM": "Average dps: 690,410 (14.61% party)",
-   "RKNM": "Average dps: 1,059,898 (17.42% party)"
-  }
- },
- {
-  "name": "Kawaii.grill",
-  "contrCurrent": 0,
-  "contrTotal": 2526,
-  "class": "Slayer",
-  "rank": "Daikatana",
-  "lastOnline": "20/06/2018, 2:05:43",
-  "note": "WTB Tank",
-  "dungeons": {
-   "RKE": "Average dps: 2,083,155 (26.25% party)",
-   "RRHM": "Average dps: 1,839,364 (22.91% party)",
-   "TRNM": "Average dps: 3,076,378 (32.84% party)",
-   "AANM": "Average dps: 1,631,860 (30.66% party)",
-   "RKNM": "Average dps: 2,379,818 (30.76% party)"
-  }
- },
- {
-  "name": "tassa",
-  "contrCurrent": 0,
-  "contrTotal": 144,
-  "class": "Mystic",
-  "rank": "Ronin",
-  "lastOnline": "17/06/2018, 9:17:05",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Volley of Curses: 88%, Contagion: 21%, Thrall of Vengeance: undefined%, Thrall of Wrath: undefined%",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Ninga",
-  "contrCurrent": 0,
-  "contrTotal": 324,
-  "class": "Ninja",
-  "rank": "Alts",
-  "lastOnline": "30/05/2018, 11:39:18",
-  "note": "Boka Poo",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 820,059 (11.30% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 452,716 (7.83% party)"
-  }
- },
- {
-  "name": "dilisorc",
-  "contrCurrent": 24,
-  "contrTotal": 1396,
-  "class": "Sorcerer",
-  "rank": "Shogun",
-  "lastOnline": "18/06/2018, 9:45:16",
-  "note": "suzy",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,595,904 (22.23% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,201,099 (19.37% party)"
-  }
- },
- {
-  "name": "Ratpatrol",
-  "contrCurrent": 0,
-  "contrTotal": 40,
-  "class": "Berserker",
-  "rank": "Alts",
-  "lastOnline": "16/06/2018, 12:02:46",
-  "note": "Santa",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Zenyte",
-  "contrCurrent": 0,
-  "contrTotal": 96,
-  "class": "Warrior",
-  "rank": "Alts",
-  "lastOnline": "20/06/2018, 3:31:49",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 2,408,092 (21.32% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,571,447 (21.49% party)"
-  }
- },
- {
-  "name": "Puntta",
-  "contrCurrent": 0,
-  "contrTotal": 108,
-  "class": "Brawler",
-  "rank": "Alts",
-  "lastOnline": "19/06/2018, 11:15:13",
-  "note": "Smyrnaa's alt",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,232,806 (15.91% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 364,210 (8.76% party)"
-  }
- },
- {
-  "name": "Asod",
-  "contrCurrent": 0,
-  "contrTotal": 40,
-  "class": "Brawler",
-  "rank": "Alts",
-  "lastOnline": "06/06/2018, 5:54:53",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Apostrosios",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Archer",
-  "rank": "Ronin",
-  "lastOnline": "20/06/2018, 4:41:47",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Tulina",
-  "contrCurrent": 0,
-  "contrTotal": 56,
-  "class": "Sorcerer",
-  "rank": "Daikatana",
-  "lastOnline": "20/06/2018, 2:14:33",
-  "note": "Mira/alt/",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,271,115 (19.00% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 612,856 (13.42% party)"
-  }
- },
- {
-  "name": "omg.brunette",
-  "contrCurrent": 48,
-  "contrTotal": 148,
-  "class": "Brawler",
-  "rank": "Ronin",
-  "lastOnline": "19/06/2018, 11:45:07",
-  "note": "Discord&gt; Exolius",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,544,051 (19.22% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 461,103 (9.68% party)"
-  }
- },
- {
-  "name": "Eleora",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Archer",
-  "rank": "Alts",
-  "lastOnline": "19/06/2018, 9:48:19",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,666,257 (16.08% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Lugh.Lamhfada",
-  "contrCurrent": 56,
-  "contrTotal": 0,
-  "class": "Berserker",
-  "rank": "Ronin",
-  "lastOnline": "20/06/2018, 4:22:16",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,493,174 (33.53% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Aceon",
-  "contrCurrent": 0,
-  "contrTotal": 56,
-  "class": "Priest",
-  "rank": "Ronin",
-  "lastOnline": "19/06/2018, 11:07:10",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Triple Nemesis: 84%, Energy Stars: 83%, Edict of Judgement: 12%, Divine Charge: 2%",
-   "AANM": "Never completed",
-   "RKNM": "Triple Nemesis: 87%, Energy Stars: 83%, Edict of Judgement: 8%, Divine Charge: 40%"
-  }
- },
- {
-  "name": "Yeviathan",
-  "contrCurrent": 68,
-  "contrTotal": 0,
-  "class": "Valkyrie",
-  "rank": "Ronin",
-  "lastOnline": "20/06/2018, 1:18:23",
-  "note": "Addie",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,474,146 (25.61% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 797,220 (14.47% party)"
-  }
- },
- {
-  "name": "Allandras",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Brawler",
-  "rank": "Alts",
-  "lastOnline": "20/06/2018, 10:14:50",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Meiko.Shirakii",
-  "contrCurrent": 0,
-  "contrTotal": 281,
-  "class": "Priest",
-  "rank": "Shogun",
-  "lastOnline": "16/06/2018, 10:15:05",
-  "note": "Alt mazinkaiser",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Triple Nemesis: 64%, Energy Stars: 70%, Edict of Judgement: undefined%, Divine Charge: undefined%",
-   "AANM": "Never completed",
-   "RKNM": "Triple Nemesis: 66%, Energy Stars: 74%, Edict of Judgement: undefined%, Divine Charge: undefined%"
-  }
- },
- {
-  "name": "Bob",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Archer",
-  "rank": "Alts",
-  "lastOnline": "13/05/2018, 11:10:16",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Faldorn",
-  "contrCurrent": 56,
-  "contrTotal": 136,
-  "class": "Mystic",
-  "rank": "Alts",
-  "lastOnline": "20/06/2018, 11:10:06",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Skyilla",
-  "contrCurrent": 0,
-  "contrTotal": 72,
-  "class": "Brawler",
-  "rank": "Alts",
-  "lastOnline": "20/06/2018, 1:05:49",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 818,958 (8.39% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Shieraki",
-  "contrCurrent": 72,
-  "contrTotal": 0,
-  "class": "Lancer",
-  "rank": "Alts",
-  "lastOnline": "20/06/2018, 4:26:01",
-  "note": "Addie c:",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 327,178 (4.10% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Healforlove",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Mystic",
-  "rank": "Ronin",
-  "lastOnline": "14/06/2018, 11:49:38",
-  "note": "Lili",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Coldfiresy",
-  "contrCurrent": 0,
-  "contrTotal": 80,
-  "class": "Gunner",
-  "rank": "Alts",
-  "lastOnline": "13/06/2018, 12:38:08",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,292,188 (14.90% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 548,184 (8.55% party)"
-  }
- },
- {
-  "name": "Sklver",
-  "contrCurrent": 0,
-  "contrTotal": 280,
-  "class": "Valkyrie",
-  "rank": "Alts",
-  "lastOnline": "20/06/2018, 6:55:41",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "takemaballs",
-  "contrCurrent": 88,
-  "contrTotal": 2619,
-  "class": "Mystic",
-  "rank": "Shogun",
-  "lastOnline": "18/06/2018, 9:16:09",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Volley of Curses: 67%, Contagion: 25%, Thrall of Vengeance: 6%, Thrall of Wrath: 7%",
-   "AANM": "Never completed",
-   "RKNM": "Volley of Curses: 71%, Contagion: 31%, Thrall of Vengeance: 7%, Thrall of Wrath: 7%"
-  }
- },
- {
-  "name": "Skorkyrie",
-  "contrCurrent": 0,
-  "contrTotal": 48,
-  "class": "Valkyrie",
-  "rank": "Daikatana",
-  "lastOnline": "20/06/2018, 12:56:52",
-  "note": "Skormy's Impaler",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,634,431 (26.10% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 859,746 (20.46% party)"
-  }
- },
- {
-  "name": "play.doll",
-  "contrCurrent": 0,
-  "contrTotal": 24,
-  "class": "Lancer",
-  "rank": "Ronin",
-  "lastOnline": "06/06/2018, 12:43:33",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 484,216 (6.15% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Dammu",
-  "contrCurrent": 0,
-  "contrTotal": 313,
-  "class": "Berserker",
-  "rank": "Ronin",
-  "lastOnline": "20/06/2018, 4:14:22",
-  "note": "If u read this fu",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,708,524 (15.70% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Günz",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Gunner",
-  "rank": "Ronin",
-  "lastOnline": "13/06/2018, 9:51:29",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Raiichuu",
-  "contrCurrent": 80,
-  "contrTotal": 1888,
-  "class": "Ninja",
-  "rank": "Emperor",
-  "lastOnline": "20/06/2018, 12:48:46",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,064,229 (11.93% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 809,746 (12.28% party)"
-  }
- },
- {
-  "name": "Quentino",
-  "contrCurrent": 0,
-  "contrTotal": 264,
-  "class": "Mystic",
-  "rank": "Ronin",
-  "lastOnline": "05/06/2018, 4:41:45",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Volley of Curses: 78%, Contagion: 17%, Thrall of Vengeance: 13%, Thrall of Wrath: 16%",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Fatooma",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Valkyrie",
-  "rank": "Shogun",
-  "lastOnline": "20/06/2018, 5:36:48",
-  "note": "Mazinkaiser alt",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,581,282 (32.81% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Kataleïa",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Valkyrie",
-  "rank": "Alts",
-  "lastOnline": "03/06/2018, 9:45:21",
-  "note": "Cata's Valk ! ( alt )",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 2,277,984 (30.00% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Kingrai",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Sorcerer",
-  "rank": "Shogun",
-  "lastOnline": "17/06/2018, 8:53:41",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Lyniph",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Slayer",
-  "rank": "Ronin",
-  "lastOnline": "20/06/2018, 11:35:07",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Mirä-chän",
-  "contrCurrent": 348,
-  "contrTotal": 1710,
-  "class": "Valkyrie",
-  "rank": "Daikatana",
-  "lastOnline": "20/06/2018, 1:26:33",
-  "note": "Mira",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,531,736 (18.71% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 803,161 (15.11% party)"
-  }
- },
- {
-  "name": "Adraeel",
-  "contrCurrent": 0,
-  "contrTotal": 20,
-  "class": "Mystic",
-  "rank": "Alts",
-  "lastOnline": "08/06/2018, 1:08:02",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Volley of Curses: 81%, Contagion: undefined%, Thrall of Vengeance: 19%, Thrall of Wrath: 17%"
-  }
- },
- {
-  "name": "Ninjii.Sorc",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Sorcerer",
-  "rank": "Alts",
-  "lastOnline": "19/06/2018, 1:01:32",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Raikita",
-  "contrCurrent": 236,
-  "contrTotal": 2359,
-  "class": "Priest",
-  "rank": "Emperor",
-  "lastOnline": "19/06/2018, 12:22:24",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Triple Nemesis: 64%, Energy Stars: 76%, Edict of Judgement: 12%, Divine Charge: 24%",
-   "AANM": "Never completed",
-   "RKNM": "Triple Nemesis: 79%, Energy Stars: 87%, Edict of Judgement: 11%, Divine Charge: 1%"
-  }
- },
- {
-  "name": "Miny.a",
-  "contrCurrent": 0,
-  "contrTotal": 80,
-  "class": "Warrior",
-  "rank": "Alts",
-  "lastOnline": "20/06/2018, 5:41:18",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Atomgunner",
-  "contrCurrent": 0,
-  "contrTotal": 710,
-  "class": "Gunner",
-  "rank": "Ronin",
-  "lastOnline": "16/06/2018, 12:04:55",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Namecut",
-  "contrCurrent": 0,
-  "contrTotal": 611,
-  "class": "Reaper",
-  "rank": "Alts",
-  "lastOnline": "02/05/2018, 4:40:22",
-  "note": "Namestre alt",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 687,335 (18.25% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Enryo",
-  "contrCurrent": 0,
-  "contrTotal": 195,
-  "class": "Valkyrie",
-  "rank": "Alts",
-  "lastOnline": "02/05/2018, 4:48:52",
-  "note": "Namestre alt",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Naslash",
-  "contrCurrent": 0,
-  "contrTotal": 1319,
-  "class": "Ninja",
-  "rank": "Alts",
-  "lastOnline": "16/04/2018, 9:56:31",
-  "note": "Namestre alt",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "minikebu",
-  "contrCurrent": 0,
-  "contrTotal": 40,
-  "class": "Reaper",
-  "rank": "Alts",
-  "lastOnline": "01/06/2018, 6:28:34",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Fällïna",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Lancer",
-  "rank": "Alts",
-  "lastOnline": "20/06/2018, 5:42:18",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Thor.X",
-  "contrCurrent": 0,
-  "contrTotal": 112,
-  "class": "Berserker",
-  "rank": "Ronin",
-  "lastOnline": "19/06/2018, 9:17:12",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,740,700 (23.09% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Khonsu",
-  "contrCurrent": 0,
-  "contrTotal": 284,
-  "class": "Sorcerer",
-  "rank": "Daikatana",
-  "lastOnline": "15/06/2018, 12:24:31",
-  "note": "Mini's sorc :3",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,337,149 (13.63% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 546,628 (9.05% party)"
-  }
- },
- {
-  "name": "Morci.Csillag",
-  "contrCurrent": 24,
-  "contrTotal": 0,
-  "class": "Archer",
-  "rank": "Alts",
-  "lastOnline": "19/06/2018, 12:24:35",
-  "note": "Csilag",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,375,574 (19.34% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Ällaya",
-  "contrCurrent": 0,
-  "contrTotal": 437,
-  "class": "Reaper",
-  "rank": "Excused",
-  "lastOnline": "20/06/2018, 6:38:50",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Average dps: 633,726 (8.91% party)",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 766,147 (12.36% party)"
-  }
- },
- {
-  "name": "Aërith",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Priest",
-  "rank": "Alts",
-  "lastOnline": "20/06/2018, 5:43:52",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Deadlyfiresy",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Valkyrie",
-  "rank": "Alts",
-  "lastOnline": "08/06/2018, 11:21:01",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,096,145 (14.28% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Infieri",
-  "contrCurrent": 0,
-  "contrTotal": 195,
-  "class": "Valkyrie",
-  "rank": "Ronin",
-  "lastOnline": "31/05/2018, 10:20:22",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Moon_Moony",
-  "contrCurrent": 0,
-  "contrTotal": 148,
-  "class": "Berserker",
-  "rank": "Ronin",
-  "lastOnline": "20/06/2018, 12:15:40",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Lifekiss",
-  "contrCurrent": 0,
-  "contrTotal": 24,
-  "class": "Priest",
-  "rank": "Ronin",
-  "lastOnline": "12/06/2018, 11:32:32",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Triple Nemesis: 99%, Energy Stars: 99%, Edict of Judgement: 15%, Divine Charge: 37%",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Fireskullsy",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Brawler",
-  "rank": "Alts",
-  "lastOnline": "24/05/2018, 11:30:33",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "G.Prav",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Gunner",
-  "rank": "Daikatana",
-  "lastOnline": "19/06/2018, 4:58:30",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "andiko",
-  "contrCurrent": 0,
-  "contrTotal": 1225,
-  "class": "Warrior",
-  "rank": "Shogun",
-  "lastOnline": "16/06/2018, 10:37:16",
-  "note": "suzy alt",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Paxslx",
-  "contrCurrent": 96,
-  "contrTotal": 544,
-  "class": "Mystic",
-  "rank": "Alts",
-  "lastOnline": "20/06/2018, 1:31:16",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Volley of Curses: 94%, Contagion: 21%, Thrall of Vengeance: 37%, Thrall of Wrath: 26%",
-   "AANM": "Never completed",
-   "RKNM": "Volley of Curses: 94%, Contagion: 19%, Thrall of Vengeance: 33%, Thrall of Wrath: 17%"
-  }
- },
- {
-  "name": "Ruby.Arkest",
-  "contrCurrent": 64,
-  "contrTotal": 395,
-  "class": "Reaper",
-  "rank": "Daikatana",
-  "lastOnline": "18/06/2018, 10:14:03",
-  "note": "not Nikki's alt ",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,671,225 (19.62% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "The.Blanker",
-  "contrCurrent": 220,
-  "contrTotal": 739,
-  "class": "Gunner",
-  "rank": "Ronin",
-  "lastOnline": "20/06/2018, 12:02:56",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,028,173 (11.71% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 694,586 (10.70% party)"
-  }
- },
- {
-  "name": "Tempi",
-  "contrCurrent": 0,
-  "contrTotal": 317,
-  "class": "Warrior",
-  "rank": "Ronin",
-  "lastOnline": "19/06/2018, 8:27:50",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Yko",
-  "contrCurrent": 0,
-  "contrTotal": 215,
-  "class": "Mystic",
-  "rank": "Daikatana",
-  "lastOnline": "10/06/2018, 6:06:28",
-  "note": "Hai Hai!",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Lyira",
-  "contrCurrent": 0,
-  "contrTotal": 223,
-  "class": "Berserker",
-  "rank": "Alts",
-  "lastOnline": "17/06/2018, 1:17:46",
-  "note": "Lyria",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 793,605 (9.32% party)"
-  }
- },
- {
-  "name": "Kawaii.Bulbo",
-  "contrCurrent": 0,
-  "contrTotal": 352,
-  "class": "Lancer",
-  "rank": "Daikatana",
-  "lastOnline": "10/06/2018, 5:54:06",
-  "note": "Kawaii.Grill alt",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 449,704 (5.59% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 166,228 (3.40% party)"
-  }
- },
- {
-  "name": "Merrick.Arkest",
-  "contrCurrent": 0,
-  "contrTotal": 315,
-  "class": "Brawler",
-  "rank": "Daikatana",
-  "lastOnline": "09/06/2018, 10:08:25",
-  "note": "ITS MERRICK NOT NIKKI PFF",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Skornja",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Ninja",
-  "rank": "Daikatana",
-  "lastOnline": "06/06/2018, 1:28:32",
-  "note": "Skormy's Ninja (forever lvl41",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Meneidä",
-  "contrCurrent": 0,
-  "contrTotal": 225,
-  "class": "Lancer",
-  "rank": "Daikatana",
-  "lastOnline": "16/06/2018, 11:46:48",
-  "note": "Mira",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Ramari",
-  "contrCurrent": 40,
-  "contrTotal": 690,
-  "class": "Gunner",
-  "rank": "Ronin",
-  "lastOnline": "20/06/2018, 2:10:31",
-  "note": "Save the day, or Wreck it",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Exoluis_W",
-  "contrCurrent": 0,
-  "contrTotal": 120,
-  "class": "Warrior",
-  "rank": "Alts",
-  "lastOnline": "04/06/2018, 10:23:57",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Darkflame.iq",
-  "contrCurrent": 0,
-  "contrTotal": 25,
-  "class": "Berserker",
-  "rank": "Ronin",
-  "lastOnline": "05/06/2018, 7:59:39",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Lina.Arkest",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Slayer",
-  "rank": "Daikatana",
-  "lastOnline": "01/05/2018, 5:20:15",
-  "note": "Nikki  alt",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "King.sslayer",
-  "contrCurrent": 0,
-  "contrTotal": 68,
-  "class": "Slayer",
-  "rank": "Ronin",
-  "lastOnline": "04/06/2018, 11:21:20",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "No.Escape",
-  "contrCurrent": 0,
-  "contrTotal": 1450,
-  "class": "Warrior",
-  "rank": "Alts",
-  "lastOnline": "20/06/2018, 4:45:32",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 288,147 (5.05% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 634,327 (12.16% party)"
-  }
- },
- {
-  "name": "Talycia",
-  "contrCurrent": 219,
-  "contrTotal": 0,
-  "class": "Mystic",
-  "rank": "Ronin",
-  "lastOnline": "20/06/2018, 2:37:05",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Volley of Curses: 64%, Contagion: 21%, Thrall of Vengeance: undefined%, Thrall of Wrath: undefined%",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Akuma.kaiser",
-  "contrCurrent": 40,
-  "contrTotal": 1708,
-  "class": "Brawler",
-  "rank": "Shogun",
-  "lastOnline": "20/06/2018, 5:28:13",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 2,243,063 (29.94% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Arcanistkvothe",
-  "contrCurrent": 75,
-  "contrTotal": 60,
-  "class": "Sorcerer",
-  "rank": "Alts",
-  "lastOnline": "19/06/2018, 8:49:26",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Ninjiikun",
-  "contrCurrent": 0,
-  "contrTotal": 56,
-  "class": "Warrior",
-  "rank": "Alts",
-  "lastOnline": "19/06/2018, 1:08:59",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,481,780 (20.94% party)"
-  }
- },
- {
-  "name": "Csillagocska",
-  "contrCurrent": 160,
-  "contrTotal": 1787,
-  "class": "Brawler",
-  "rank": "Samurai",
-  "lastOnline": "19/06/2018, 11:22:24",
-  "note": "The Shining little Star",
-  "dungeons": {
-   "RKE": "Average dps: 1,068,193 (17.49% party)",
-   "RRHM": "Average dps: 1,104,740 (28.41% party)",
-   "TRNM": "Average dps: 1,878,798 (17.15% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,366,843 (21.62% party)"
-  }
- },
- {
-  "name": "Masteradiga",
-  "contrCurrent": 0,
-  "contrTotal": 1342,
-  "class": "Warrior",
-  "rank": "Samurai",
-  "lastOnline": "08/06/2018, 12:45:09",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,003,688 (12.62% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "play-toy",
-  "contrCurrent": 20,
-  "contrTotal": 64,
-  "class": "Slayer",
-  "rank": "Alts",
-  "lastOnline": "17/06/2018, 1:19:28",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 2,163,524 (24.35% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Skorlynne",
-  "contrCurrent": 0,
-  "contrTotal": 24,
-  "class": "Gunner",
-  "rank": "Daikatana",
-  "lastOnline": "20/06/2018, 12:05:22",
-  "note": "Skormy's Gun-Bun",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "criturclit",
-  "contrCurrent": 0,
-  "contrTotal": 330,
-  "class": "Slayer",
-  "rank": "Alts",
-  "lastOnline": "31/05/2018, 5:21:42",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Miss.Kaiser",
-  "contrCurrent": 0,
-  "contrTotal": 958,
-  "class": "Ninja",
-  "rank": "Shogun",
-  "lastOnline": "20/06/2018, 5:43:57",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,711,694 (29.00% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,067,739 (30.17% party)"
-  }
- },
- {
-  "name": "Raiki",
-  "contrCurrent": 0,
-  "contrTotal": 450,
-  "class": "Brawler",
-  "rank": "Emperor",
-  "lastOnline": "19/06/2018, 11:23:54",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Shawarma",
-  "contrCurrent": 0,
-  "contrTotal": 60,
-  "class": "Warrior",
-  "rank": "Alts",
-  "lastOnline": "23/05/2018, 10:39:13",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Mr.Gazawe",
-  "contrCurrent": 0,
-  "contrTotal": 215,
-  "class": "Lancer",
-  "rank": "Alts",
-  "lastOnline": "23/05/2018, 9:38:30",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Shiriaki",
-  "contrCurrent": 0,
-  "contrTotal": 128,
-  "class": "Priest",
-  "rank": "Alts",
-  "lastOnline": "20/06/2018, 2:14:51",
-  "note": "Addie",
-  "dungeons": {
-   "RKE": "Triple Nemesis: 91%, Energy Stars: 93%, Edict of Judgement: undefined%, Divine Charge: 3%",
-   "RRHM": "Triple Nemesis: 62%, Energy Stars: 65%, Edict of Judgement: undefined%, Divine Charge: 1%",
-   "TRNM": "Triple Nemesis: 76%, Energy Stars: 85%, Edict of Judgement: 12%, Divine Charge: 2%",
-   "AANM": "Never completed",
-   "RKNM": "Triple Nemesis: 95%, Energy Stars: 92%, Edict of Judgement: undefined%, Divine Charge: 2%"
-  }
- },
- {
-  "name": "Blanko",
-  "contrCurrent": 32,
-  "contrTotal": 120,
-  "class": "Priest",
-  "rank": "Alts",
-  "lastOnline": "20/06/2018, 2:45:36",
-  "note": "",
-  "dungeons": {
-   "RKE": "Triple Nemesis: 88%, Energy Stars: 85%, Edict of Judgement: 16%, Divine Charge: 1%",
-   "RRHM": "Triple Nemesis: 89%, Energy Stars: 91%, Edict of Judgement: 16%, Divine Charge: 1%",
-   "TRNM": "Triple Nemesis: 92%, Energy Stars: 89%, Edict of Judgement: 11%, Divine Charge: 16%",
-   "AANM": "Never completed",
-   "RKNM": "Triple Nemesis: 95%, Energy Stars: 95%, Edict of Judgement: 20%, Divine Charge: 1%"
-  }
- },
- {
-  "name": "W.Prav",
-  "contrCurrent": 0,
-  "contrTotal": 1170,
-  "class": "Warrior",
-  "rank": "Daikatana",
-  "lastOnline": "19/06/2018, 5:06:01",
-  "note": "&lt;-- Prav Prav Prav Prav",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 2,656,554 (35.02% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 1,285,151 (23.16% party)"
-  }
- },
- {
-  "name": "Kebudos",
-  "contrCurrent": 0,
-  "contrTotal": 135,
-  "class": "Brawler",
-  "rank": "Alts",
-  "lastOnline": "01/06/2018, 4:03:03",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Grendizer.kaiser",
-  "contrCurrent": 135,
-  "contrTotal": 450,
-  "class": "Slayer",
-  "rank": "Shogun",
-  "lastOnline": "19/06/2018, 11:21:57",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Csillagfeny",
-  "contrCurrent": 0,
-  "contrTotal": 225,
-  "class": "Sorcerer",
-  "rank": "Alts",
-  "lastOnline": "19/06/2018, 12:37:36",
-  "note": "Csillag",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Count.Kaiser",
-  "contrCurrent": 0,
-  "contrTotal": 975,
-  "class": "Mystic",
-  "rank": "Shogun",
-  "lastOnline": "14/06/2018, 1:57:14",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Shinkunotsuki",
-  "contrCurrent": 0,
-  "contrTotal": 135,
-  "class": "Gunner",
-  "rank": "Shogun",
-  "lastOnline": "03/06/2018, 12:10:09",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Mini.Osiris",
-  "contrCurrent": 0,
-  "contrTotal": 559,
-  "class": "Reaper",
-  "rank": "Daikatana",
-  "lastOnline": "15/06/2018, 12:21:16",
-  "note": "mini's reaper :3",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 596,172 (7.75% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Kaiser.Exo",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Archer",
-  "rank": "Shogun",
-  "lastOnline": "05/06/2018, 9:30:07",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Yullissa",
-  "contrCurrent": 0,
-  "contrTotal": 735,
-  "class": "Warrior",
-  "rank": "Alts",
-  "lastOnline": "20/06/2018, 1:05:08",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Arkaeel",
-  "contrCurrent": 0,
-  "contrTotal": 40,
-  "class": "Gunner",
-  "rank": "Alts",
-  "lastOnline": "07/06/2018, 6:20:36",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Lucymiu",
-  "contrCurrent": 150,
-  "contrTotal": 585,
-  "class": "Priest",
-  "rank": "Alts",
-  "lastOnline": "17/06/2018, 4:30:32",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "T.Adox",
-  "contrCurrent": 0,
-  "contrTotal": 1361,
-  "class": "Brawler",
-  "rank": "Alts",
-  "lastOnline": "16/06/2018, 10:15:20",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,578,214 (19.61% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 677,482 (14.38% party)"
-  }
- },
- {
-  "name": "Krux",
-  "contrCurrent": 48,
-  "contrTotal": 24,
-  "class": "Brawler",
-  "rank": "Ronin",
-  "lastOnline": "20/06/2018, 2:47:13",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "kornhub",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Warrior",
-  "rank": "Ronin",
-  "lastOnline": "17/06/2018, 12:56:28",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 579,780 (11.67% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Suzi",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Brawler",
-  "rank": "Shogun",
-  "lastOnline": "10/06/2018, 10:30:06",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Kishiroza",
-  "contrCurrent": 24,
-  "contrTotal": 132,
-  "class": "Valkyrie",
-  "rank": "Ronin",
-  "lastOnline": "18/06/2018, 12:44:01",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 589,887 (10.85% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Anotix",
-  "contrCurrent": 0,
-  "contrTotal": 873,
-  "class": "Berserker",
-  "rank": "Alts",
-  "lastOnline": "20/06/2018, 1:33:30",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 2,212,674 (21.11% party)",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Serrenna",
-  "contrCurrent": 0,
-  "contrTotal": 825,
-  "class": "Priest",
-  "rank": "Alts",
-  "lastOnline": "16/06/2018, 8:45:17",
-  "note": "nari's little priest",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Cyber.Cafe",
-  "contrCurrent": 0,
-  "contrTotal": 825,
-  "class": "Berserker",
-  "rank": "Ronin",
-  "lastOnline": "10/06/2018, 9:23:55",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Glingo",
-  "contrCurrent": 0,
-  "contrTotal": 195,
-  "class": "Reaper",
-  "rank": "Ronin",
-  "lastOnline": "20/06/2018, 11:33:05",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Spectral",
-  "contrCurrent": 0,
-  "contrTotal": 447,
-  "class": "Reaper",
-  "rank": "Alts",
-  "lastOnline": "20/06/2018, 11:45:55",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Average dps: 1,296,036 (16.79% party)",
-   "AANM": "Never completed",
-   "RKNM": "Average dps: 293,504 (5.97% party)"
-  }
- },
- {
-  "name": "Jaymo",
-  "contrCurrent": 0,
-  "contrTotal": 195,
-  "class": "Archer",
-  "rank": "Ronin",
-  "lastOnline": "17/06/2018, 5:24:33",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "escanor.Pride",
-  "contrCurrent": 0,
-  "contrTotal": 0,
-  "class": "Priest",
-  "rank": "Ronin",
-  "lastOnline": "14/06/2018, 5:43:58",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Sausage",
-  "contrCurrent": 135,
-  "contrTotal": 450,
-  "class": "Priest",
-  "rank": "Alts",
-  "lastOnline": "20/06/2018, 4:17:09",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Luna.Rp",
-  "contrCurrent": 0,
-  "contrTotal": 375,
-  "class": "Reaper",
-  "rank": "Ronin",
-  "lastOnline": "17/06/2018, 5:01:07",
-  "note": "",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- },
- {
-  "name": "Pravler",
-  "contrCurrent": 330,
-  "contrTotal": 0,
-  "class": "Brawler",
-  "rank": "Daikatana",
-  "lastOnline": "20/06/2018, 5:20:53",
-  "note": "Pravs alt",
-  "dungeons": {
-   "RKE": "Never completed",
-   "RRHM": "Never completed",
-   "TRNM": "Never completed",
-   "AANM": "Never completed",
-   "RKNM": "Never completed"
-  }
- }
 ]

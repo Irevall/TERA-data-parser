@@ -9,20 +9,16 @@ const router = new Router();
 app.use(Serve('../html'));
 
 router.get('/', async (ctx) => {
-    ctx.body = await deliverHTML(false, false);
+    ctx.body = await deliverHTML(false);
 });
 
-router.get('/show-all', async (ctx) => {
-    ctx.body = await deliverHTML(false, true);
-    ctx.response.status = 200;
-});
-
-router.get('/sorted/:column/:way', async (ctx) => {
-    ctx.body = await deliverHTML(ctx.params, true);
+router.get('/show-alts', async (ctx) => {
+    ctx.body = await deliverHTML(true);
     ctx.response.status = 200;
 });
 
 router.put('/:id/:column/:data', async (ctx) => {
+    console.log(ctx);
     const answer = await updateDB(ctx.params);
     ctx.response.status = answer.status;
     ctx.response.message = answer.message;
@@ -39,72 +35,64 @@ function logAndExit(error) {
     process.exit();
 }
 
-function dungeonsScore(data) {
+function dungeonsScore(score, type) {
     let html = '';
-    if (/party/.exec(data) !== null) {
-        let x = data.split(' ');
-        let number = x[2].replace(/,/g, '');
-        html += '<span>' + (number / (10**6)).toFixed(3) + 'M</span>&nbsp';
-        html += x[3] + ')';
-    } else if (/Divine/.exec(data) !== null){
-        let x = data.match(/[0-9]+[%]/g);
-        x.forEach((element, index) => {
-            html += '<img src="buffs/priest/buff' + (index + 1) + '.png" alt="Buff" />';
-            html += '<span>' + element + '</span>';
-        });
-    } else if (/Thrall/.exec(data) !== null) {
-        let x = data.match(/[0-9]+[%]/g);
-        x.forEach((element, index) => {
-            html += '<img src="buffs/mystic/buff' + (index + 1) + '.png" alt="Buff" />';
-            html += '<span>' + element + '</span>';
-        });
+    if (score === '0') {
+        html += 'Never completed';
+    } else if (type === 'Mystic') {
+        html += 'Mystic score!';
+    } else if (type === 'Priest') {
+        html += 'Priest score!';
     } else {
-        html += data;
+        let dmg = score.split(' ');
+        html += `${(dmg[0] / (10 ** 6)).toFixed(3)}M ${dmg[1]}`;
     }
+    // if (/party/.exec(data) !== null) {
+    //     let x = data.split(' ');
+    //     let number = x[2].replace(/,/g, '');
+    //     html += '<span>' + (number / (10**6)).toFixed(3) + 'M</span>&nbsp';
+    //     html += x[3] + ')';
+    // } else if (/Divine/.exec(data) !== null){
+    //     let x = data.match(/[0-9]+[%]/g);
+    //     x.forEach((element, index) => {
+    //         html += '<img src="buffs/priest/buff' + (index + 1) + '.png" alt="Buff" />';
+    //         html += '<span>' + element + '</span>';
+    //     });
+    // } else if (/Thrall/.exec(data) !== null) {
+    //     let x = data.match(/[0-9]+[%]/g);
+    //     x.forEach((element, index) => {
+    //         html += '<img src="buffs/mystic/buff' + (index + 1) + '.png" alt="Buff" />';
+    //         html += '<span>' + element + '</span>';
+    //     });
+    // } else {
+    //     html += 'Never completed';
+    // }
     return html;
 }
 
 function addRow(element, hasAlts, showAlts) {
-    let html = '<div class="row"><div class="name"><span ';
-    html += (element.main !== '') ? ('title="Main: ' + element.main + '"') : '';
-    html += '>';
-    html += element.name;
-    html += '</span>';
-    html += (hasAlts && !showAlts) ? '<img src="icons/arrow.png" alt="Show alts" class="arrow"/>' : '';
+    const date = new Date(element.lastOnline);
+    let html = '<div class="row">';
+    html += `<div class="name" data-sort="${element.name}"><span ${(element.main !== '') ? (`title="Main: ${element.main}"`) : ''}>${element.name}</span>${(hasAlts && !showAlts) ? '<img src="icons/arrow.png" alt="Show alts" class="arrow"/>' : ''}</div>`;
     if (element.main === '' && !showAlts) {
-        html += '</div><div class="rank"><span>';
-        html += element.rank;
-        html += '</span>';
+        html += `<div class="rank"><span>${element.rank}</span></div>`;
     } else if (showAlts) {
-        html += '</div><div class="rank"><span>';
-        html += (element.main === '' ? element.rank : 'Alt');
-        html += '</span>';
+        html += `<div class="rank"><span>${(element.main === '' ? element.rank : 'Alt')}</span></div>`;
     }
-    html += '</div><div class="class"><span>';
-    html += element.class;
-    html += '</div><div class="contribution"><span>';
-    html += element.contrCurrent + ' ('  + element.contrTotal + ')';
-    html += '</div><div class="last-online"><span title="' + element.lastOnline.split(',')[1] + '">';
-    html += element.lastOnline.split(',')[0];
-    html += '</div><div class="note"><span class="empty">...</span><span class="content hidden">';
-    html += element.note;
-    html += '</span></div><div class="dungeons"><span class="empty">...</span><div class="content hidden">';
-    html += dungeonsScore(element.RKE);
-    html += '</div></div><div class="dungeons"><span class="empty">...</span><div class="content hidden">';
-    html += dungeonsScore(element.RRHM);
-    html += '</div></div><div class="dungeons"><span class="empty">...</span><div class="content hidden">';
-    html += dungeonsScore(element.TRNM);
-    html += '</div></div><div class="dungeons"><span class="empty">...</span><div class="content hidden">';
-    html += dungeonsScore(element.AANM);
-    html += '</div></div><div class="dungeons"><span class="empty">...</span><div class="content hidden">';
-    html += dungeonsScore(element.RKNM);
-    html += '</div>';
-    html += '</div><div class="misc">';
+    html += `<div class="class" data-sort="${element.class}"><span>${element.class}</span></div>`;
+    html += `<div class="contribution" data-sort="${element.contrTotal}"><span><span class="contrCurrent">${element.contrCurrent}</span>(<span class="contrTotal">${element.contrTotal}</span>)</span></div>`;
+    html += `<div class="last-online" data-sort="${element.lastOnline}"><span title="${('0' + date.getHours()).substr(-2)}:${('0' + date.getMinutes()).substr(-2)}">${('0' + date.getDate()).substr(-2)}/${('0' + (date.getMonth() + 1)).substr(-2)}/${('' + date.getFullYear()).substr(-2)}</span></div>`;
+    html += `<div class="note" data-sort="${element.note}"><span class="empty">...</span><span class="content hidden">${element.note}</span></div>`;
+    html += `<div class="dungeons"><span class="empty">...</span><div class="content hidden">${dungeonsScore(element.RKE, element.class)}</div></div>`;
+    html += `<div class="dungeons"><span class="empty">...</span><div class="content hidden">${dungeonsScore(element.RRHM, element.class)}</div></div>`;
+    html += `<div class="dungeons"><span class="empty">...</span><div class="content hidden">${dungeonsScore(element.TRNM, element.class)}</div></div>`;
+    html += `<div class="dungeons"><span class="empty">...</span><div class="content hidden">${dungeonsScore(element.AANM, element.class)}</div></div>`;
+    html += `<div class="dungeons"><span class="empty">...</span><div class="content hidden">${dungeonsScore(element.RKNM, element.class)}</div></div>`;
     if (element.main === '') {
-        html += element.discord ? '<img src="icons/discord.png" alt="Has discord" class="discord"/>' : '<img src="icons/discord.png" alt="No discord" class="discord faded"/>';
-        html += element.civil ? '<img src="icons/sword.png" alt="Plays civil unrest" class="civil"/>' : '<img src="icons/sword.png" alt="Doesn\'t play civil unrest" class="civil faded"/>';
+        html += `<div>${element.discord ? '<img src="icons/discord.png" alt="Has discord" class="discord"/>' : '<img src="icons/discord.png" alt="No discord" class="discord faded"/>'}</div>`;
+        html += `<div>${element.civil ? '<img src="icons/sword.png" alt="Plays civil unrest" class="civil"/>' : '<img src="icons/sword.png" alt="Doesn\'t play civil unrest" class="civil faded"/>'}</div>`;
     }
-    html += '</div></div>';
+    html += '</div>';
     return html;
 }
 
@@ -115,7 +103,7 @@ function buildHTML(data, showAlts) {
     head += '<link rel="stylesheet" type="text/css" href="style.css"/>';
     head += '<script src="main.js"></script>';
 
-    body += '<main><div class="row"><div>Name</div><div>Rank</div><div>Class</div><div>Contribution</div><div>Last online</div><div>Note</div><div>RKE</div><div>RRHM</div><div>TRNM</div><div>AANM</div><div>RKNM</div><div>Misc</div></div><hr/>';
+    body += '<main><div class="row header"><div class="name">Name</div><div class="rank">Rank</div><div class="class">Class</div><div class="contribution">Contribution</div><div class="last-online">Last online</div><div class="note">Note</div><div>RKE</div><div>RRHM</div><div>TRNM</div><div>AANM</div><div>RKNM</div><div>Discord</div><div>Civil</div></div>';
 
     if (showAlts === false) {
         data.forEach((element) => {
@@ -142,19 +130,11 @@ function buildHTML(data, showAlts) {
     return '<!DOCTYPE html><html><head>' + head + '</head><body>' + body + '</body></html>';
 }
 
-async function deliverHTML(sort, showAlts) {
+async function deliverHTML(showAlts) {
     const db = await Sqlite.open('data/tera.db').catch(err => logAndExit(err));
     console.log('Open DB connection.');
-    let data = [];
 
-    if (!sort) {
-        data = await db.all('select * from guild_members').catch(err => logAndExit(err));
-    } else {
-        console.log('SELECT * FROM guild_members ORDER BY ' + sort.column + ' ' + sort.way);
-        console.log(sort);
-        data = await db.all('SELECT * FROM guild_members ORDER BY ' + sort.column + ' ' + sort.way).catch(err => logAndExit(err));
-    }
-
+    let data = await db.all('select * from guild_members').catch(err => logAndExit(err));
 
     if (showAlts === false) {
         data = data.sort((a, b) => !!a.main - !!b.main);
@@ -166,10 +146,6 @@ async function deliverHTML(sort, showAlts) {
                 data = data.filter(element3 => element3.name !== element.name);
             }
         });
-    }
-
-    if (sort !== false) {
-        console.log(sort);
     }
 
     const html = buildHTML(data, showAlts);

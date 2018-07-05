@@ -20,7 +20,7 @@ function readFile() {
 }
 
 function createNewTable() {
-    let sqlQuery = 'CREATE TABLE if not exists guild_members (name TEXT, main TEXT, contrCurrent NUMBER, contrTotal NUMBER, class TEXT, rank TEXT, lastOnline TEXT, note TEXT, RKE TEXT, RRHM TEXT,' +
+    let sqlQuery = 'CREATE TABLE if not exists guild_members (name TEXT, main TEXT, contrCurrent NUMBER, contrTotal NUMBER, class TEXT, rank TEXT, lastOnline number, note TEXT, RKE TEXT, RRHM TEXT,' +
         'TRNM TEXT, AANM TEXT, RKNM TEXT, discord BOOLEAN, civil BOOLEAN)';
 
     return db.run(sqlQuery);
@@ -37,7 +37,19 @@ function addRow(row) {
         } else {
             for (let property2 in row.dungeons) {
                 propertyList.push(property2);
-                valueList.push(row.dungeons[property2]);
+                if(row.dungeons[property2].completed === false) {
+                    valueList.push(false);
+                } else if (row.dungeons[property2].dps !== undefined) {
+                    valueList.push(`${row.dungeons[property2].dps} (${row.dungeons[property2].partyPercent})`);
+                } else {
+                    let buffList = '';
+                    for (let buff in row.dungeons[property2]) {
+                        if (buff !== 'completed') {
+                            buffList += `${buff}: ${row.dungeons[property2][buff]}, `;
+                        }
+                    }
+                    valueList.push(buffList);
+                }
             }
         }
     }
