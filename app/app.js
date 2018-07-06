@@ -9,16 +9,10 @@ const router = new Router();
 app.use(Serve('../html'));
 
 router.get('/', async (ctx) => {
-    ctx.body = await deliverHTML(false);
-});
-
-router.get('/show-alts', async (ctx) => {
-    ctx.body = await deliverHTML(true);
-    ctx.response.status = 200;
+    ctx.body = await deliverHTML();
 });
 
 router.put('/:id/:column/:data', async (ctx) => {
-    console.log(ctx);
     const answer = await updateDB(ctx.params);
     ctx.response.status = answer.status;
     ctx.response.message = answer.message;
@@ -26,8 +20,8 @@ router.put('/:id/:column/:data', async (ctx) => {
 
 app.use(router.routes());
 
-app.listen(8080, () => {
-    console.log('Server running on https://localhost:8080')
+app.listen(8999, () => {
+    console.log('Server running on https://localhost:8999')
 });
 
 function logAndExit(error) {
@@ -36,16 +30,35 @@ function logAndExit(error) {
 }
 
 function dungeonsScore(score, type) {
-    let html = '';
+    let html = ' data-value="';
     if (score === '0') {
+        html += '0">';
+        html += '<div class="content hidden">';
         html += 'Never completed';
-    } else if (type === 'Mystic') {
-        html += 'Mystic score!';
-    } else if (type === 'Priest') {
-        html += 'Priest score!';
+        html += '</div>'
+    } else if (type === 'Mystic' || type === 'Priest') {
+        let buffs = score.split(', ');
+        buffs.pop();
+        let percentageSum = 0;
+        let miniHTML = '';
+        buffs.forEach((element) => {
+           let buffName = element.split(':')[0];
+           let percentage = element.split(':')[1].slice(0, -1);
+           percentageSum += Number(percentage);
+           miniHTML += `<div class="img-container"><img src="buffs/${(buffName.replace(/ /g, '_')).toLowerCase()}.png" alt="${buffName}" /><div>${percentage}</div></div>`;
+        });
+        html += `${percentageSum}">`;
+        html += '<div class="content hidden">';
+        html += miniHTML;
+        html += '</div>'
     } else {
-        let dmg = score.split(' ');
+        const dmg = score.split(' ');
+        html += `${(dmg[0] / (10 ** 3)).toFixed(0)}">`;
+        html += '<div class="content hidden">';
         html += `${(dmg[0] / (10 ** 6)).toFixed(3)}M ${dmg[1]}`;
+        html += '</div>'
+
+
     }
     // if (/party/.exec(data) !== null) {
     //     let x = data.split(' ');
@@ -70,85 +83,66 @@ function dungeonsScore(score, type) {
     return html;
 }
 
-function addRow(element, hasAlts, showAlts) {
+function addRow(element) {
     const date = new Date(element.lastOnline);
-    let html = '<div class="row">';
-    html += `<div class="name" data-sort="${element.name}"><span ${(element.main !== '') ? (`title="Main: ${element.main}"`) : ''}>${element.name}</span>${(hasAlts && !showAlts) ? '<img src="icons/arrow.png" alt="Show alts" class="arrow"/>' : ''}</div>`;
-    if (element.main === '' && !showAlts) {
-        html += `<div class="rank"><span>${element.rank}</span></div>`;
-    } else if (showAlts) {
-        html += `<div class="rank"><span>${(element.main === '' ? element.rank : 'Alt')}</span></div>`;
+    let html = '<div class="row';
+    if (element.main === 'true' || element.main === '') {
+        html += ' main';
+    } else {
+        html += ' alt hidden';
     }
-    html += `<div class="class" data-sort="${element.class}"><span>${element.class}</span></div>`;
-    html += `<div class="contribution" data-sort="${element.contrTotal}"><span><span class="contrCurrent">${element.contrCurrent}</span>(<span class="contrTotal">${element.contrTotal}</span>)</span></div>`;
-    html += `<div class="last-online" data-sort="${element.lastOnline}"><span title="${('0' + date.getHours()).substr(-2)}:${('0' + date.getMinutes()).substr(-2)}">${('0' + date.getDate()).substr(-2)}/${('0' + (date.getMonth() + 1)).substr(-2)}/${('' + date.getFullYear()).substr(-2)}</span></div>`;
-    html += `<div class="note" data-sort="${element.note}"><span class="empty">...</span><span class="content hidden">${element.note}</span></div>`;
-    html += `<div class="dungeons"><span class="empty">...</span><div class="content hidden">${dungeonsScore(element.RKE, element.class)}</div></div>`;
-    html += `<div class="dungeons"><span class="empty">...</span><div class="content hidden">${dungeonsScore(element.RRHM, element.class)}</div></div>`;
-    html += `<div class="dungeons"><span class="empty">...</span><div class="content hidden">${dungeonsScore(element.TRNM, element.class)}</div></div>`;
-    html += `<div class="dungeons"><span class="empty">...</span><div class="content hidden">${dungeonsScore(element.AANM, element.class)}</div></div>`;
-    html += `<div class="dungeons"><span class="empty">...</span><div class="content hidden">${dungeonsScore(element.RKNM, element.class)}</div></div>`;
-    if (element.main === '') {
+    html += '">';
+    html += `<div class="name" data-value="${element.name}"><span>${element.name}</span>${(element.main === "true") ? '<img src="icons/arrow.png" alt="Show alts" class="arrow"/>' : ''}</div>`;
+    if (element.main === '' || element.main === 'true') {
+        html += `<div class="rank" data-value="${element.rank}"><span>${element.rank}</span></div>`;
+    } else {
+        html += `<div class="rank" data-value="Alt" data-main="${element.main}"><span title="Main: ${element.main}">Alt</span></div>`;
+    }
+    html += `<div class="class" data-value="${element.class}"><img src="icons/classes/${(element.class).toLowerCase()}.svg" alt="${element.class}" class="class"/></div>`;
+    html += `<div class="contribution" data-value="${element.contrTotal}"><span><span class="contrCurrent">${element.contrCurrent}</span>(<span class="contrTotal">${element.contrTotal}</span>)</span></div>`;
+    html += `<div class="last-online" data-value="${element.lastOnline}"><span title="${('0' + date.getHours()).substr(-2)}:${('0' + date.getMinutes()).substr(-2)}">${('0' + date.getDate()).substr(-2)}/${('0' + (date.getMonth() + 1)).substr(-2)}/${('' + date.getFullYear()).substr(-2)}</span></div>`;
+    html += `<div class="note" data-value="${element.note}"><span class="empty">...</span><span class="content hidden">${element.note}</span></div>`;
+    html += `<div class="dungeons rke"${dungeonsScore(element.RKE, element.class)}<span class="empty">...</span></div>`;
+    html += `<div class="dungeons rrhm"${dungeonsScore(element.RRHM, element.class)}<span class="empty">...</span></div>`;
+    html += `<div class="dungeons trnm"${dungeonsScore(element.TRNM, element.class)}<span class="empty">...</span></div>`;
+    html += `<div class="dungeons aanm"${dungeonsScore(element.AANM, element.class)}<span class="empty">...</span></div>`;
+    html += `<div class="dungeons rknm"${dungeonsScore(element.RKNM, element.class)}<span class="empty">...</span></div>`;
+    if (element.main === '' || element.main === 'true') {
         html += `<div>${element.discord ? '<img src="icons/discord.png" alt="Has discord" class="discord"/>' : '<img src="icons/discord.png" alt="No discord" class="discord faded"/>'}</div>`;
         html += `<div>${element.civil ? '<img src="icons/sword.png" alt="Plays civil unrest" class="civil"/>' : '<img src="icons/sword.png" alt="Doesn\'t play civil unrest" class="civil faded"/>'}</div>`;
+    } else {
+        html += '<div></div><div></div>';
     }
     html += '</div>';
     return html;
 }
 
-function buildHTML(data, showAlts) {
+function buildHTML(data) {
     let head = '';
     let body = '';
 
     head += '<link rel="stylesheet" type="text/css" href="style.css"/>';
     head += '<script src="main.js"></script>';
 
-    body += '<main><div class="row header"><div class="name">Name</div><div class="rank">Rank</div><div class="class">Class</div><div class="contribution">Contribution</div><div class="last-online">Last online</div><div class="note">Note</div><div>RKE</div><div>RRHM</div><div>TRNM</div><div>AANM</div><div>RKNM</div><div>Discord</div><div>Civil</div></div>';
+    body += '<main><div class="header"><div class="name">Name</div><div class="rank">Rank</div><div class="class">Class</div><div class="contribution">Contribution</div><div class="last-online">Last online</div><div class="note">Note</div><div class="rke">RKE</div><div class="rrhm">RRHM</div><div class="trnm">TRNM</div><div class="aanm">AANM</div><div class="rknm">RKNM</div><div>Discord</div><div>Civil</div></div>';
 
-    if (showAlts === false) {
-        data.forEach((element) => {
-            body += '<div class="main">';
-            body += ((element.alts.length === 0) ? addRow(element, false, showAlts) : addRow(element, true, showAlts));
-            body += '</div>';
-            body += '<div class="alts hidden">';
 
-            element.alts.forEach((element2) => {
-                body += addRow(element2, false, showAlts);
-
-            });
-
-            body += '</div>';
-        });
-    } else {
-        data.forEach((element) => {
-           body += addRow(element, false, showAlts);
-        });
-    }
+    data.forEach((element) => {
+        body += addRow(element);
+    });
 
 
     body += '</main>';
     return '<!DOCTYPE html><html><head>' + head + '</head><body>' + body + '</body></html>';
 }
 
-async function deliverHTML(showAlts) {
+async function deliverHTML() {
     const db = await Sqlite.open('data/tera.db').catch(err => logAndExit(err));
     console.log('Open DB connection.');
 
     let data = await db.all('select * from guild_members').catch(err => logAndExit(err));
 
-    if (showAlts === false) {
-        data = data.sort((a, b) => !!a.main - !!b.main);
-        data.forEach((element) => {
-            if (element.main === '') {
-                element.alts = [];
-            } else {
-                data.find(element2 => element2.name === element.main).alts.push(element);
-                data = data.filter(element3 => element3.name !== element.name);
-            }
-        });
-    }
-
-    const html = buildHTML(data, showAlts);
+    const html = buildHTML(data);
     await db.close().catch(err => logAndExit(err));
     console.log('Close DB connection.');
 

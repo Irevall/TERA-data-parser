@@ -33,7 +33,7 @@ main > hr {
 }
 
 
-.main, .alts, .row {
+.main, .alts, .row, .header {
     display: contents;
 }
 
@@ -43,8 +43,13 @@ main > hr {
     flex-direction: row;
 }
 
-.row > div:not(:first-of-type) {
+.row > div:not(.name):not(.rank):not(.note), .header > div:not(.name):not(.rank):not(.note) {
     justify-content: flex-end;
+    text-align: right;
+}
+
+.row > .class *, .discord, .civil {
+    margin: 0 auto;
 }
 
 .row span {
@@ -98,4 +103,37 @@ main > .row:nth-child(1) > div {
 
 .alts > .row > div:nth-of-type(1) > span {
     margin-left: 25px;
+}
+
+.img-container {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    text-align: center;
+    color: white;
+    text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+}
+
+.img-container:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+/* Bottom left text */
+.img-container > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-container > img {
+    opacity: 0.8;
+}
+
+.dungeons > .content{
+    margin: 0 auto;
 }

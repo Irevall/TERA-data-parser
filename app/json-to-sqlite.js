@@ -45,7 +45,7 @@ function addRow(row) {
                     let buffList = '';
                     for (let buff in row.dungeons[property2]) {
                         if (buff !== 'completed') {
-                            buffList += `${buff}: ${row.dungeons[property2][buff]}, `;
+                            buffList += `${buff}:${row.dungeons[property2][buff]}, `;
                         }
                     }
                     valueList.push(buffList);
@@ -60,6 +60,7 @@ function addRow(row) {
     return db.run('INSERT INTO guild_members (' + propertyList.join(', ') + ') VALUES(' +  propertyList.map(() => '?' ).join(', ')  +')', valueList);
 }
 
+// fix update
 function updateRow(row) {
     const setList = [];
 
