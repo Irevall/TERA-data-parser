@@ -60,26 +60,6 @@ function dungeonsScore(score, type) {
 
 
     }
-    // if (/party/.exec(data) !== null) {
-    //     let x = data.split(' ');
-    //     let number = x[2].replace(/,/g, '');
-    //     html += '<span>' + (number / (10**6)).toFixed(3) + 'M</span>&nbsp';
-    //     html += x[3] + ')';
-    // } else if (/Divine/.exec(data) !== null){
-    //     let x = data.match(/[0-9]+[%]/g);
-    //     x.forEach((element, index) => {
-    //         html += '<img src="buffs/priest/buff' + (index + 1) + '.png" alt="Buff" />';
-    //         html += '<span>' + element + '</span>';
-    //     });
-    // } else if (/Thrall/.exec(data) !== null) {
-    //     let x = data.match(/[0-9]+[%]/g);
-    //     x.forEach((element, index) => {
-    //         html += '<img src="buffs/mystic/buff' + (index + 1) + '.png" alt="Buff" />';
-    //         html += '<span>' + element + '</span>';
-    //     });
-    // } else {
-    //     html += 'Never completed';
-    // }
     return html;
 }
 
@@ -93,12 +73,12 @@ function addRow(element) {
     }
     html += '">';
     html += `<div class="name" data-value="${element.name}"><span>${element.name}</span>${(element.main === "true") ? '<img src="icons/arrow.png" alt="Show alts" class="arrow"/>' : ''}</div>`;
+    html += `<div class="class" data-value="${element.class}"><img src="icons/classes/${(element.class).toLowerCase()}.svg" alt="${element.class}" class="class"/></div>`;
     if (element.main === '' || element.main === 'true') {
         html += `<div class="rank" data-value="${element.rank}"><span>${element.rank}</span></div>`;
     } else {
         html += `<div class="rank" data-value="Alt" data-main="${element.main}"><span title="Main: ${element.main}">Alt</span></div>`;
     }
-    html += `<div class="class" data-value="${element.class}"><img src="icons/classes/${(element.class).toLowerCase()}.svg" alt="${element.class}" class="class"/></div>`;
     html += `<div class="contribution" data-value="${element.contrTotal}"><span><span class="contrCurrent">${element.contrCurrent}</span>(<span class="contrTotal">${element.contrTotal}</span>)</span></div>`;
     html += `<div class="last-online" data-value="${element.lastOnline}"><span title="${('0' + date.getHours()).substr(-2)}:${('0' + date.getMinutes()).substr(-2)}">${('0' + date.getDate()).substr(-2)}/${('0' + (date.getMonth() + 1)).substr(-2)}/${('' + date.getFullYear()).substr(-2)}</span></div>`;
     html += `<div class="note" data-value="${element.note}"><span class="empty">...</span><span class="content hidden">${element.note}</span></div>`;
@@ -108,8 +88,8 @@ function addRow(element) {
     html += `<div class="dungeons aanm"${dungeonsScore(element.AANM, element.class)}<span class="empty">...</span></div>`;
     html += `<div class="dungeons rknm"${dungeonsScore(element.RKNM, element.class)}<span class="empty">...</span></div>`;
     if (element.main === '' || element.main === 'true') {
-        html += `<div>${element.discord ? '<img src="icons/discord.png" alt="Has discord" class="discord"/>' : '<img src="icons/discord.png" alt="No discord" class="discord faded"/>'}</div>`;
-        html += `<div>${element.civil ? '<img src="icons/sword.png" alt="Plays civil unrest" class="civil"/>' : '<img src="icons/sword.png" alt="Doesn\'t play civil unrest" class="civil faded"/>'}</div>`;
+        html += `<div class="discord">${element.discord ? '<img src="icons/discord.png" alt="Has discord"/>' : '<img src="icons/discord.png" alt="No discord" class="faded"/>'}</div>`;
+        html += `<div class="civil">${element.civil ? '<img src="icons/sword.png" alt="Plays civil unrest"/>' : '<img src="icons/sword.png" alt="Doesn\'t play civil unrest" class="faded"/>'}</div>`;
     } else {
         html += '<div></div><div></div>';
     }
@@ -124,7 +104,7 @@ function buildHTML(data) {
     head += '<link rel="stylesheet" type="text/css" href="style.css"/>';
     head += '<script src="main.js"></script>';
 
-    body += '<main><div class="header"><div class="name">Name</div><div class="rank">Rank</div><div class="class">Class</div><div class="contribution">Contribution</div><div class="last-online">Last online</div><div class="note">Note</div><div class="rke">RKE</div><div class="rrhm">RRHM</div><div class="trnm">TRNM</div><div class="aanm">AANM</div><div class="rknm">RKNM</div><div>Discord</div><div>Civil</div></div>';
+    body += '<nav><span class="alter">Show/hide alts</span></nav><main><div class="header"><div class="name">Name</div><div class="rank">Rank</div><div class="class">Class</div><div class="contribution">Contribution</div><div class="last-online">Last online</div><div class="note">Note</div><div class="rke">RKE</div><div class="rrhm">RRHM</div><div class="trnm">TRNM</div><div class="aanm">AANM</div><div class="rknm">RKNM</div><div class="discord">Discord</div><div class="civil">Civil</div></div>';
 
 
     data.forEach((element) => {

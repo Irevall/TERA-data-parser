@@ -1,4 +1,5 @@
 let sorted = false;
+let showAlts = false;
 
 // make it fetch
 function sendRequest(method, url) {
@@ -49,6 +50,10 @@ function sortListener() {
 }
 
 function altsAfterMains() {
+    if (showAlts === true) {
+        return false;
+    }
+
     const alts = document.querySelectorAll('.alt');
     const mains = document.querySelectorAll('.main');
 
@@ -65,8 +70,8 @@ function altsAfterMains() {
 
 function miscChange() {
     document.querySelectorAll('.main').forEach((element) => {
-        const discord = element.querySelector('.discord');
-        const civil = element.querySelector('.civil');
+        const discord = element.querySelector('.discord').querySelector('img');
+        const civil = element.querySelector('.civil').querySelector('img');
         discord.addEventListener('click', () => {
             if (discord.classList.contains('faded')) {
                 sendRequest('PUT', ('/' + element.querySelector('.name').querySelector('span').innerHTML + '/discord/1'));
@@ -115,6 +120,38 @@ function hiddenAlts() {
     });
 }
 
+function globalHiddenAlts() {
+    document.querySelector('.alter').addEventListener('click', () => {
+        if (showAlts === false) {
+            document.querySelectorAll('.main').forEach((element) => {
+                let img = element.querySelector('.name').querySelector('img');
+                if (img !== null) {
+                    img.classList.add('hidden');
+                }
+            });
+
+            document.querySelectorAll('.alt').forEach((element) => {
+                element.classList.remove('hidden');
+            });
+
+            showAlts = true;
+        } else {
+            document.querySelectorAll('.main').forEach((element) => {
+                let img = element.querySelector('.name').querySelector('img');
+                if (img !== null) {
+                    img.classList.remove('hidden');
+                }
+            });
+
+            document.querySelectorAll('.alt').forEach((element) => {
+                element.classList.add('hidden');
+            });
+
+            showAlts = false;
+            altsAfterMains();
+        }
+    })
+}
 
 function hiddenElements() {
     document.querySelectorAll('.row').forEach((element, index) => {
@@ -161,4 +198,5 @@ document.addEventListener('DOMContentLoaded', () => {
     miscChange();
     hiddenAlts();
     hiddenElements();
+    globalHiddenAlts()
 });
