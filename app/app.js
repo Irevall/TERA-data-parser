@@ -104,7 +104,7 @@ function buildHTML(data) {
     head += '<link rel="stylesheet" type="text/css" href="style.css"/>';
     head += '<script src="main.js"></script>';
 
-    body += '<nav><span class="alter">Show/hide alts</span></nav><main><div class="header"><div class="name">Name</div><div class="rank">Rank</div><div class="class">Class</div><div class="contribution">Contribution</div><div class="last-online">Last online</div><div class="note">Note</div><div class="rke">RKE</div><div class="rrhm">RRHM</div><div class="trnm">TRNM</div><div class="aanm">AANM</div><div class="rknm">RKNM</div><div class="discord">Discord</div><div class="civil">Civil</div></div>';
+    body += '<nav><span class="alter">Show/hide alts</span></nav><main><div class="header"><div class="name">Name</div><div class="class">Class</div><div class="rank">Rank</div><div class="contribution">Contribution</div><div class="last-online">Last online</div><div class="note">Note</div><div class="rke">RKE</div><div class="rrhm">RRHM</div><div class="trnm">TRNM</div><div class="aanm">AANM</div><div class="rknm">RKNM</div><div class="discord">Discord</div><div class="civil">Civil</div></div>';
 
 
     data.forEach((element) => {
