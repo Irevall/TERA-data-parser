@@ -19,7 +19,7 @@ main {
 }
 
 hr {
-    grid-column: span 12;
+    grid-column: span 13;
     width: 100%;
     margin: 0;
 }
