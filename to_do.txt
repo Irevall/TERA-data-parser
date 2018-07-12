@@ -1,9 +1,5 @@
 To do:
 When alts are hidden their contribution sums up to main
-Search bar (by name)
-Filters (rank/class/dmg or buffs/discord/civil)
 Nav with search, filter and better show/hide button
-Cursor: pointer
 Make it look better
 Automatize all node
-Fix updating DB

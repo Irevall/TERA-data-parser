@@ -2,18 +2,26 @@
 
 body {
     margin: 0;
-    background-color: #2d3b51;;
-    color: #dbdbdb;
+    background-color: #2d3b51;
+    color: #e3e3e3;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    display: flex;
+}
+
+nav > span {
+    margin-left: 15px;
 }
 
 main {
     margin-left: 15px;
     margin-top: 15px;
     display: grid;
-    grid-column-gap: 15px;
-    grid-row-gap: 7px;
+    grid-column-gap: 20px;
+    grid-row-gap: 5px;
     width: max-content;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto;
 }
@@ -22,14 +30,6 @@ hr {
     grid-column: span 13;
     width: 100%;
     margin: 0;
-}
-
-hr {
-    opacity: 0.3;
-}
-
-main > hr {
-    opacity: 1;
 }
 
 .main, .alts, .row, .header {
@@ -42,13 +42,25 @@ main > hr {
     flex-direction: row;
 }
 
+.header > div:not(.note) {
+    cursor: pointer;
+}
+
 .row > div:not(.name):not(.rank):not(.note), .header > div:not(.name):not(.rank):not(.note) {
     justify-content: flex-end;
     text-align: right;
 }
 
+.row > .note > .empty, .row > .dungeons > .empty {
+    margin: 0 auto;
+}
+
 .row > .class *, .discord, .civil {
     margin: 0 auto;
+}
+
+.header > .rke, .header > .rrhm, .header > .trnm, .header > .aanm, .header > .rknm {
+    text-align: center !important;
 }
 
 .row span {
@@ -65,8 +77,7 @@ main > hr {
 }
 
 .faded {
-    filter: grayscale(100%);
-    opacity: 0.8;
+    filter: grayscale(90%);
 }
 
 .content span {
@@ -121,7 +132,6 @@ main > .row:nth-child(1) > div {
     margin-right: 10px;
 }
 
-/* Bottom left text */
 .img-container > div {
     position: absolute;
     top: 50%;
@@ -135,4 +145,64 @@ main > .row:nth-child(1) > div {
 
 .dungeons > .content{
     margin: 0 auto;
+}
+
+
+.filter > span {
+    width: 100px;
+}
+
+.dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #2d3b51;
+    padding: 0 7px;
+}
+
+.dropdown span {
+    width: 100%;
+}
+
+.dropdown > li:not(:first-child) {
+    display: none;
+}
+
+
+.dropdown > li {
+    display: flex;
+}
+
+.dropdown:hover > li {
+    display: flex;
+}
+
+
+li .dropdown2 {
+    flex-direction: column;
+    position: absolute;
+    display: none;
+    background-color: #27465e;
+    padding: 0 7px;
+}
+
+.dropdown > li:hover > span {
+    color: #0075d6;
+}
+
+.dropdown > li li:hover {
+    color: #0075d6;
+}
+
+li:hover .dropdown2 {
+    display: flex;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+.option, .alter, .name > img, .row > .dungeons, .row > .note, .discord > img, .civil > img {
+    cursor: pointer;
 }

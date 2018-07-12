@@ -1,5 +1,6 @@
 let sorted = false;
-let showAlts = false;
+let filtered = [];
+let altsVisible = false;
 
 // make it fetch
 function sendRequest(method, url) {
@@ -8,7 +9,23 @@ function sendRequest(method, url) {
     xhr.send();
 }
 
-function sortAltsHidden(column) {
+function showAll() {
+    document.querySelectorAll('.row').forEach((element) => {
+        if (element.classList.contains('hidden') === true) {
+            element.classList.remove('hidden');
+        }
+    })
+}
+
+function hideAll() {
+    document.querySelectorAll('.row').forEach((element) => {
+        if (element.classList.contains('hidden') === false) {
+            element.classList.add('hidden');
+        }
+    })
+}
+
+function sortColumn(column) {
     if (column === 'note') {
         return false;
     }
@@ -43,14 +60,14 @@ function sortAltsHidden(column) {
 function sortListener() {
     document.querySelector('.header').querySelectorAll('div').forEach((element) => {
         element.addEventListener('click', () => {
-            sortAltsHidden(element.classList.value);
-            altsAfterMains();
+            sortColumn(element.classList.value);
+            sortAltsAfterMains();
         });
     })
 }
 
-function altsAfterMains() {
-    if (showAlts === true) {
+function sortAltsAfterMains() {
+    if (altsVisible === true) {
         return false;
     }
 
@@ -68,7 +85,7 @@ function altsAfterMains() {
     })
 }
 
-function miscChange() {
+function miscStateChange() {
     document.querySelectorAll('.main').forEach((element) => {
         const discord = element.querySelector('.discord').querySelector('img');
         const civil = element.querySelector('.civil').querySelector('img');
@@ -77,10 +94,12 @@ function miscChange() {
                 sendRequest('PUT', ('/' + element.querySelector('.name').querySelector('span').innerHTML + '/discord/1'));
                 discord.classList.remove('faded');
                 discord.alt = 'Has discord';
+                element.querySelector('.discord').dataset.value = 1;
             } else {
                 sendRequest('PUT', ('/' + element.querySelector('.name').querySelector('span').innerHTML + '/discord/0'));
                 discord.classList.add('faded');
                 discord.alt = 'No discord';
+                element.querySelector('.discord').dataset.value = 0;
             }
         });
 
@@ -89,72 +108,19 @@ function miscChange() {
                 sendRequest('PUT', ('/' + element.querySelector('.name').querySelector('span').innerHTML + '/civil/1'));
                 civil.classList.remove('faded');
                 civil.alt = 'Plays civil unrest';
+                element.querySelector('.civil').dataset.value = 1;
             } else {
                 sendRequest('PUT', ('/' + element.querySelector('.name').querySelector('span').innerHTML + '/civil/0'));
                 civil.classList.add('faded');
                 civil.alt = 'Doesn\'t play civil unrest';
+                element.querySelector('.civil').dataset.value = 0;
             }
         });
     });
 }
 
-function hiddenAlts() {
-    document.querySelectorAll('.main').forEach((element) => {
-        if (element.querySelector('.arrow') !== null) {
-            element.querySelector('.arrow').addEventListener('click', () => {
-                console.log(element.querySelector('.name').dataset.value);
-                document.querySelectorAll('.alt').forEach((alt) => {
-                   if (element.querySelector('.name').dataset.value === alt.querySelector('.rank').dataset.main) {
-                       if (alt.classList.contains('hidden') !== false) {
-                           alt.classList.remove('hidden');
-                           element.querySelector('.arrow').classList.add('down');
-                       } else {
-                           alt.classList.add('hidden');
-                           element.querySelector('.arrow').classList.remove('down');
-                       }
-                       console.log(alt);
-                   }
-                });
-            });
-        }
-    });
-}
-
-function globalHiddenAlts() {
-    document.querySelector('.alter').addEventListener('click', () => {
-        if (showAlts === false) {
-            document.querySelectorAll('.main').forEach((element) => {
-                let img = element.querySelector('.name').querySelector('img');
-                if (img !== null) {
-                    img.classList.add('hidden');
-                }
-            });
-
-            document.querySelectorAll('.alt').forEach((element) => {
-                element.classList.remove('hidden');
-            });
-
-            showAlts = true;
-        } else {
-            document.querySelectorAll('.main').forEach((element) => {
-                let img = element.querySelector('.name').querySelector('img');
-                if (img !== null) {
-                    img.classList.remove('hidden');
-                }
-            });
-
-            document.querySelectorAll('.alt').forEach((element) => {
-                element.classList.add('hidden');
-            });
-
-            showAlts = false;
-            altsAfterMains();
-        }
-    })
-}
-
-function hiddenElements() {
-    document.querySelectorAll('.row').forEach((element, index) => {
+function switchColumnVisibility() {
+    document.querySelectorAll('.row').forEach((element) => {
 
         element.querySelectorAll('.dungeons').forEach((element2, index2) => {
             element2.addEventListener('click', () => {
@@ -173,30 +139,195 @@ function hiddenElements() {
         });
 
         element.querySelector('.note').addEventListener('click', () => {
-            document.querySelectorAll('.note').forEach((element2, index2) => {
-                if (index2 === 0) {
-                    return false;
-                }
+            document.querySelectorAll('.row').forEach((element2) => {
+                const target2 = element2.querySelector('.note');
 
-                const target = element2;
-
-                if (target.querySelector('.content').classList.contains('hidden')) {
-                    target.querySelector('.content').classList.remove('hidden');
-                    target.querySelector('span').classList.add('hidden');
+                if (target2.querySelector('.content').classList.contains('hidden')) {
+                    target2.querySelector('.content').classList.remove('hidden');
+                    target2.querySelector('span').classList.add('hidden');
                 } else {
-                    target.querySelector('.content').classList.add('hidden');
-                    target.querySelector('span').classList.remove('hidden');
+                    target2.querySelector('.content').classList.add('hidden');
+                    target2.querySelector('span').classList.remove('hidden');
                 }
             });
         });
     });
 }
 
+function switchAltsVisibility() {
+    document.querySelectorAll('.main').forEach((element) => {
+        if (element.querySelector('.arrow') !== null) {
+            element.querySelector('.arrow').addEventListener('click', () => {
+                console.log(element.querySelector('.name').dataset.value);
+                document.querySelectorAll('.alt').forEach((alt) => {
+                   if (element.querySelector('.name').dataset.value === alt.querySelector('.rank').dataset.main) {
+                       if (alt.classList.contains('hidden') !== false) {
+                           alt.classList.remove('hidden');
+                           element.querySelector('.arrow').classList.add('down');
+                       } else {
+                           alt.classList.add('hidden');
+                           element.querySelector('.arrow').classList.remove('down');
+                       }
+                   }
+                });
+            });
+        }
+    });
+}
+
+function globalSwitchAltsVisibility(desiredState) {
+    if (filtered.length !== 0) {
+        return;
+    }
+
+    if (desiredState === true) {
+        document.querySelectorAll('.main').forEach((element) => {
+            let img = element.querySelector('.name').querySelector('img');
+            if (img !== null) {
+                img.classList.add('hidden');
+            }
+        });
+
+        document.querySelectorAll('.alt').forEach((element) => {
+            element.classList.remove('hidden');
+        });
+
+        altsVisible = true;
+    } else {
+        document.querySelectorAll('.main').forEach((element) => {
+            let img = element.querySelector('.name').querySelector('img');
+            if (img !== null) {
+                img.classList.remove('hidden');
+            }
+        });
+
+        document.querySelectorAll('.alt').forEach((element) => {
+            element.classList.add('hidden');
+        });
+
+        altsVisible = false;
+        sortAltsAfterMains();
+    }
+}
+
+function globalSwitchAltsVisibilityListener() {
+    document.querySelector('.alter').addEventListener('click', () => {
+        globalSwitchAltsVisibility(!altsVisible);
+    })
+}
+
+function searchResults(query) {
+    document.querySelectorAll('.row').forEach((element) => {
+        if (element.querySelector('.name').dataset.value.search(query) === -1) {
+            element.classList.add('hidden');
+        }
+    })
+}
+
+function searchListener() {
+    document.querySelector('.search').querySelector('input').addEventListener('input',(e) => {
+        searchResults(e.target.value);
+    })
+}
+
+function filterListener() {
+    document.querySelectorAll('.option').forEach((element) => {
+        element.addEventListener('click', () => {
+            filter(element);
+        })
+    })
+}
+
+function filter(element) {
+    const elementContext = element.querySelector('span').innerHTML.toLowerCase();
+
+    globalSwitchAltsVisibility(true);
+    if (elementContext === 'none') {
+        showAll();
+        filtered = [];
+        return
+    }
+
+
+    let filter = {};
+    console.log(filtered);
+
+    if (element.dataset.category === undefined) {
+        filter.category = elementContext;
+        filter.value = true;
+    } else {
+        filter.category = element.dataset.category;
+        filter.value = elementContext;
+    }
+
+    filtered.forEach((filterElement) => {
+        if (filter.category === 'type' && filterElement.category === 'class') {
+            console.log(1);
+            filtered = [];
+            showAll();
+        } else if (filter.category === 'type' && filterElement.category === 'type') {
+            console.log(2);
+            filtered = [];
+            showAll();
+        } else if (filter.category === 'class' && filterElement.category === 'type') {
+            console.log(3);
+            filtered = [];
+            showAll();
+        } else if (filter.category === 'class' && filterElement.category === 'class' && filter.value !== filterElement.value) {
+            console.log(4);
+            filtered = [];
+            showAll();
+        } else if (filter.category === 'rank' && filterElement.category === 'rank' && filter.value !== filterElement.value) {
+            console.log(5);
+            filtered = [];
+            showAll();
+        }
+    });
+
+    document.querySelectorAll('.row').forEach((element2) => {
+        if (element.dataset.category === undefined) {
+            if (element2.querySelector(`.${elementContext}`).dataset.value !== '1') {
+                element2.classList.add('hidden');
+            }
+        } else {
+            if (element.dataset.category !== 'type') {
+                if (filter.category === 'rank' && filter.value === 'alt') {
+                    if (element2.querySelector(`.${element.dataset.category}`).dataset.value.toLowerCase() !== 'alt' && element2.querySelector(`.${element.dataset.category}`).dataset.value.toLowerCase() !== 'alts') {
+                        element2.classList.add('hidden');
+                    }
+
+                } else if (element2.querySelector(`.${element.dataset.category}`).dataset.value.toLowerCase() !== elementContext) {
+                    element2.classList.add('hidden');
+                }
+            } else {
+                if (elementContext === 'dmg') {
+                    if (element2.querySelector('.class').dataset.value === 'Priest' || element2.querySelector('.class').dataset.value === 'Mystic') {
+                        element2.classList.add('hidden');
+                    }
+                } else {
+                    if (element2.querySelector('.class').dataset.value !== 'Priest' && element2.querySelector('.class').dataset.value !== 'Mystic') {
+                        element2.classList.add('hidden');
+                    }
+                }
+
+            }
+        }
+    });
+
+    if (document.querySelectorAll('.row').length === document.querySelectorAll('.row.hidden').length) {
+        console.log('0 results, clap');
+    }
+
+    filtered.push(filter);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    altsAfterMains();
+    sortAltsAfterMains();
     sortListener();
-    miscChange();
-    hiddenAlts();
-    hiddenElements();
-    globalHiddenAlts()
+    miscStateChange();
+    switchAltsVisibility();
+    switchColumnVisibility();
+    globalSwitchAltsVisibilityListener();
+    searchListener();
+    filterListener()
 });

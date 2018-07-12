@@ -26,32 +26,41 @@ function createNewTable() {
     return db.run(sqlQuery);
 }
 
+function dataToRow(row) {
+    const values = {};
+
+    for (let property1 in row) {
+        if (property1 !== 'dungeons') {
+            values[property1] = row[property1];
+        } else {
+            for (let property2 in row.dungeons) {
+                if(row.dungeons[property2].completed === false) {
+                    values[property2] = false;
+                } else if (row.dungeons[property2].dps !== undefined) {
+                    values[property2] = `${row.dungeons[property2].dps} (${row.dungeons[property2].partyPercent})`;
+                } else {
+                    let buffList = [];
+                    for (let buff in row.dungeons[property2]) {
+                        if (buff !== 'completed') {
+                            buffList.push(`${buff}:${row.dungeons[property2][buff]}`);
+                        }
+                    }
+                    values[property2] = buffList.join(', ');
+                }
+            }
+        }
+    }
+
+    return values;
+}
+
 function addRow(row) {
     const propertyList = [];
     const valueList = [];
 
-    for (let property1 in row) {
-        if (property1 !== 'dungeons') {
-            propertyList.push(property1);
-            valueList.push(row[property1]);
-        } else {
-            for (let property2 in row.dungeons) {
-                propertyList.push(property2);
-                if(row.dungeons[property2].completed === false) {
-                    valueList.push(false);
-                } else if (row.dungeons[property2].dps !== undefined) {
-                    valueList.push(`${row.dungeons[property2].dps} (${row.dungeons[property2].partyPercent})`);
-                } else {
-                    let buffList = '';
-                    for (let buff in row.dungeons[property2]) {
-                        if (buff !== 'completed') {
-                            buffList += `${buff}:${row.dungeons[property2][buff]}, `;
-                        }
-                    }
-                    valueList.push(buffList);
-                }
-            }
-        }
+    for (let property in row) {
+        propertyList.push(property);
+        valueList.push(row[property]);
     }
 
     propertyList.push('discord', 'civil', 'main');
@@ -60,35 +69,20 @@ function addRow(row) {
     return db.run('INSERT INTO guild_members (' + propertyList.join(', ') + ') VALUES(' +  propertyList.map(() => '?' ).join(', ')  +')', valueList);
 }
 
-// fix update
 function updateRow(row) {
-    const setList = [];
+    const propertyList = [];
+    const valueList = [];
 
-    for (let property1 in row) {
-        let set = '';
-        if (property1 !== "dungeons" && property1 !== "name") {
-            set = property1;
-            set += ' = ';
-            if (property1 !== 'contrCurrent' && property1 !== 'contrTotal') {
-                set += '"';
-                set += row[property1];
-                set += '"';
-            } else {
-                set += row[property1];
-            }
-            setList.push(set);
-        } else if (property1 === "dungeons") {
-            for (let property2 in row.dungeons) {
-                set = property2;
-                set += ' = "';
-                set += row.dungeons[property2];
-                set += '"';
-                setList.push(set);
-            }
+    for (let property in row) {
+        if (property === 'name') {
+            continue;
         }
+        propertyList.push(property);
+        valueList.push(row[property]);
     }
 
-    return db.run('UPDATE guild_members SET ' + setList.join(', ') + ' WHERE name = "' + row.name + '"');
+    valueList.push(row.name);
+    return db.run(`UPDATE guild_members SET ${propertyList.join(' = ?, ')} = ? WHERE name = ?`, valueList);
 }
 
 async function main() {
@@ -107,11 +101,12 @@ async function main() {
     await createNewTable();
 
     for (let element in data) {
-        const row = await db.all('select * from guild_members where name = "' + data[element].name + '"').catch(err => logAndExit(err));
-        if (row.length === 0) {
-            await addRow(data[element]).catch(err => logAndExit(err));
-        } else if (row.length === 1) {
-            await updateRow(data[element]).catch(err => logAndExit(err));
+        const row = dataToRow(data[element]);
+        const response = await db.all('select * from guild_members where name = "' + row.name + '"').catch(err => logAndExit(err));
+        if (response.length === 0) {
+            await addRow(row).catch(err => logAndExit(err));
+        } else if (response.length === 1) {
+            await updateRow(row).catch(err => logAndExit(err));
         } else {
             console.log('ERROR. More than 1 row, shouldn\'t be possible');
             console.log(row);

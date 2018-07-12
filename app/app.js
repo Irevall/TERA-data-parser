@@ -33,12 +33,9 @@ function dungeonsScore(score, type) {
     let html = ' data-value="';
     if (score === '0') {
         html += '0">';
-        html += '<div class="content hidden">';
-        html += 'Never completed';
-        html += '</div>'
+        html += '<div class="content hidden">Never completed.</div>';
     } else if (type === 'Mystic' || type === 'Priest') {
         let buffs = score.split(', ');
-        buffs.pop();
         let percentageSum = 0;
         let miniHTML = '';
         buffs.forEach((element) => {
@@ -57,9 +54,14 @@ function dungeonsScore(score, type) {
         html += '<div class="content hidden">';
         html += `${(dmg[0] / (10 ** 6)).toFixed(3)}M ${dmg[1]}`;
         html += '</div>'
-
-
     }
+
+    if (score === '0') {
+        html += '<span class="empty"><img src="icons/not-completed.svg"/></span>';
+    } else {
+        html += '<span class="empty"><img src="icons/completed.svg"/></span>';
+    }
+
     return html;
 }
 
@@ -82,16 +84,16 @@ function addRow(element) {
     html += `<div class="contribution" data-value="${element.contrTotal}"><span><span class="contrCurrent">${element.contrCurrent}</span>(<span class="contrTotal">${element.contrTotal}</span>)</span></div>`;
     html += `<div class="last-online" data-value="${element.lastOnline}"><span title="${('0' + date.getHours()).substr(-2)}:${('0' + date.getMinutes()).substr(-2)}">${('0' + date.getDate()).substr(-2)}/${('0' + (date.getMonth() + 1)).substr(-2)}/${('' + date.getFullYear()).substr(-2)}</span></div>`;
     html += `<div class="note" data-value="${element.note}"><span class="empty">...</span><span class="content hidden">${element.note}</span></div>`;
-    html += `<div class="dungeons rke"${dungeonsScore(element.RKE, element.class)}<span class="empty">...</span></div>`;
-    html += `<div class="dungeons rrhm"${dungeonsScore(element.RRHM, element.class)}<span class="empty">...</span></div>`;
-    html += `<div class="dungeons trnm"${dungeonsScore(element.TRNM, element.class)}<span class="empty">...</span></div>`;
-    html += `<div class="dungeons aanm"${dungeonsScore(element.AANM, element.class)}<span class="empty">...</span></div>`;
-    html += `<div class="dungeons rknm"${dungeonsScore(element.RKNM, element.class)}<span class="empty">...</span></div>`;
+    html += `<div class="dungeons rke"${dungeonsScore(element.RKE, element.class)}</div>`;
+    html += `<div class="dungeons rrhm"${dungeonsScore(element.RRHM, element.class)}</div>`;
+    html += `<div class="dungeons trnm"${dungeonsScore(element.TRNM, element.class)}</div>`;
+    html += `<div class="dungeons aanm"${dungeonsScore(element.AANM, element.class)}</div>`;
+    html += `<div class="dungeons rknm"${dungeonsScore(element.RKNM, element.class)}</div>`;
     if (element.main === '' || element.main === 'true') {
-        html += `<div class="discord">${element.discord ? '<img src="icons/discord.png" alt="Has discord"/>' : '<img src="icons/discord.png" alt="No discord" class="faded"/>'}</div>`;
-        html += `<div class="civil">${element.civil ? '<img src="icons/sword.png" alt="Plays civil unrest"/>' : '<img src="icons/sword.png" alt="Doesn\'t play civil unrest" class="faded"/>'}</div>`;
+        html += `<div class="discord" data-value="${element.discord ? '1"><img src="icons/discord.png" alt="Has discord"/>' : '0"><img src="icons/discord.png" alt="No discord" class="faded"/>'}</div>`;
+        html += `<div class="civil" data-value="${element.civil ? '1"><img src="icons/sword.png" alt="Plays civil unrest"/>' : '0"><img src="icons/sword.png" alt="Doesn\'t play civil unrest" class="faded"/>'}</div>`;
     } else {
-        html += '<div></div><div></div>';
+        html += '<div class="discord" data-value="-1"></div><div class="civil" data-value="-1"></div>';
     }
     html += '</div>';
     return html;
@@ -104,7 +106,53 @@ function buildHTML(data) {
     head += '<link rel="stylesheet" type="text/css" href="style.css"/>';
     head += '<script src="main.js"></script>';
 
-    body += '<nav><span class="alter">Show/hide alts</span></nav><main><div class="header"><div class="name">Name</div><div class="class">Class</div><div class="rank">Rank</div><div class="contribution">Contribution</div><div class="last-online">Last online</div><div class="note">Note</div><div class="rke">RKE</div><div class="rrhm">RRHM</div><div class="trnm">TRNM</div><div class="aanm">AANM</div><div class="rknm">RKNM</div><div class="discord">Discord</div><div class="civil">Civil</div></div><hr/>';
+    body += '<nav><span class="alter">Show/hide alts</span><span class="search">Search: <input type="text"/></span><span>Filter:</span> <div>' +
+        '<ul class="dropdown">' +
+        '<li class="option"><span>None</span></li>' +
+        '<li class="with-dropdown">' +
+        '<span>Rank</span>' +
+        '<div>' +
+        '<ul class="dropdown2">' +
+        '<li class="option" data-category="rank"><span>Alt</span></li>' +
+        '<li class="option" data-category="rank"><span>Daikatana</span></li>' +
+        '<li class="option" data-category="rank"><span>Emperor</span></li>' +
+        '<li class="option" data-category="rank"><span>Excused</span></li>' +
+        '<li class="option" data-category="rank"><span>Ronin</span></li>' +
+        '<li class="option" data-category="rank"><span>Samurai</span></li>' +
+        '<li class="option" data-category="rank"><span>Shogun</span></li>' +
+        '</ul>' +
+        '</div>' +
+        '</li>' +
+        '<li class="with-dropdown">' +
+        '<span>Class</span>' +
+        '<div>' +
+        '<ul class="dropdown2">' +
+        '<li class="option" data-category="class"><span>Archer</span></li>' +
+        '<li class="option" data-category="class"><span>Berserker</span></li>' +
+        '<li class="option" data-category="class"><span>Gunner</span></li>' +
+        '<li class="option" data-category="class"><span>Lancer</span></li>' +
+        '<li class="option" data-category="class"><span>Mystic</span></li>' +
+        '<li class="option" data-category="class"><span>Priest</span></li>' +
+        '<li class="option" data-category="class"><span>Slayer</span></li>' +
+        '<li class="option" data-category="class"><span>Sorcerer</span></li>' +
+        '<li class="option" data-category="class"><span>Warrior</span></li>' +
+        '</ul>' +
+        '</div>' +
+        '</li>' +
+        '<li class="with-dropdown">' +
+        '<span>Type</span>' +
+        '<div>' +
+        '<ul class="dropdown2">' +
+        '<li class="option" data-category="type"><span>DMG</span></li>' +
+        '<li class="option" data-category="type"><span>Buff</span></li>' +
+        '</ul>' +
+        '</div>' +
+        '</li>' +
+        '<li class="option"><span>Discord</span></li>' +
+        '<li class="option"><span>Civil</span></li>' +
+        '</ul>' +
+        '</div></nav>';
+    body += '<main><div class="header"><div class="name">Name</div><div class="class">Class</div><div class="rank">Rank</div><div class="contribution">Contribution</div><div class="last-online">Last online</div><div class="note">Note</div><div class="rke">RKE</div><div class="rrhm">RRHM</div><div class="trnm">TRNM</div><div class="aanm">AANM</div><div class="rknm">RKNM</div><div class="discord">Discord</div><div class="civil">Civil</div></div><hr/>';
 
 
     data.forEach((element) => {

@@ -26,8 +26,6 @@ async function main() {
     const x = await readFile();
 
     for (let main in x) {
-        console.log(main);
-
         const result = await db.all('SELECT * FROM guild_members WHERE name = ?', [main]).catch(err => console.log(err));
         if (result.length === 0) {
             console.log(`Wrong main: ${main}`);
