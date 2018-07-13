@@ -10,6 +10,7 @@ function sendRequest(method, url) {
 }
 
 function showAll() {
+    console.log('lmao');
     document.querySelectorAll('.row').forEach((element) => {
         if (element.classList.contains('hidden') === true) {
             element.classList.remove('hidden');
@@ -217,8 +218,10 @@ function globalSwitchAltsVisibilityListener() {
 }
 
 function searchResults(query) {
+    globalSwitchAltsVisibility(true);
+    showAll();
     document.querySelectorAll('.row').forEach((element) => {
-        if (element.querySelector('.name').dataset.value.search(query) === -1) {
+        if (element.querySelector('.name').dataset.value.toLowerCase().search(query) === -1) {
             element.classList.add('hidden');
         }
     })
@@ -226,7 +229,7 @@ function searchResults(query) {
 
 function searchListener() {
     document.querySelector('.search').querySelector('input').addEventListener('input',(e) => {
-        searchResults(e.target.value);
+        searchResults(e.target.value.toLowerCase());
     })
 }
 
@@ -241,7 +244,10 @@ function filterListener() {
 function filter(element) {
     const elementContext = element.querySelector('span').innerHTML.toLowerCase();
 
-    globalSwitchAltsVisibility(true);
+    if (altsVisible === false) {
+        globalSwitchAltsVisibility(true);
+    }
+    
     if (elementContext === 'none') {
         showAll();
         filtered = [];
@@ -295,7 +301,6 @@ function filter(element) {
                     if (element2.querySelector(`.${element.dataset.category}`).dataset.value.toLowerCase() !== 'alt' && element2.querySelector(`.${element.dataset.category}`).dataset.value.toLowerCase() !== 'alts') {
                         element2.classList.add('hidden');
                     }
-
                 } else if (element2.querySelector(`.${element.dataset.category}`).dataset.value.toLowerCase() !== elementContext) {
                     element2.classList.add('hidden');
                 }
