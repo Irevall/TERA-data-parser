@@ -1,28 +1,6 @@
-const Koa = require('koa');
-const Router = require('koa-router');
-const Serve = require('koa-static');
+module.exports = main;
+
 const Sqlite = require('sqlite');
-
-const app = new Koa();
-const router = new Router();
-
-app.use(Serve('../html'));
-
-router.get('/', async (ctx) => {
-    ctx.body = await deliverHTML();
-});
-
-router.put('/:id/:column/:data', async (ctx) => {
-    const answer = await updateDB(ctx.params);
-    ctx.response.status = answer.status;
-    ctx.response.message = answer.message;
-});
-
-app.use(router.routes());
-
-app.listen(8999, () => {
-    console.log('Server running on https://localhost:8999')
-});
 
 function logAndExit(error) {
     console.log(error);
@@ -164,8 +142,9 @@ function buildHTML(data) {
     return '<!DOCTYPE html><html><head>' + head + '</head><body>' + body + '</body></html>';
 }
 
-async function deliverHTML() {
-    const db = await Sqlite.open('data/tera.db').catch(err => logAndExit(err));
+async function main() {
+    console.log('xd');
+    const db = await Sqlite.open('./database/tera.db').catch(err => logAndExit(err));
     console.log('Open DB connection.');
 
     let data = await db.all('select * from guild_members').catch(err => logAndExit(err));
@@ -175,35 +154,4 @@ async function deliverHTML() {
     console.log('Close DB connection.');
 
     return html;
-}
-
-async function updateDB(data) {
-    if (!(data.column === 'discord' || data.column === 'civil')) {
-        return {status: 400, message: 'You can\'t change that column.'};
-    }
-
-    if ((data.column === 'discord' || data.column === 'civil') && !(data.data == 1 || data.data == 0)) {
-        return {status: 400, message: 'Wrong value for that column.'};
-    }
-
-    const db = await Sqlite.open('data/tera.db').catch(err => logAndExit(err));
-    console.log('Open DB connection.');
-
-    const isID = await db.all('SELECT * FROM guild_members WHERE name = ?', [data.id]);
-    if (isID.length === 0) {
-        await db.close().catch(err => logAndExit(err));
-        console.log('Close DB connection.');
-        return {status: 400, message: 'No such guild member.'};
-    }
-
-    let sqlQuery = 'UPDATE guild_members SET ';
-    sqlQuery += data.column;
-    sqlQuery += ' = ? WHERE name = ?';
-
-    await db.run(sqlQuery, [data.data, data.id]).catch(err => logAndExit(err));
-
-    await db.close().catch(err => logAndExit(err));
-    console.log('Close DB connection.');
-
-    return {status: 200, message: 'Accepted and fulfilled.'};
 }

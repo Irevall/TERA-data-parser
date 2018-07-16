@@ -1,22 +1,11 @@
-const data = [];
-let fs = require('fs');
+module.exports = main;
 
+let fs = require('fs');
 let db = '';
 
 function logAndExit(error) {
     console.log(error);
     process.exit();
-}
-
-function readFile() {
-    return new Promise(resolve => {
-        fs.readFile('data/tera.json', 'utf8',  function (err, data) {
-            if (err) {
-                return console.log(err);
-            }
-            resolve(data);
-        });
-    });
 }
 
 function createNewTable() {
@@ -85,18 +74,12 @@ function updateRow(row) {
     return db.run(`UPDATE guild_members SET ${propertyList.join(' = ?, ')} = ? WHERE name = ?`, valueList);
 }
 
-async function main() {
+async function main(data) {
+    console.log('XD');
     const sqlite = require('sqlite');
 
-    db = await sqlite.open('data/tera.db').catch(err => logAndExit(err));
+    db = await sqlite.open('./database/tera.db').catch(err => logAndExit(err));
     console.log('Open DB connection.');
-
-    let jsonAsString = await readFile().catch(err => logAndExit(err));
-    console.log('Read file');
-
-    JSON.parse(jsonAsString).forEach((element) => {
-        data.push(element);
-    });
 
     await createNewTable();
 
@@ -113,8 +96,13 @@ async function main() {
         }
     }
 
+    const date = Date.now();
+
+    fs.writeFile(`./database/backup/old_members/${date}.json`, JSON.stringify(data), function (err) {
+        if (err) throw err;
+        console.log('Saved!');
+    });
+
     await db.close().catch(err => logAndExit(err));
     console.log('Close DB connection.');
 }
-
-main();
