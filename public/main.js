@@ -338,13 +338,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-fetch('/users', {
-    method: 'POST',
-    headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify([{"name":"narianna","contrCurrent":10,"contrTotal":1819,"class":"Archer","rank":"Samurai","lastOnline":1530815479073,"note":"dark misstres ","dungeons":{"TRNM":{"completed":true,"dps":"1810616","partyPercent":"20.70%"},"RKE":{"completed":false},"RRHM":{"completed":false},"AANM":{"completed":false},"RKNM":{"completed":true,"dps":"892921","partyPercent":"13.44%"}}},{"name":"Smyrnaa","contrCurrent":28,"contrTotal":770,"class":"Sorcerer","rank":"Samurai","lastOnline":1530833713073,"note":"","dungeons":{"TRNM":{"completed":true,"dps":"2128946","partyPercent":"24.80%"},"RKE":{"completed":false},"RRHM":{"completed":true,"dps":"1357493","partyPercent":"17.65%"},"AANM":{"completed":true,"dps":"1092597","partyPercent":"18.68%"},"RKNM":{"completed":true,"dps":"1717452","partyPercent":"23.25%"}}}])
-});
+// fetch('/users', {
+//     method: 'POST',
+//     headers: {
+//         'Accept': 'application/json',
+//         'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify([{"name":"narianna","contrCurrent":10,"contrTotal":1819,"class":"Archer","rank":"Samurai","lastOnline":1530815479073,"note":"dark misstres ","dungeons":{"TRNM":{"completed":true,"dps":"1810616","partyPercent":"20.70%"},"RKE":{"completed":false},"RRHM":{"completed":false},"AANM":{"completed":false},"RKNM":{"completed":true,"dps":"892921","partyPercent":"13.44%"}}},{"name":"Smyrnaa","contrCurrent":28,"contrTotal":770,"class":"Sorcerer","rank":"Samurai","lastOnline":1530833713073,"note":"","dungeons":{"TRNM":{"completed":true,"dps":"2128946","partyPercent":"24.80%"},"RKE":{"completed":false},"RRHM":{"completed":true,"dps":"1357493","partyPercent":"17.65%"},"AANM":{"completed":true,"dps":"1092597","partyPercent":"18.68%"},"RKNM":{"completed":true,"dps":"1717452","partyPercent":"23.25%"}}}])
+// });
 
 

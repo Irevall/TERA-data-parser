@@ -1,12 +1,7 @@
 module.exports = main;
 
-let fs = require('fs');
-let db = '';
-
-function logAndExit(error) {
-    console.log(error);
-    process.exit();
-}
+const sqlite = require('sqlite');
+let db;
 
 function createNewTable() {
     let sqlQuery = 'CREATE TABLE if not exists guild_members (name TEXT, main TEXT, contrCurrent NUMBER, contrTotal NUMBER, class TEXT, rank TEXT, lastOnline number, note TEXT, RKE TEXT, RRHM TEXT,' +
@@ -75,34 +70,34 @@ function updateRow(row) {
 }
 
 async function main(data) {
-    console.log('XD');
-    const sqlite = require('sqlite');
-
-    db = await sqlite.open('./database/tera.db').catch(err => logAndExit(err));
-    console.log('Open DB connection.');
+    db = await sqlite.open('./database/tera.db').catch((err) => {
+        return {status: 500, message: 'Database error.'};
+    });
 
     await createNewTable();
 
     for (let element in data) {
         const row = dataToRow(data[element]);
-        const response = await db.all('select * from guild_members where name = "' + row.name + '"').catch(err => logAndExit(err));
+        const response = await db.all('select * from guild_members where name = "' + row.name + '"').catch((err) => {
+            return {status: 500, message: 'Database error.'};
+        });
         if (response.length === 0) {
-            await addRow(row).catch(err => logAndExit(err));
+            await addRow(row).catch((err) => {
+                return {status: 500, message: 'Database error.'};
+            });
         } else if (response.length === 1) {
-            await updateRow(row).catch(err => logAndExit(err));
+            await updateRow(row).catch((err) => {
+                return {status: 500, message: 'Database error.'};
+            });
         } else {
             console.log('ERROR. More than 1 row, shouldn\'t be possible');
             console.log(row);
         }
     }
 
-    const date = Date.now();
-
-    fs.writeFile(`./database/backup/old_members/${date}.json`, JSON.stringify(data), function (err) {
-        if (err) throw err;
-        console.log('Saved!');
+    await db.close().catch((err) => {
+        return {status: 500, message: 'Database error.'};
     });
 
-    await db.close().catch(err => logAndExit(err));
-    console.log('Close DB connection.');
+    return {status: 200, message: 'Success'};
 }

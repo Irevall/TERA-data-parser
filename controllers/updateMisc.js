@@ -2,11 +2,6 @@ module.exports = main;
 
 const Sqlite = require('sqlite');
 
-function logAndExit(error) {
-    console.log(error);
-    process.exit();
-}
-
 async function main(data) {
     if (!(data.column === 'discord' || data.column === 'civil')) {
         return {status: 400, message: 'You can\'t change that column.'};
@@ -16,12 +11,15 @@ async function main(data) {
         return {status: 400, message: 'Wrong value for that column.'};
     }
 
-    const db = await Sqlite.open('./database/tera.db').catch(err => logAndExit(err));
-    console.log('Open DB connection.');
+    const db = await Sqlite.open('./database/tera.db').catch((err) => {
+        return {status: 500, message: 'Database error.'};
+    });
 
     const isID = await db.all('SELECT * FROM guild_members WHERE name = ?', [data.id]);
     if (isID.length === 0) {
-        await db.close().catch(err => logAndExit(err));
+        await db.close().catch((err) => {
+            return {status: 500, message: 'Database error.'};
+        });
         console.log('Close DB connection.');
         return {status: 400, message: 'No such guild member.'};
     }
@@ -30,10 +28,13 @@ async function main(data) {
     sqlQuery += data.column;
     sqlQuery += ' = ? WHERE name = ?';
 
-    await db.run(sqlQuery, [data.data, data.id]).catch(err => logAndExit(err));
+    await db.run(sqlQuery, [data.data, data.id]).catch((err) => {
+        return {status: 500, message: 'Database error.'};
+    });
 
-    await db.close().catch(err => logAndExit(err));
-    console.log('Close DB connection.');
+    await db.close().catch((err) => {
+        return {status: 500, message: 'Database error.'};
+    });
 
-    return {status: 200, message: 'Accepted and fulfilled.'};
+    return {status: 200, message: 'Success'};
 }

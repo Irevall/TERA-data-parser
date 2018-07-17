@@ -1,5 +1,7 @@
 To do:
 When alts are hidden their contribution sums up to main
-Nav with search, filter and better show/hide button
+Better show/hide button
+Assign guest rank to people in DB but not in new update and make it possible to delete them
+Auths and responses for POSTs
+Fetch in clientside js
 Make it look better
-Automatize all node

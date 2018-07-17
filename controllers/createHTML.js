@@ -2,11 +2,6 @@ module.exports = main;
 
 const Sqlite = require('sqlite');
 
-function logAndExit(error) {
-    console.log(error);
-    process.exit();
-}
-
 function dungeonsScore(score, type) {
     let html = ' data-value="';
     if (score === '0') {
@@ -59,7 +54,7 @@ function addRow(element) {
     } else {
         html += `<div class="rank" data-value="Alt" data-main="${element.main}"><span title="Main: ${element.main}">Alt</span></div>`;
     }
-    html += `<div class="contribution" data-value="${element.contrTotal}"><span><span class="contrCurrent">${element.contrCurrent}</span>(<span class="contrTotal">${element.contrTotal}</span>)</span></div>`;
+    html += `<div class="contribution" data-value="${element.contrTotal}"><span><span class="contrTotal">${element.contrTotal}</span>(+<span class="contrCurrent">${element.contrCurrent}</span>)</span></div>`;
     html += `<div class="last-online" data-value="${element.lastOnline}"><span title="${('0' + date.getHours()).substr(-2)}:${('0' + date.getMinutes()).substr(-2)}">${('0' + date.getDate()).substr(-2)}/${('0' + (date.getMonth() + 1)).substr(-2)}/${('' + date.getFullYear()).substr(-2)}</span></div>`;
     html += `<div class="note" data-value="${element.note}"><span class="empty">...</span><span class="content hidden">${element.note}</span></div>`;
     html += `<div class="dungeons rke"${dungeonsScore(element.RKE, element.class)}</div>`;
@@ -143,15 +138,17 @@ function buildHTML(data) {
 }
 
 async function main() {
-    console.log('xd');
-    const db = await Sqlite.open('./database/tera.db').catch(err => logAndExit(err));
-    console.log('Open DB connection.');
+    const db = await Sqlite.open('./database/tera.db').catch((err) => {
+        return {status: 500, message: 'Database error.'};
+    });
 
     let data = await db.all('select * from guild_members').catch(err => logAndExit(err));
 
     const html = buildHTML(data);
-    await db.close().catch(err => logAndExit(err));
-    console.log('Close DB connection.');
 
-    return html;
+    await db.close().catch((err) => {
+        return {status: 500, message: 'Database error.'};
+    });
+
+    return {status: 200, message: 'Success', body: html};
 }
