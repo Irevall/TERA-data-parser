@@ -1,6 +1,6 @@
 module.exports = main;
 
-const Sqlite = require('sqlite');
+const sqlite = require('sqlite');
 
 function dungeonsScore(score, type) {
     let html = ' data-value="';
@@ -138,11 +138,11 @@ function buildHTML(data) {
 }
 
 async function main() {
-    const db = await Sqlite.open('./database/tera.db').catch((err) => {
+    const db = await sqlite.open('./database/tera.db').catch((err) => {
         return {status: 500, message: 'Database error.'};
     });
 
-    let data = await db.all('select * from guild_members').open('./database/tera.db').catch((err) => {
+    let data = await db.all('select * from guild_members').catch((err) => {
         return {status: 500, message: 'Database error.'};
     });
 
