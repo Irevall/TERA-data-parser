@@ -142,7 +142,9 @@ async function main() {
         return {status: 500, message: 'Database error.'};
     });
 
-    let data = await db.all('select * from guild_members').catch(err => logAndExit(err));
+    let data = await db.all('select * from guild_members').open('./database/tera.db').catch((err) => {
+        return {status: 500, message: 'Database error.'};
+    });
 
     const html = buildHTML(data);
 
