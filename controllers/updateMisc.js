@@ -20,7 +20,6 @@ async function main(data) {
         await db.close().catch((err) => {
             return {status: 500, message: 'Database error.'};
         });
-        console.log('Close DB connection.');
         return {status: 400, message: 'No such guild member.'};
     }
 

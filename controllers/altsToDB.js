@@ -7,8 +7,6 @@ async function main(data) {
         return {status: 500, message: 'Database error.'};
     });
 
-    console.log('Open DB connection.');
-
     for (let main in data) {
         console.log(main);
         const result = await db.all('SELECT * FROM guild_members WHERE name = ?', [main]).catch((err) => {

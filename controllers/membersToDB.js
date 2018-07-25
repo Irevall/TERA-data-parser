@@ -69,6 +69,7 @@ function updateRow(row) {
     return db.run(`UPDATE guild_members SET ${propertyList.join(' = ?, ')} = ? WHERE name = ?`, valueList);
 }
 
+
 async function main(data) {
     db = await sqlite.open('./database/tera.db').catch((err) => {
         return {status: 500, message: 'Database error.'};
@@ -76,23 +77,29 @@ async function main(data) {
 
     await createNewTable();
 
-    for (let element in data) {
-        const row = dataToRow(data[element]);
-        const response = await db.all('select * from guild_members where name = "' + row.name + '"').catch((err) => {
+    const data2 = await db.all('SELECT * FROM guild_members');
+
+    for (let index in data2) {
+        let element = data2[index];
+
+        let corresponding = data.find((element2) => {
+            return element2.name === element.name;
+        });
+
+        if (corresponding === undefined) {
+            await db.run(`UPDATE guild_members SET rank = 'Guest' WHERE name = ?`, [element.name]);
+        } else {
+            await updateRow(dataToRow(corresponding)).catch((err) => {
+                return {status: 500, message: 'Database error.'};
+            });
+            data = data.filter(element3 => element3 !== corresponding);
+        }
+    }
+
+    for (let index in data) {
+        await addRow(dataToRow(data[index])).catch((err) => {
             return {status: 500, message: 'Database error.'};
         });
-        if (response.length === 0) {
-            await addRow(row).catch((err) => {
-                return {status: 500, message: 'Database error.'};
-            });
-        } else if (response.length === 1) {
-            await updateRow(row).catch((err) => {
-                return {status: 500, message: 'Database error.'};
-            });
-        } else {
-            console.log('ERROR. More than 1 row, shouldn\'t be possible');
-            console.log(row);
-        }
     }
 
     await db.close().catch((err) => {

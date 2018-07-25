@@ -44,17 +44,25 @@ function addRow(element) {
     if (element.main === 'true' || element.main === '') {
         html += ' main';
     } else {
-        html += ' alt hidden';
+        html += ' alt';
     }
     html += '">';
-    html += `<div class="name" data-value="${element.name}"><span>${element.name}</span>${(element.main === "true") ? '<img src="icons/arrow.png" alt="Show alts" class="arrow"/>' : ''}</div>`;
+    html += `<div class="name" data-value="${element.name}"><span>${element.name}</span>${(element.main === "true") ? '<img src="icons/arrow.png" alt="Show alts" class="arrow hidden"/>' : ''}</div>`;
     html += `<div class="class" data-value="${element.class}"><img src="icons/classes/${(element.class).toLowerCase()}.svg" alt="${element.class}" class="class"/></div>`;
     if (element.main === '' || element.main === 'true') {
         html += `<div class="rank" data-value="${element.rank}"><span>${element.rank}</span></div>`;
     } else {
         html += `<div class="rank" data-value="Alt" data-main="${element.main}"><span title="Main: ${element.main}">Alt</span></div>`;
     }
-    html += `<div class="contribution" data-value="${element.contrTotal}"><span><span class="contrTotal">${element.contrTotal}</span>(+<span class="contrCurrent">${element.contrCurrent}</span>)</span></div>`;
+    html += `<div class="contribution" data-value1="${element.contrTotal}" data-value2="${element.contrCurrent}"`;
+    if (element.main === 'true') {
+        html += `data-value3="${element.combinedContrTotal}"`;
+        html += `data-value4="${element.combinedContrCurrent}"`;
+    } else {
+        html += `data-value3="${element.contrTotal}"`;
+        html += `data-value4="${element.contrCurrent}"`;
+    }
+    html += `><span><span class="contrTotal">${element.contrTotal}</span> (+<span class="contrCurrent">${element.contrCurrent}</span>)</span></div>`;
     html += `<div class="last-online" data-value="${element.lastOnline}"><span title="${('0' + date.getHours()).substr(-2)}:${('0' + date.getMinutes()).substr(-2)}">${('0' + date.getDate()).substr(-2)}/${('0' + (date.getMonth() + 1)).substr(-2)}/${('' + date.getFullYear()).substr(-2)}</span></div>`;
     html += `<div class="note" data-value="${element.note}"><span class="empty">...</span><span class="content hidden">${element.note}</span></div>`;
     html += `<div class="dungeons rke"${dungeonsScore(element.RKE, element.class)}</div>`;
@@ -76,10 +84,10 @@ function buildHTML(data) {
     let head = '';
     let body = '';
 
-    head += '<link rel="stylesheet" type="text/css" href="style.css"/>';
     head += '<script src="main.js"></script>';
+    head += '<link rel="stylesheet" type="text/css" href="style.css"/>';
 
-    body += '<nav><span class="alter">Show/hide alts</span><span class="search">Search: <input type="text"/></span><span>Filter:</span> <div>' +
+    body += '<nav><span class="alter"><span></span> alts</span><span class="search">Search: <input type="text"/></span><span>Filter:</span> <div>' +
         '<ul class="dropdown">' +
         '<li class="option"><span>None</span></li>' +
         '<li class="with-dropdown">' +
@@ -127,6 +135,19 @@ function buildHTML(data) {
         '</div></nav>';
     body += '<main><div class="header"><div class="name">Name</div><div class="class">Class</div><div class="rank">Rank</div><div class="contribution">Contribution</div><div class="last-online">Last online</div><div class="note">Note</div><div class="rke">RKE</div><div class="rrhm">RRHM</div><div class="trnm">TRNM</div><div class="aanm">AANM</div><div class="rknm">RKNM</div><div class="discord">Discord</div><div class="civil">Civil</div></div><hr/>';
 
+
+    data.forEach((element) => {
+       if (element.main !== '' && element.main !== 'true') {
+           let x = data.find(player => player.name === element.main);
+           if (x.combinedContrCurrent === undefined || x.combinedContrTotal === undefined) {
+               x.combinedContrCurrent = x.contrCurrent;
+               x.combinedContrTotal = x.contrTotal;
+           }
+
+           x.combinedContrCurrent += element.contrCurrent;
+           x.combinedContrTotal += element.contrTotal;
+       }
+    });
 
     data.forEach((element) => {
         body += addRow(element);

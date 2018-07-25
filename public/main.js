@@ -1,16 +1,16 @@
-let sorted = false;
+let sorted = 'none';
 let filtered = [];
-let altsVisible = false;
 
-// make it fetch
+// keep track when user changes alt visibility and when filtering does
+let altsVisible, lastUserChoice;
+
 function sendRequest(method, url) {
-    const xhr = new XMLHttpRequest();
-    xhr.open(method, url);
-    xhr.send();
+    fetch(url, {
+        method: method,
+    });
 }
 
 function showAll() {
-    console.log('lmao');
     document.querySelectorAll('.row').forEach((element) => {
         if (element.classList.contains('hidden') === true) {
             element.classList.remove('hidden');
@@ -32,29 +32,90 @@ function sortColumn(column) {
     }
 
     let mainList = Array.from(document.querySelectorAll('.row'));
-    mainList.sort((a, b) => {
-        if (column === sorted) {
-            b = [a, a = b][0];
-        }
-        let aValue = a.querySelector(`.${column}`).dataset.value;
-        let bValue = b.querySelector(`.${column}`).dataset.value;
-        if (aValue === bValue) {
-            return a.querySelector('.name').dataset.value.localeCompare(b.querySelector('.name').dataset.value);
-        } else if (column === 'name' || column === 'rank' || column === 'class') {
-            return aValue.localeCompare(bValue);
-        } else {
-            return bValue - aValue;
-        }
-    });
 
-    if (column === sorted) {
-        sorted = false;
+    if (column !== 'contribution') {
+        mainList.sort((a, b) => {
+            if (column === sorted) {
+                b = [a, a = b][0];
+            }
+            let aValue = a.querySelector(`.${column}`).dataset.value;
+            let bValue = b.querySelector(`.${column}`).dataset.value;
+            if (aValue === bValue) {
+                return a.querySelector('.name').dataset.value.localeCompare(b.querySelector('.name').dataset.value);
+            } else if (column === 'name' || column === 'rank' || column === 'class') {
+                return aValue.localeCompare(bValue);
+            } else {
+                return bValue - aValue;
+            }
+        });
+
+        if (column === sorted) {
+            sorted = `${column}-reverse`;
+        } else {
+            sorted = column;
+        }
     } else {
-        sorted = column;
+        mainList.sort((a, b) => {
+            if (sorted.includes('contr') && !sorted.includes('reverse')) {
+                b = [a, a = b][0];
+            }
+
+            let aValue, bValue;
+            if (!sorted.includes('contr') || sorted === 'contrTotal' || sorted === 'contrCurrent-reverse') {
+                if (altsVisible !== false) {
+                    aValue = a.querySelector(`.${column}`).dataset.value1;
+                    bValue = b.querySelector(`.${column}`).dataset.value1;
+                } else {
+                    aValue = a.querySelector(`.${column}`).dataset.value3;
+                    bValue = b.querySelector(`.${column}`).dataset.value3;
+                }
+            } else {
+                if (altsVisible !== false) {
+                    aValue = a.querySelector(`.${column}`).dataset.value2;
+                    bValue = b.querySelector(`.${column}`).dataset.value2;
+                } else {
+                    aValue = a.querySelector(`.${column}`).dataset.value4;
+                    bValue = b.querySelector(`.${column}`).dataset.value4;
+                }
+            }
+
+            if (aValue === bValue) {
+                return a.querySelector('.name').dataset.value.localeCompare(b.querySelector('.name').dataset.value);
+            } else {
+                return bValue - aValue;
+            }
+        });
+
+        if (!sorted.includes('contr') || sorted === 'contrCurrent-reverse') {
+            sorted = 'contrTotal';
+        } else if (sorted === 'contrTotal') {
+            sorted = 'contrTotal-reverse';
+        } else if (sorted === 'contrTotal-reverse') {
+            sorted = 'contrCurrent';
+        } else {
+            sorted = 'contrCurrent-reverse';
+        }
     }
 
     mainList.forEach((element) => {
         document.querySelector('main').appendChild(element);
+    });
+}
+
+function setContribution(elements, state) {
+    if (elements.length === undefined) {
+        elements = [elements];
+    }
+
+    elements.forEach((element) => {
+        let contribution = element.querySelector('.contribution');
+        if (state === 'combined') {
+            contribution.querySelector('.contrTotal').innerHTML = contribution.dataset.value3;
+            contribution.querySelector('.contrCurrent').innerHTML = contribution.dataset.value4;
+        } else {
+            contribution.querySelector('.contrTotal').innerHTML = contribution.dataset.value1;
+            contribution.querySelector('.contrCurrent').innerHTML = contribution.dataset.value2;
+        }
     });
 }
 
@@ -159,7 +220,12 @@ function switchAltsVisibility() {
     document.querySelectorAll('.main').forEach((element) => {
         if (element.querySelector('.arrow') !== null) {
             element.querySelector('.arrow').addEventListener('click', () => {
-                console.log(element.querySelector('.name').dataset.value);
+                if (!element.querySelector('.arrow').classList.contains('down')) {
+                    setContribution(element, 'individual');
+                } else {
+                    setContribution(element, 'combined');
+                }
+
                 document.querySelectorAll('.alt').forEach((alt) => {
                    if (element.querySelector('.name').dataset.value === alt.querySelector('.rank').dataset.main) {
                        if (alt.classList.contains('hidden') !== false) {
@@ -182,6 +248,8 @@ function globalSwitchAltsVisibility(desiredState) {
     }
 
     if (desiredState === true) {
+        document.querySelector('.alter').querySelector('span').innerHTML = 'Hide';
+
         document.querySelectorAll('.main').forEach((element) => {
             let img = element.querySelector('.name').querySelector('img');
             if (img !== null) {
@@ -194,7 +262,11 @@ function globalSwitchAltsVisibility(desiredState) {
         });
 
         altsVisible = true;
+
+        setContribution(document.querySelectorAll('.main'), 'individual');
     } else {
+        document.querySelector('.alter').querySelector('span').innerHTML = 'Show';
+
         document.querySelectorAll('.main').forEach((element) => {
             let img = element.querySelector('.name').querySelector('img');
             if (img !== null) {
@@ -208,6 +280,8 @@ function globalSwitchAltsVisibility(desiredState) {
 
         altsVisible = false;
         sortAltsAfterMains();
+
+        setContribution(document.querySelectorAll('.main'), 'combined');
     }
 }
 
@@ -254,9 +328,7 @@ function filter(element) {
         return
     }
 
-
     let filter = {};
-    console.log(filtered);
 
     if (element.dataset.category === undefined) {
         filter.category = elementContext;
@@ -268,23 +340,18 @@ function filter(element) {
 
     filtered.forEach((filterElement) => {
         if (filter.category === 'type' && filterElement.category === 'class') {
-            console.log(1);
             filtered = [];
             showAll();
         } else if (filter.category === 'type' && filterElement.category === 'type') {
-            console.log(2);
             filtered = [];
             showAll();
         } else if (filter.category === 'class' && filterElement.category === 'type') {
-            console.log(3);
             filtered = [];
             showAll();
         } else if (filter.category === 'class' && filterElement.category === 'class' && filter.value !== filterElement.value) {
-            console.log(4);
             filtered = [];
             showAll();
         } else if (filter.category === 'rank' && filterElement.category === 'rank' && filter.value !== filterElement.value) {
-            console.log(5);
             filtered = [];
             showAll();
         }
@@ -327,24 +394,14 @@ function filter(element) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    sortAltsAfterMains();
+    globalSwitchAltsVisibility(false);
+    globalSwitchAltsVisibilityListener();
     sortListener();
+    searchListener();
+    filterListener();
+
+    //make below listeners instead of listener + function
     miscStateChange();
     switchAltsVisibility();
     switchColumnVisibility();
-    globalSwitchAltsVisibilityListener();
-    searchListener();
-    filterListener()
 });
-
-
-fetch('/members', {
-    method: 'POST',
-    headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify([{"name":"narianna","contrCurrent":10,"contrTotal":1819,"class":"Archer","rank":"Samurai","lastOnline":1530815479073,"note":"dark misstres ","dungeons":{"TRNM":{"completed":true,"dps":"1810616","partyPercent":"20.70%"},"RKE":{"completed":false},"RRHM":{"completed":false},"AANM":{"completed":false},"RKNM":{"completed":true,"dps":"892921","partyPercent":"13.44%"}}},{"name":"Smyrnaa","contrCurrent":28,"contrTotal":770,"class":"Sorcerer","rank":"Samurai","lastOnline":1530833713073,"note":"","dungeons":{"TRNM":{"completed":true,"dps":"2128946","partyPercent":"24.80%"},"RKE":{"completed":false},"RRHM":{"completed":true,"dps":"1357493","partyPercent":"17.65%"},"AANM":{"completed":true,"dps":"1092597","partyPercent":"18.68%"},"RKNM":{"completed":true,"dps":"1717452","partyPercent":"23.25%"}}}])
-});
-
-
