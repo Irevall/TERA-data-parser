@@ -243,11 +243,17 @@ function switchAltsVisibility() {
 }
 
 function globalSwitchAltsVisibility(desiredState) {
+    if (sorted.includes('contr')) {
+        sorted = 'none';
+    }
+
     if (filtered.length !== 0) {
         return;
     }
 
     if (desiredState === true) {
+        sorted = 'none';
+
         document.querySelector('.alter').querySelector('span').innerHTML = 'Hide';
 
         document.querySelectorAll('.main').forEach((element) => {
